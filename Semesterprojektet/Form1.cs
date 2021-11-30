@@ -55,7 +55,7 @@ namespace Semesterprojektet
             string id = maskedTextBox1.Text;
             string pass = maskedTextBox2.Text;
 
-            // assumption:
+            // assumption: //double assumption dont assume anything
             bool id_ok = true, pass_ok = true;
 
             // length check:
