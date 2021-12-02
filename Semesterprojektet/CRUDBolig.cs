@@ -58,9 +58,16 @@ namespace Semesterprojektet
         {
             // Create
             // masked messagebox = BAdresse, BPostnr, BKvm, BSalgspris, BHandelspris, BSælger, BEjendomsmægler
+            string bAdresse = BAdresse.Text;
+            string bPostnr = BPostnr.Text;
+            string bKvm = BKvm.Text;
+            string bSalgspris = BSalgspris.Text;
+            string bHandelspris = BHandelspris.Text;
+            string bSælger = BSælger.Text;
+            string bEjdm = BEjendomsmægler.Text;
 
             /*
-            //C(RUD):
+            //C(RUD): EKSEMPEL FRA JENS FRA DA VI STARTEDE MED CRUD
             string sqlCom = "INSERT INTO kunde VALUES (@Id, @Knavn, @Kadresse);";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
             cmd.Parameters.Add("@Id", System.Data.SqlDbType.Int);
@@ -74,7 +81,7 @@ namespace Semesterprojektet
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                conn.Close(); // remember this
+                conn.Close(); // remember this HUSK ALTID AT LUKKE!
                 MessageBox.Show("SUCCESS :\n" + sqlCom + "\nmed værdierne: (" +
                                 cmd.Parameters["@Id"].Value + ", " +
                                 cmd.Parameters["@Knavn"].Value + ", " +
