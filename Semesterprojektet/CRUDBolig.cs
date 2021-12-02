@@ -19,19 +19,12 @@ namespace Semesterprojektet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // log in knap
-            panel1.Controls.Clear();
-            CRUDSaelger frm = new CRUDSaelger() { TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(frm);
-            this.panel1.SuspendLayout();
-            frm.Show();
+            // log in knap - GEMT BAG PANEL!
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // glemt password
-            MessageBox.Show("Idiot!");
+            // glemt password - GEMT BAG PANEL!
         }
 
         private void textBox10_MouseHover(object sender, EventArgs e)
@@ -65,6 +58,34 @@ namespace Semesterprojektet
         {
             // Create
             // masked messagebox = BAdresse, BPostnr, BKvm, BSalgspris, BHandelspris, BSælger, BEjendomsmægler
+
+            /*
+            //C(RUD):
+            string sqlCom = "INSERT INTO kunde VALUES (@Id, @Knavn, @Kadresse);";
+            SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            cmd.Parameters.Add("@Id", System.Data.SqlDbType.Int);
+            cmd.Parameters["@Id"].Value = Convert.ToInt32(Id);
+            cmd.Parameters.Add("@Knavn", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@Knavn"].Value = Convert.ToString(Knavn);
+            cmd.Parameters.Add("@Kadresse", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@Kadresse"].Value = Convert.ToString(Kadresse);
+            *//*
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close(); // remember this
+                MessageBox.Show("SUCCESS :\n" + sqlCom + "\nmed værdierne: (" +
+                                cmd.Parameters["@Id"].Value + ", " +
+                                cmd.Parameters["@Knavn"].Value + ", " +
+                                cmd.Parameters["@Kadresse"].Value +
+                                ")");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("ERROR: \n\n" + exc.ToString());
+            }
+            */
         }
     }
 }
