@@ -45,10 +45,11 @@ namespace Semesterprojektet
             this.teamBreadDBDataSet = new Semesterprojektet.TeamBreadDBDataSet();
             this.boligTableAdapter = new Semesterprojektet.TeamBreadDBDataSetTableAdapters.BoligTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamBreadDBDataSetBindingSource)).BeginInit();
@@ -173,6 +174,7 @@ namespace Semesterprojektet
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.maskedTextBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -185,14 +187,21 @@ namespace Semesterprojektet
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button1
+            // maskedTextBox1
             // 
-            this.button1.Location = new System.Drawing.Point(667, 474);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Print Sheet";
-            this.button1.UseVisualStyleBackColor = true;
+            this.maskedTextBox1.Location = new System.Drawing.Point(373, 370);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(222, 376);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Postnummer";
             // 
             // label1
             // 
@@ -204,21 +213,23 @@ namespace Semesterprojektet
             this.label1.TabIndex = 2;
             this.label1.Text = "Søg på boliger i hele Danmark";
             // 
-            // label2
+            // button1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(277, 376);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Postnummer";
+            this.button1.Location = new System.Drawing.Point(667, 474);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 33);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Print Sheet";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // button2
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(437, 370);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox1.TabIndex = 4;
+            this.button2.Location = new System.Drawing.Point(541, 367);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 29);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Søg";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // View
             // 
@@ -261,5 +272,6 @@ namespace Semesterprojektet
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
