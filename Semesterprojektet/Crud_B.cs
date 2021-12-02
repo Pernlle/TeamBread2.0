@@ -43,5 +43,28 @@ namespace Semesterprojektet
         {
             toolTip1.Show("Prisen boligen er solgt til", textBox11);
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Delete
+            // Maskedmessagebox 7
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Update
+            // maskedmessagebox = 3-6
+        }
+
+        private void maskedTextBox7_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            //Fejltryk
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Create
+            // masked messagebox = BAdresse, BPostnr, BKvm, BSalgspris, BHandelspris, BSælger, BEjendomsmægler
+        }
     }
 }
