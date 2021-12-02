@@ -45,11 +45,11 @@ namespace Semesterprojektet
             this.teamBreadDBDataSet = new Semesterprojektet.TeamBreadDBDataSet();
             this.boligTableAdapter = new Semesterprojektet.TeamBreadDBDataSetTableAdapters.BoligTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamBreadDBDataSetBindingSource)).BeginInit();
@@ -60,6 +60,7 @@ namespace Semesterprojektet
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bIDDataGridViewTextBoxColumn,
@@ -72,12 +73,11 @@ namespace Semesterprojektet
             this.handelsPrisDataGridViewTextBoxColumn,
             this.handelsDatoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.boligBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 30);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(845, 243);
+            this.dataGridView1.Size = new System.Drawing.Size(751, 194);
             this.dataGridView1.TabIndex = 0;
             // 
             // bIDDataGridViewTextBoxColumn
@@ -180,26 +180,37 @@ namespace Semesterprojektet
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(15, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 542);
+            this.panel1.Size = new System.Drawing.Size(784, 434);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(476, 289);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(71, 28);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Søg";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(373, 370);
+            this.maskedTextBox1.Location = new System.Drawing.Point(332, 296);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(89, 22);
             this.maskedTextBox1.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(222, 376);
+            this.label2.Location = new System.Drawing.Point(197, 301);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.Size = new System.Drawing.Size(87, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Postnummer";
             // 
@@ -207,39 +218,29 @@ namespace Semesterprojektet
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(220, 300);
+            this.label1.Location = new System.Drawing.Point(196, 240);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(396, 32);
+            this.label1.Size = new System.Drawing.Size(339, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Søg på boliger i hele Danmark";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(645, 474);
+            this.button1.Location = new System.Drawing.Point(573, 379);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 45);
+            this.button1.Size = new System.Drawing.Size(132, 36);
             this.button1.TabIndex = 1;
             this.button1.Text = "Print Sheet";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(536, 361);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 35);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Søg";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "View";
             this.Text = "View";
             this.Load += new System.EventHandler(this.View_Load);
