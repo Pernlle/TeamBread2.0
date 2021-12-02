@@ -63,9 +63,15 @@ namespace Semesterprojektet
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.f.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -319,6 +325,8 @@ namespace Semesterprojektet
             // 
             // f
             // 
+            this.f.Controls.Add(this.button6);
+            this.f.Controls.Add(this.textBox14);
             this.f.Location = new System.Drawing.Point(4, 25);
             this.f.Name = "f";
             this.f.Padding = new System.Windows.Forms.Padding(3);
@@ -329,6 +337,8 @@ namespace Semesterprojektet
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox15);
+            this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -395,6 +405,38 @@ namespace Semesterprojektet
             this.button3.Text = "U";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(223, 152);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 22);
+            this.textBox14.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(344, 226);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 42);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(345, 219);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(111, 43);
+            this.button7.TabIndex = 0;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(184, 127);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 22);
+            this.textBox15.TabIndex = 1;
+            // 
             // Log_in
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,6 +450,10 @@ namespace Semesterprojektet
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.f.ResumeLayout(false);
+            this.f.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -447,5 +493,9 @@ namespace Semesterprojektet
         private System.Windows.Forms.MaskedTextBox BKvm;
         private System.Windows.Forms.MaskedTextBox BPostnr;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Button button7;
     }
 }
