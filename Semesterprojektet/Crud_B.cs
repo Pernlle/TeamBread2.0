@@ -33,5 +33,15 @@ namespace Semesterprojektet
             // glemt password
             MessageBox.Show("Idiot!");
         }
+
+        private void textBox10_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Prisen boligen er sat til",textBox10);
+        }
+
+        private void textBox11_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Prisen boligen er solgt til", textBox11);
+        }
     }
 }

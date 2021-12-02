@@ -29,6 +29,7 @@ namespace Semesterprojektet
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -36,31 +37,32 @@ namespace Semesterprojektet
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.BEjendomsmægler = new System.Windows.Forms.MaskedTextBox();
+            this.BSælger = new System.Windows.Forms.MaskedTextBox();
+            this.BHandelspris = new System.Windows.Forms.MaskedTextBox();
+            this.BSalgspris = new System.Windows.Forms.MaskedTextBox();
+            this.BKvm = new System.Windows.Forms.MaskedTextBox();
+            this.BPostnr = new System.Windows.Forms.MaskedTextBox();
+            this.BAdresse = new System.Windows.Forms.MaskedTextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.f = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.BAdresse = new System.Windows.Forms.MaskedTextBox();
-            this.BPostnr = new System.Windows.Forms.MaskedTextBox();
-            this.BKvm = new System.Windows.Forms.MaskedTextBox();
-            this.BSalgspris = new System.Windows.Forms.MaskedTextBox();
-            this.BHandelspris = new System.Windows.Forms.MaskedTextBox();
-            this.BSælger = new System.Windows.Forms.MaskedTextBox();
-            this.BEjendomsmægler = new System.Windows.Forms.MaskedTextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -142,64 +144,6 @@ namespace Semesterprojektet
             this.panel1.Size = new System.Drawing.Size(785, 436);
             this.panel1.TabIndex = 6;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(404, 350);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 28);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "D";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(298, 350);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "U";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(36, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 22);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TabStop = false;
-            this.textBox3.Text = "Kvm";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(36, 155);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(124, 22);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TabStop = false;
-            this.textBox4.Text = "Salgs pris";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(36, 196);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(124, 22);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.TabStop = false;
-            this.textBox5.Text = "Handels pris";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(36, 238);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(124, 22);
-            this.textBox6.TabIndex = 9;
-            this.textBox6.TabStop = false;
-            this.textBox6.Text = "Egendomsmægler id";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -236,6 +180,143 @@ namespace Semesterprojektet
             this.tabPage1.Text = "Opret bolig";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(385, 322);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(124, 37);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "Opret bolig";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // BEjendomsmægler
+            // 
+            this.BEjendomsmægler.Location = new System.Drawing.Point(330, 282);
+            this.BEjendomsmægler.Name = "BEjendomsmægler";
+            this.BEjendomsmægler.Size = new System.Drawing.Size(235, 22);
+            this.BEjendomsmægler.TabIndex = 13;
+            // 
+            // BSælger
+            // 
+            this.BSælger.Location = new System.Drawing.Point(330, 238);
+            this.BSælger.Name = "BSælger";
+            this.BSælger.Size = new System.Drawing.Size(235, 22);
+            this.BSælger.TabIndex = 12;
+            // 
+            // BHandelspris
+            // 
+            this.BHandelspris.Location = new System.Drawing.Point(330, 196);
+            this.BHandelspris.Name = "BHandelspris";
+            this.BHandelspris.Size = new System.Drawing.Size(235, 22);
+            this.BHandelspris.TabIndex = 11;
+            // 
+            // BSalgspris
+            // 
+            this.BSalgspris.Location = new System.Drawing.Point(330, 155);
+            this.BSalgspris.Name = "BSalgspris";
+            this.BSalgspris.Size = new System.Drawing.Size(235, 22);
+            this.BSalgspris.TabIndex = 10;
+            // 
+            // BKvm
+            // 
+            this.BKvm.Location = new System.Drawing.Point(330, 112);
+            this.BKvm.Name = "BKvm";
+            this.BKvm.Size = new System.Drawing.Size(235, 22);
+            this.BKvm.TabIndex = 9;
+            // 
+            // BPostnr
+            // 
+            this.BPostnr.Location = new System.Drawing.Point(330, 72);
+            this.BPostnr.Name = "BPostnr";
+            this.BPostnr.Size = new System.Drawing.Size(235, 22);
+            this.BPostnr.TabIndex = 8;
+            // 
+            // BAdresse
+            // 
+            this.BAdresse.Location = new System.Drawing.Point(330, 29);
+            this.BAdresse.Name = "BAdresse";
+            this.BAdresse.Size = new System.Drawing.Size(235, 22);
+            this.BAdresse.TabIndex = 7;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(174, 282);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(124, 22);
+            this.textBox13.TabIndex = 6;
+            this.textBox13.TabStop = false;
+            this.textBox13.Text = "Ejendomsmægler";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(174, 238);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(124, 22);
+            this.textBox12.TabIndex = 5;
+            this.textBox12.TabStop = false;
+            this.textBox12.Text = "Sælger";
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(174, 196);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(124, 22);
+            this.textBox11.TabIndex = 4;
+            this.textBox11.TabStop = false;
+            this.textBox11.Text = "Handelspris";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox11.MouseHover += new System.EventHandler(this.textBox11_MouseHover);
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(174, 155);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(124, 22);
+            this.textBox10.TabIndex = 3;
+            this.textBox10.TabStop = false;
+            this.textBox10.Text = "Salgspris";
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox10.MouseHover += new System.EventHandler(this.textBox10_MouseHover);
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(174, 112);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(124, 22);
+            this.textBox9.TabIndex = 2;
+            this.textBox9.TabStop = false;
+            this.textBox9.Text = "kvm";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(174, 72);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(124, 22);
+            this.textBox8.TabIndex = 1;
+            this.textBox8.TabStop = false;
+            this.textBox8.Text = "Postnummer";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(174, 30);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(124, 22);
+            this.textBox7.TabIndex = 0;
+            this.textBox7.TabStop = false;
+            this.textBox7.Text = "Adresse";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // f
             // 
             this.f.Location = new System.Drawing.Point(4, 25);
@@ -256,140 +337,63 @@ namespace Semesterprojektet
             this.tabPage2.Text = "Slet bolig";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // textBox6
             // 
-            this.textBox7.Location = new System.Drawing.Point(174, 30);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(124, 22);
-            this.textBox7.TabIndex = 0;
-            this.textBox7.TabStop = false;
-            this.textBox7.Text = "Adresse";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox6.Location = new System.Drawing.Point(36, 238);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(124, 22);
+            this.textBox6.TabIndex = 9;
+            this.textBox6.TabStop = false;
+            this.textBox6.Text = "Egendomsmægler id";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox8
+            // textBox5
             // 
-            this.textBox8.Location = new System.Drawing.Point(174, 72);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(124, 22);
-            this.textBox8.TabIndex = 1;
-            this.textBox8.TabStop = false;
-            this.textBox8.Text = "Postnummer";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox5.Location = new System.Drawing.Point(36, 196);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(124, 22);
+            this.textBox5.TabIndex = 8;
+            this.textBox5.TabStop = false;
+            this.textBox5.Text = "Handels pris";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox9
+            // textBox4
             // 
-            this.textBox9.Location = new System.Drawing.Point(174, 112);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(124, 22);
-            this.textBox9.TabIndex = 2;
-            this.textBox9.TabStop = false;
-            this.textBox9.Text = "kvm";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox4.Location = new System.Drawing.Point(36, 155);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(124, 22);
+            this.textBox4.TabIndex = 7;
+            this.textBox4.TabStop = false;
+            this.textBox4.Text = "Salgs pris";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox10
+            // textBox3
             // 
-            this.textBox10.Location = new System.Drawing.Point(174, 155);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(124, 22);
-            this.textBox10.TabIndex = 3;
-            this.textBox10.TabStop = false;
-            this.textBox10.Text = "Salgspris";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.Location = new System.Drawing.Point(36, 112);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(124, 22);
+            this.textBox3.TabIndex = 6;
+            this.textBox3.TabStop = false;
+            this.textBox3.Text = "Kvm";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox11
+            // button4
             // 
-            this.textBox11.Location = new System.Drawing.Point(174, 196);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(124, 22);
-            this.textBox11.TabIndex = 4;
-            this.textBox11.TabStop = false;
-            this.textBox11.Text = "Handelspris";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.button4.Location = new System.Drawing.Point(404, 350);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 28);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "D";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // button3
             // 
-            this.textBox12.Location = new System.Drawing.Point(174, 238);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(124, 22);
-            this.textBox12.TabIndex = 5;
-            this.textBox12.TabStop = false;
-            this.textBox12.Text = "Sælger";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(174, 282);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(124, 22);
-            this.textBox13.TabIndex = 6;
-            this.textBox13.TabStop = false;
-            this.textBox13.Text = "Ejendomsmægler";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // BAdresse
-            // 
-            this.BAdresse.Location = new System.Drawing.Point(330, 29);
-            this.BAdresse.Name = "BAdresse";
-            this.BAdresse.Size = new System.Drawing.Size(235, 22);
-            this.BAdresse.TabIndex = 7;
-            // 
-            // BPostnr
-            // 
-            this.BPostnr.Location = new System.Drawing.Point(330, 72);
-            this.BPostnr.Name = "BPostnr";
-            this.BPostnr.Size = new System.Drawing.Size(235, 22);
-            this.BPostnr.TabIndex = 8;
-            // 
-            // BKvm
-            // 
-            this.BKvm.Location = new System.Drawing.Point(330, 112);
-            this.BKvm.Name = "BKvm";
-            this.BKvm.Size = new System.Drawing.Size(235, 22);
-            this.BKvm.TabIndex = 9;
-            // 
-            // BSalgspris
-            // 
-            this.BSalgspris.Location = new System.Drawing.Point(330, 155);
-            this.BSalgspris.Name = "BSalgspris";
-            this.BSalgspris.Size = new System.Drawing.Size(235, 22);
-            this.BSalgspris.TabIndex = 10;
-            // 
-            // BHandelspris
-            // 
-            this.BHandelspris.Location = new System.Drawing.Point(330, 196);
-            this.BHandelspris.Name = "BHandelspris";
-            this.BHandelspris.Size = new System.Drawing.Size(235, 22);
-            this.BHandelspris.TabIndex = 11;
-            // 
-            // BSælger
-            // 
-            this.BSælger.Location = new System.Drawing.Point(330, 238);
-            this.BSælger.Name = "BSælger";
-            this.BSælger.Size = new System.Drawing.Size(235, 22);
-            this.BSælger.TabIndex = 12;
-            // 
-            // BEjendomsmægler
-            // 
-            this.BEjendomsmægler.Location = new System.Drawing.Point(330, 282);
-            this.BEjendomsmægler.Name = "BEjendomsmægler";
-            this.BEjendomsmægler.Size = new System.Drawing.Size(235, 22);
-            this.BEjendomsmægler.TabIndex = 13;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(385, 322);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 37);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Opret bolig";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(298, 350);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "U";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Log_in
             // 
@@ -442,5 +446,6 @@ namespace Semesterprojektet
         private System.Windows.Forms.MaskedTextBox BSalgspris;
         private System.Windows.Forms.MaskedTextBox BKvm;
         private System.Windows.Forms.MaskedTextBox BPostnr;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
