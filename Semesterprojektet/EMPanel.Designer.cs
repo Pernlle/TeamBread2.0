@@ -29,38 +29,38 @@ namespace Semesterprojektet
         /// </summary>
         private void InitializeComponent()
         {
-            this.BoligBtn = new System.Windows.Forms.Button();
-            this.SaeglerBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bolig2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // BoligBtn
+            // button1
             // 
-            this.BoligBtn.Location = new System.Drawing.Point(144, 155);
-            this.BoligBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BoligBtn.Name = "BoligBtn";
-            this.BoligBtn.Size = new System.Drawing.Size(133, 87);
-            this.BoligBtn.TabIndex = 0;
-            this.BoligBtn.Text = "Bolig";
-            this.BoligBtn.UseVisualStyleBackColor = true;
-            this.BoligBtn.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Location = new System.Drawing.Point(144, 155);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 87);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Bolig";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // SaeglerBtn
+            // bolig2
             // 
-            this.SaeglerBtn.Location = new System.Drawing.Point(415, 155);
-            this.SaeglerBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SaeglerBtn.Name = "SaeglerBtn";
-            this.SaeglerBtn.Size = new System.Drawing.Size(133, 87);
-            this.SaeglerBtn.TabIndex = 1;
-            this.SaeglerBtn.Text = "Sælger";
-            this.SaeglerBtn.UseVisualStyleBackColor = true;
-            this.SaeglerBtn.Click += new System.EventHandler(this.button2_Click);
+            this.bolig2.Location = new System.Drawing.Point(415, 155);
+            this.bolig2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bolig2.Name = "bolig2";
+            this.bolig2.Size = new System.Drawing.Size(133, 87);
+            this.bolig2.TabIndex = 1;
+            this.bolig2.Text = "Sælger";
+            this.bolig2.UseVisualStyleBackColor = true;
+            this.bolig2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.SaeglerBtn);
-            this.panel1.Controls.Add(this.BoligBtn);
+            this.panel1.Controls.Add(this.bolig2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -82,8 +82,8 @@ namespace Semesterprojektet
         }
 
         #endregion
-        private System.Windows.Forms.Button SaeglerBtn;
+        private System.Windows.Forms.Button bolig2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BoligBtn;
+        private System.Windows.Forms.Button button1;
     }
 }
