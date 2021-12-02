@@ -29,11 +29,6 @@ namespace Semesterprojektet
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             // den falske knap
-            panel1.Controls.Clear();
-            Log_in frm = new Log_in() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(frm);
-            frm.Show();
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -43,11 +38,7 @@ namespace Semesterprojektet
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            CRUDSaelger frm = new CRUDSaelger() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(frm);
-            frm.Show();
+            // forside knap, hvad skal den føre til?
         }
 
         private void button1_Click(object sender, EventArgs e)
