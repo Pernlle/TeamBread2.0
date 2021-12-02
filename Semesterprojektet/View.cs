@@ -23,5 +23,10 @@ namespace Semesterprojektet
             this.boligTableAdapter.Fill(this.teamBreadDBDataSet.Bolig);
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
