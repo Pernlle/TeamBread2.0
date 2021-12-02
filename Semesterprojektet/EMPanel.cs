@@ -19,12 +19,19 @@ namespace Semesterprojektet
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            panel1.Controls.Clear();
+            CRUDBolig frm = new CRUDBolig() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            CRUDSaelger frm = new CRUDSaelger() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
         }
     }
 }

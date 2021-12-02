@@ -1,7 +1,7 @@
 ﻿
 namespace Semesterprojektet
 {
-    partial class Log_in
+    partial class CRUDBolig
     {
         /// <summary>
         /// Required designer variable.
@@ -55,7 +55,19 @@ namespace Semesterprojektet
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.f = new System.Windows.Forms.TabPage();
+            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -63,18 +75,6 @@ namespace Semesterprojektet
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -351,6 +351,88 @@ namespace Semesterprojektet
             this.f.Text = "Rediger bolig";
             this.f.UseVisualStyleBackColor = true;
             // 
+            // maskedTextBox6
+            // 
+            this.maskedTextBox6.Location = new System.Drawing.Point(368, 222);
+            this.maskedTextBox6.Name = "maskedTextBox6";
+            this.maskedTextBox6.Size = new System.Drawing.Size(160, 22);
+            this.maskedTextBox6.TabIndex = 8;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(223, 222);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(100, 22);
+            this.textBox18.TabIndex = 7;
+            this.textBox18.TabStop = false;
+            this.textBox18.Text = "Handel dato";
+            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // maskedTextBox5
+            // 
+            this.maskedTextBox5.Location = new System.Drawing.Point(368, 172);
+            this.maskedTextBox5.Name = "maskedTextBox5";
+            this.maskedTextBox5.Size = new System.Drawing.Size(160, 22);
+            this.maskedTextBox5.TabIndex = 6;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(223, 84);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
+            this.textBox17.Size = new System.Drawing.Size(100, 22);
+            this.textBox17.TabIndex = 5;
+            this.textBox17.TabStop = false;
+            this.textBox17.Text = "Primærnøgle";
+            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Location = new System.Drawing.Point(368, 127);
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(160, 22);
+            this.maskedTextBox4.TabIndex = 4;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(223, 172);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(100, 22);
+            this.textBox16.TabIndex = 3;
+            this.textBox16.TabStop = false;
+            this.textBox16.Text = "Handelspris";
+            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(368, 84);
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(160, 22);
+            this.maskedTextBox3.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(324, 274);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 42);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Updater bolig";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(223, 127);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(100, 22);
+            this.textBox14.TabIndex = 0;
+            this.textBox14.TabStop = false;
+            this.textBox14.Text = "Salgspris";
+            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.maskedTextBox7);
@@ -363,6 +445,35 @@ namespace Semesterprojektet
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Slet bolig";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox7
+            // 
+            this.maskedTextBox7.Location = new System.Drawing.Point(377, 127);
+            this.maskedTextBox7.Name = "maskedTextBox7";
+            this.maskedTextBox7.Size = new System.Drawing.Size(181, 22);
+            this.maskedTextBox7.TabIndex = 2;
+            this.maskedTextBox7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox7_MaskInputRejected);
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(228, 127);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(100, 22);
+            this.textBox15.TabIndex = 1;
+            this.textBox15.TabStop = false;
+            this.textBox15.Text = "Primærnøgle";
+            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(345, 219);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(111, 43);
+            this.button7.TabIndex = 0;
+            this.button7.Text = "Slet bolig";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // textBox6
             // 
@@ -422,124 +533,13 @@ namespace Semesterprojektet
             this.button3.Text = "U";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(223, 127);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(100, 22);
-            this.textBox14.TabIndex = 0;
-            this.textBox14.TabStop = false;
-            this.textBox14.Text = "Salgspris";
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(324, 274);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(112, 42);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Updater bolig";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(345, 219);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(111, 43);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Slet bolig";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(228, 127);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(100, 22);
-            this.textBox15.TabIndex = 1;
-            this.textBox15.TabStop = false;
-            this.textBox15.Text = "Primærnøgle";
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(368, 84);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(160, 22);
-            this.maskedTextBox3.TabIndex = 2;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(223, 172);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(100, 22);
-            this.textBox16.TabIndex = 3;
-            this.textBox16.TabStop = false;
-            this.textBox16.Text = "Handelspris";
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(368, 127);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(160, 22);
-            this.maskedTextBox4.TabIndex = 4;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(223, 84);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(100, 22);
-            this.textBox17.TabIndex = 5;
-            this.textBox17.TabStop = false;
-            this.textBox17.Text = "Primærnøgle";
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // maskedTextBox5
-            // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(368, 172);
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(160, 22);
-            this.maskedTextBox5.TabIndex = 6;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(223, 222);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(100, 22);
-            this.textBox18.TabIndex = 7;
-            this.textBox18.TabStop = false;
-            this.textBox18.Text = "Handel dato";
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // maskedTextBox6
-            // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(368, 222);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(160, 22);
-            this.maskedTextBox6.TabIndex = 8;
-            // 
-            // maskedTextBox7
-            // 
-            this.maskedTextBox7.Location = new System.Drawing.Point(377, 127);
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(181, 22);
-            this.maskedTextBox7.TabIndex = 2;
-            this.maskedTextBox7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox7_MaskInputRejected);
-            // 
-            // Log_in
+            // CRUDBolig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "Log_in";
+            this.Name = "CRUDBolig";
             this.Text = "CUD bolig";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
