@@ -1,7 +1,7 @@
 ﻿
 namespace Semesterprojektet
 {
-    partial class Opret
+    partial class EMPanel
     {
         /// <summary>
         /// Required designer variable.

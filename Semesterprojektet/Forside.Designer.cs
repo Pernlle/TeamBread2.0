@@ -1,7 +1,7 @@
 ﻿
 namespace Semesterprojektet
 {
-    partial class Form1
+    partial class Forside
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Semesterprojektet
 {
-    public partial class Opret : Form
+    public partial class EMPanel : Form
     {
-        public Opret()
+        public EMPanel()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Semesterprojektet
 {
-    public partial class CRUD_S : Form
+    public partial class CRUDSaelger : Form
     {
-        public CRUD_S()
+        public CRUDSaelger()
         {
             InitializeComponent();
         }

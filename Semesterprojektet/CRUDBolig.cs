@@ -21,7 +21,7 @@ namespace Semesterprojektet
         {
             // log in knap
             panel1.Controls.Clear();
-            CRUD_S frm = new CRUD_S() { TopLevel = false, TopMost = true };
+            CRUDSaelger frm = new CRUDSaelger() { TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.panel1.Controls.Add(frm);
             this.panel1.SuspendLayout();

@@ -46,30 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRUD_S.cs">
+    <Compile Include="CRUDSaelger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRUD_S.Designer.cs">
-      <DependentUpon>CRUD_S.cs</DependentUpon>
+    <Compile Include="CRUDSaelger.Designer.cs">
+      <DependentUpon>CRUDSaelger.cs</DependentUpon>
       <CustomToolNamespace>Forside</CustomToolNamespace>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forside.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forside.Designer.cs">
+      <DependentUpon>Forside.cs</DependentUpon>
     </Compile>
-    <Compile Include="Crud_B.cs">
+    <Compile Include="CRUDBolig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Crud_B.Designer.cs">
-      <DependentUpon>Crud_B.cs</DependentUpon>
+    <Compile Include="CRUDBolig.Designer.cs">
+      <DependentUpon>CRUDBolig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Opret.cs">
+    <Compile Include="EMPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Opret.Designer.cs">
-      <DependentUpon>Opret.cs</DependentUpon>
+    <Compile Include="EMPanel.Designer.cs">
+      <DependentUpon>EMPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,17 +84,17 @@
     <Compile Include="View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CRUD_S.resx">
-      <DependentUpon>CRUD_S.cs</DependentUpon>
+    <EmbeddedResource Include="CRUDSaelger.resx">
+      <DependentUpon>CRUDSaelger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forside.resx">
+      <DependentUpon>Forside.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Crud_B.resx">
-      <DependentUpon>Crud_B.cs</DependentUpon>
+    <EmbeddedResource Include="CRUDBolig.resx">
+      <DependentUpon>CRUDBolig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Opret.resx">
-      <DependentUpon>Opret.cs</DependentUpon>
+    <EmbeddedResource Include="EMPanel.resx">
+      <DependentUpon>EMPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Semesterprojektet
 {
-    public partial class Form1 : Form
+    public partial class Forside : Form
     {
-        public Form1()
+        public Forside()
         {
             InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace Semesterprojektet
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            CRUD_S frm = new CRUD_S() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            CRUDSaelger frm = new CRUDSaelger() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.panel1.Controls.Add(frm);
             frm.Show();
@@ -72,7 +72,7 @@ namespace Semesterprojektet
                 if (idId.Contains("2")) { /* Egendomsmægler */}
 
                 panel1.Controls.Clear();
-                Opret frm = new Opret() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                EMPanel frm = new EMPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                 frm.FormBorderStyle = FormBorderStyle.None;
                 this.panel1.Controls.Add(frm);
                 frm.Show();

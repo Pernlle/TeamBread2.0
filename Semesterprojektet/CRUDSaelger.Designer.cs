@@ -1,7 +1,7 @@
 ﻿
 namespace Semesterprojektet
 {
-    partial class CRUD_S
+    partial class CRUDSaelger
     {
         /// <summary>
         /// Required designer variable.
