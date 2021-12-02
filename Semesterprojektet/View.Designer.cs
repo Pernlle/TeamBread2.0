@@ -215,9 +215,9 @@ namespace Semesterprojektet
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(667, 474);
+            this.button1.Location = new System.Drawing.Point(645, 474);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 33);
+            this.button1.Size = new System.Drawing.Size(148, 45);
             this.button1.TabIndex = 1;
             this.button1.Text = "Print Sheet";
             this.button1.UseVisualStyleBackColor = true;
@@ -225,9 +225,9 @@ namespace Semesterprojektet
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(541, 367);
+            this.button2.Location = new System.Drawing.Point(536, 361);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 29);
+            this.button2.Size = new System.Drawing.Size(80, 35);
             this.button2.TabIndex = 5;
             this.button2.Text = "Søg";
             this.button2.UseVisualStyleBackColor = true;
