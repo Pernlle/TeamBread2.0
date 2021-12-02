@@ -16,5 +16,20 @@ namespace Semesterprojektet
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // masked message = SFornavn, SEfternavn, SEmail, STlf
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Masked meassage = 5-6
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // masked message = 7
+        }
     }
 }
