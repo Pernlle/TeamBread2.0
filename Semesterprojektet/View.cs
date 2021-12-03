@@ -19,6 +19,8 @@ namespace Semesterprojektet
 
         private void View_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tHEONETHEONLY.Bolig' table. You can move, or remove it, as needed.
+            this.boligTableAdapter1.Fill(this.tHEONETHEONLY.Bolig);
             // TODO: This line of code loads data into the 'teamBreadDBDataSet.Bolig' table. You can move, or remove it, as needed.
             this.boligTableAdapter.Fill(this.teamBreadDBDataSet.Bolig);
 

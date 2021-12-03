@@ -83,6 +83,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TeamBreadDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="THEONETHEONLY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THEONETHEONLY.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +149,17 @@
     </None>
     <None Include="TeamBreadDBDataSet.xss">
       <DependentUpon>TeamBreadDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="THEONETHEONLY.xsc">
+      <DependentUpon>THEONETHEONLY.xsd</DependentUpon>
+    </None>
+    <None Include="THEONETHEONLY.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>THEONETHEONLY.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="THEONETHEONLY.xss">
+      <DependentUpon>THEONETHEONLY.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
