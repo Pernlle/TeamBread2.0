@@ -28,6 +28,7 @@ namespace Semesterprojektet
 
         private void button2_Click(object sender, EventArgs e)
         {
+            panel1.Controls.Clear();
             CRUDSaelger frm = new CRUDSaelger() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.panel1.Controls.Add(frm);
