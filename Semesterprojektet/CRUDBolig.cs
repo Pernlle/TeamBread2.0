@@ -13,6 +13,7 @@ namespace Semesterprojektet
 {
     public partial class CRUDBolig : Form
     {
+        public string strconn = @"Server=den1.mssql7.gear.host; Database=teambreaddb; User ID=teambreaddb; Password=Tg53?N_p6fzh";
         public CRUDBolig()
         {
             InitializeComponent();
@@ -80,7 +81,7 @@ namespace Semesterprojektet
 	handelsPris DECIMAL,
 	handelsDato DATE,
 	solgt INT,
-             *//*
+             */
             //C(RUD)
             SqlConnection conn = new SqlConnection(strconn);
             //Skal handelsdato og solgt sættes ind under mulige indtastninger??
@@ -100,7 +101,7 @@ namespace Semesterprojektet
             cmd.Parameters["@kID"].Value = Convert.ToString(bSælger);
             cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
             cmd.Parameters["@eID"].Value = Convert.ToString(bEjdm);
-            */
+            
             /*
             //C(RUD): EKSEMPEL FRA JENS FRA DA VI STARTEDE MED CRUD
             string sqlCom = "INSERT INTO kunde VALUES (@Id, @Knavn, @Kadresse);";
@@ -110,23 +111,19 @@ namespace Semesterprojektet
             cmd.Parameters.Add("@", System.Data.SqlDbType.);
             cmd.Parameters["@"].Value = Convert.ToString();
 
-            /*
+            */
             try
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close(); // remember this HUSK ALTID AT LUKKE!
-                MessageBox.Show("SUCCESS :\n" + sqlCom + "\nmed værdierne: (" +
-                                cmd.Parameters["@Id"].Value + ", " +
-                                cmd.Parameters["@Knavn"].Value + ", " +
-                                cmd.Parameters["@Kadresse"].Value +
-                                ")");
+                MessageBox.Show("Puttting info into database :)");
             }
             catch (Exception exc)
             {
                 MessageBox.Show("ERROR: \n\n" + exc.ToString());
             }
-            */
+            
         }
     }
 }
