@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -65,11 +66,50 @@ namespace Semesterprojektet
             string bHandelspris = BHandelspris.Text;
             string bSælger = BSælger.Text;
             string bEjdm = BEjendomsmægler.Text;
+            /*
+    bID INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
+	eID INT FOREIGN KEY REFERENCES Ejendomsmaegler(eID),
+	kID INT FOREIGN KEY REFERENCES Kunder(kID),
+
+	adresse VARCHAR (50),
+	postNr INT FOREIGN KEY REFERENCES Postnummer(postNr),
+	kvm DECIMAL,
+
+	salgsPris DECIMAL,
+
+	handelsPris DECIMAL,
+	handelsDato DATE,
+	solgt INT,
+             */
+            //C(RUD)
+            SqlConnection conn = new SqlConnection(strconn);
+            //Skal handelsdato og solgt sættes ind under mulige indtastninger??
+            string sqlCom = "INSERT INTO Bolig VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @kID, @eID);"; 
+            SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            cmd.Parameters.Add("@adresse", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@adresse"].Value = Convert.ToString(bAdresse);
+            cmd.Parameters.Add("@postNr", System.Data.SqlDbType.Int);
+            cmd.Parameters["@postNr"].Value = Convert.ToString(bPostnr);
+            cmd.Parameters.Add("@kvm", System.Data.SqlDbType.Int);
+            cmd.Parameters["@kvm"].Value = Convert.ToString(bKvm);
+            cmd.Parameters.Add("@salgsPris", System.Data.SqlDbType.Decimal);
+            cmd.Parameters["@salgsPris"].Value = Convert.ToString(bSalgspris);
+            cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
+            cmd.Parameters["@handelsPris"].Value = Convert.ToString(bHandelspris);
+            cmd.Parameters.Add("@kID", System.Data.SqlDbType.Int);
+            cmd.Parameters["@kID"].Value = Convert.ToString(bSælger);
+            cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
+            cmd.Parameters["@eID"].Value = Convert.ToString(bEjdm);
 
             /*
             //C(RUD): EKSEMPEL FRA JENS FRA DA VI STARTEDE MED CRUD
             string sqlCom = "INSERT INTO kunde VALUES (@Id, @Knavn, @Kadresse);";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
+
+            //Tom version
+            cmd.Parameters.Add("@", System.Data.SqlDbType.);
+            cmd.Parameters["@"].Value = Convert.ToString();
+
             cmd.Parameters.Add("@Id", System.Data.SqlDbType.Int);
             cmd.Parameters["@Id"].Value = Convert.ToInt32(Id);
             cmd.Parameters.Add("@Knavn", System.Data.SqlDbType.VarChar);
