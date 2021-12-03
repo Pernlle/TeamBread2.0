@@ -80,7 +80,7 @@ namespace Semesterprojektet
 	handelsPris DECIMAL,
 	handelsDato DATE,
 	solgt INT,
-             */
+             *//*
             //C(RUD)
             SqlConnection conn = new SqlConnection(strconn);
             //Skal handelsdato og solgt sættes ind under mulige indtastninger??
@@ -100,7 +100,7 @@ namespace Semesterprojektet
             cmd.Parameters["@kID"].Value = Convert.ToString(bSælger);
             cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
             cmd.Parameters["@eID"].Value = Convert.ToString(bEjdm);
-
+            */
             /*
             //C(RUD): EKSEMPEL FRA JENS FRA DA VI STARTEDE MED CRUD
             string sqlCom = "INSERT INTO kunde VALUES (@Id, @Knavn, @Kadresse);";
@@ -110,13 +110,7 @@ namespace Semesterprojektet
             cmd.Parameters.Add("@", System.Data.SqlDbType.);
             cmd.Parameters["@"].Value = Convert.ToString();
 
-            cmd.Parameters.Add("@Id", System.Data.SqlDbType.Int);
-            cmd.Parameters["@Id"].Value = Convert.ToInt32(Id);
-            cmd.Parameters.Add("@Knavn", System.Data.SqlDbType.VarChar);
-            cmd.Parameters["@Knavn"].Value = Convert.ToString(Knavn);
-            cmd.Parameters.Add("@Kadresse", System.Data.SqlDbType.VarChar);
-            cmd.Parameters["@Kadresse"].Value = Convert.ToString(Kadresse);
-            *//*
+            /*
             try
             {
                 conn.Open();
