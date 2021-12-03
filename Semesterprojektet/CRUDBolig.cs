@@ -43,12 +43,56 @@ namespace Semesterprojektet
         {
             // Delete
             // Maskedmessagebox 7
+            string id = maskedTextBox7.Text;
+
+            SqlConnection conn = new SqlConnection(strconn);
+
+            string sqlCom = "DELETE FROM Bolig WHERE (Id =@Id);";
+            SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            cmd.Parameters.Add("@bID", System.Data.SqlDbType.Int);
+            cmd.Parameters["@bID"].Value = Convert.ToInt32(id);
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close(); 
+                MessageBox.Show("Deleting bolig from database");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("ERROR: \n\n" + exc.ToString());
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             // Update
             // maskedmessagebox = 3-6
+            string id = maskedTextBox3.Text;
+            string k = maskedTextBox4.Text;
+            string j = maskedTextBox5.Text;
+            string l = maskedTextBox6.Text;
+
+            SqlConnection conn = new SqlConnection(strconn);
+
+            // Update er ikke værdig
+            string sqlCom = "UPDATE Bolig ";
+            SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            cmd.Parameters.Add("@Id", System.Data.SqlDbType.Int);
+            cmd.Parameters["@Id"].Value = Convert.ToInt32(id);
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close(); 
+                MessageBox.Show("Updatere bolig i database");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("ERROR: \n\n" + exc.ToString());
+            }
         }
 
         private void maskedTextBox7_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -67,22 +111,7 @@ namespace Semesterprojektet
             string bHandelspris = BHandelspris.Text;
             string bSælger = BSælger.Text;
             string bEjdm = BEjendomsmægler.Text;
-            /*
-    bID INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
-	eID INT FOREIGN KEY REFERENCES Ejendomsmaegler(eID),
-	kID INT FOREIGN KEY REFERENCES Kunder(kID),
 
-	adresse VARCHAR (50),
-	postNr INT FOREIGN KEY REFERENCES Postnummer(postNr),
-	kvm DECIMAL,
-
-	salgsPris DECIMAL,
-
-	handelsPris DECIMAL,
-	handelsDato DATE,
-	solgt INT,
-             */
-            //C(RUD)
             SqlConnection conn = new SqlConnection(strconn);
             //Skal handelsdato og solgt sættes ind under mulige indtastninger??
             string sqlCom = "INSERT INTO Bolig VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @kID, @eID);"; 
@@ -104,13 +133,11 @@ namespace Semesterprojektet
             
             /*
             //C(RUD): EKSEMPEL FRA JENS FRA DA VI STARTEDE MED CRUD
-            string sqlCom = "INSERT INTO kunde VALUES (@Id, @Knavn, @Kadresse);";
+            string sqlCom = "INSERT INTO kunde VALUES (@, @, @);";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
-
-            //Tom version
+                        
             cmd.Parameters.Add("@", System.Data.SqlDbType.);
             cmd.Parameters["@"].Value = Convert.ToString();
-
             */
             try
             {
