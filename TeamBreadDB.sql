@@ -50,11 +50,6 @@ CREATE TABLE Bolig (
 	solgt INT,
 );
 
-CREATE TABLE Administrator (
-	aID INT PRIMARY KEY NOT NULL,
-	pass VARCHAR(100),
-);
-
 INSERT INTO Postnummer (postNr, byNavn) VALUES
 (2650, 'Hvidovre'),
 (6400, 'Sønderborg'),
@@ -67,3 +62,11 @@ INSERT INTO Postnummer (postNr, byNavn) VALUES
 (8700, 'Horsens'),
 (8800, 'Viborg'),
 (9000, 'Aalborg')
+
+
+
+INSERT INTO Ejendomsmaegler (pass, fNavn, eNavn, email) VALUES ('root','Admin', '','')
+INSERT INTO Ejendomsmaegler (pass, fNavn, eNavn, email) VALUES ('1234','Tom Ali', 'Hansen','tomalihansen@realbolig.dk')
+
+SELECT * FROM Ejendomsmaegler
+
