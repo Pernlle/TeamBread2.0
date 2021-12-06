@@ -127,7 +127,7 @@ namespace Semesterprojektet
             cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
             cmd.Parameters["@handelsPris"].Value = Convert.ToDouble(bHandelspris);
             cmd.Parameters.Add("@kID", System.Data.SqlDbType.Int);
-            cmd.Parameters["@kID"].Value = Convert.ToInt32(bSælger);x
+            cmd.Parameters["@kID"].Value = Convert.ToInt32(bSælger);
             cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
             cmd.Parameters["@eID"].Value = Convert.ToInt32(bEjdm);
             
