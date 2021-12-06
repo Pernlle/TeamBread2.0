@@ -116,13 +116,13 @@ namespace Semesterprojektet
 
             SqlConnection conn = new SqlConnection(strconn);
             //Skal handelsdato og solgt sættes ind under mulige indtastninger??
-            string sqlCom = "INSERT INTO Bolig(adresse, postNr, kvm,salgsPris,handelsPris,kID,eID) VALUES (@adresse, @postNr @kvm, @salgsPris, @handelsPris, @kID, @eID);"; 
+            string sqlCom = "INSERT INTO Bolig(adresse, postNr,kvm,salgsPris,handelsPris,kID,eID) VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @kID, @eID);"; 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
             cmd.Parameters.Add("@adresse", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@adresse"].Value = Convert.ToString(bAdresse);
             cmd.Parameters.Add("@postNr", System.Data.SqlDbType.Int);
             cmd.Parameters["@postNr"].Value = Convert.ToInt32(bPostnr);
-            cmd.Parameters.Add("@kvm", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@kvm", System.Data.SqlDbType.Decimal);
             cmd.Parameters["@kvm"].Value = Convert.ToDecimal(bKvm);
             cmd.Parameters.Add("@salgsPris", System.Data.SqlDbType.Decimal);
             cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(bSalgspris);
