@@ -84,10 +84,9 @@ namespace Semesterprojektet
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(216, 438);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(192, 350);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "R";
             this.button1.UseVisualStyleBackColor = true;
@@ -95,10 +94,9 @@ namespace Semesterprojektet
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 36);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Location = new System.Drawing.Point(36, 29);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 26);
+            this.textBox1.Size = new System.Drawing.Size(124, 22);
             this.textBox1.TabIndex = 1;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Adresse";
@@ -107,10 +105,9 @@ namespace Semesterprojektet
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(40, 90);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Location = new System.Drawing.Point(36, 72);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 26);
+            this.textBox2.Size = new System.Drawing.Size(124, 22);
             this.textBox2.TabIndex = 2;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Postnr";
@@ -118,26 +115,23 @@ namespace Semesterprojektet
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(237, 36);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox1.Location = new System.Drawing.Point(211, 29);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(242, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(216, 22);
             this.maskedTextBox1.TabIndex = 3;
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(237, 90);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox2.Location = new System.Drawing.Point(211, 72);
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(242, 26);
+            this.maskedTextBox2.Size = new System.Drawing.Size(216, 22);
             this.maskedTextBox2.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(97, 438);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(86, 350);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 35);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 5;
             this.button2.Text = "C";
             this.button2.UseVisualStyleBackColor = true;
@@ -159,10 +153,9 @@ namespace Semesterprojektet
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(14, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 545);
+            this.panel1.Size = new System.Drawing.Size(785, 436);
             this.panel1.TabIndex = 6;
             // 
             // tabControl1
@@ -170,11 +163,10 @@ namespace Semesterprojektet
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.f);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 4);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(870, 512);
+            this.tabControl1.Size = new System.Drawing.Size(773, 410);
             this.tabControl1.TabIndex = 10;
             // 
             // tabPage1
@@ -194,21 +186,19 @@ namespace Semesterprojektet
             this.tabPage1.Controls.Add(this.textBox9);
             this.tabPage1.Controls.Add(this.textBox8);
             this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(862, 479);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(765, 381);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Opret bolig";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(433, 402);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Location = new System.Drawing.Point(385, 322);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(140, 46);
+            this.button5.Size = new System.Drawing.Size(124, 37);
             this.button5.TabIndex = 14;
             this.button5.Text = "Opret bolig";
             this.button5.UseVisualStyleBackColor = true;
@@ -216,91 +206,83 @@ namespace Semesterprojektet
             // 
             // BEjendomsmægler
             // 
-            this.BEjendomsmægler.Location = new System.Drawing.Point(371, 352);
-            this.BEjendomsmægler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BEjendomsmægler.Location = new System.Drawing.Point(330, 282);
             this.BEjendomsmægler.Name = "BEjendomsmægler";
-            this.BEjendomsmægler.Size = new System.Drawing.Size(264, 26);
+            this.BEjendomsmægler.Size = new System.Drawing.Size(235, 22);
             this.BEjendomsmægler.TabIndex = 13;
             // 
             // BSælger
             // 
-            this.BSælger.Location = new System.Drawing.Point(371, 298);
-            this.BSælger.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BSælger.Location = new System.Drawing.Point(330, 238);
             this.BSælger.Name = "BSælger";
-            this.BSælger.Size = new System.Drawing.Size(264, 26);
+            this.BSælger.Size = new System.Drawing.Size(235, 22);
             this.BSælger.TabIndex = 12;
             // 
             // BHandelspris
             // 
-            this.BHandelspris.Location = new System.Drawing.Point(371, 245);
-            this.BHandelspris.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BHandelspris.Location = new System.Drawing.Point(330, 196);
             this.BHandelspris.Name = "BHandelspris";
-            this.BHandelspris.Size = new System.Drawing.Size(264, 26);
+            this.BHandelspris.Size = new System.Drawing.Size(235, 22);
             this.BHandelspris.TabIndex = 11;
             // 
             // BSalgspris
             // 
-            this.BSalgspris.Location = new System.Drawing.Point(371, 194);
-            this.BSalgspris.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BSalgspris.Location = new System.Drawing.Point(330, 155);
             this.BSalgspris.Name = "BSalgspris";
-            this.BSalgspris.Size = new System.Drawing.Size(264, 26);
+            this.BSalgspris.Size = new System.Drawing.Size(235, 22);
             this.BSalgspris.TabIndex = 10;
             // 
             // BKvm
             // 
-            this.BKvm.Location = new System.Drawing.Point(371, 140);
-            this.BKvm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BKvm.Location = new System.Drawing.Point(330, 112);
             this.BKvm.Name = "BKvm";
-            this.BKvm.Size = new System.Drawing.Size(264, 26);
+            this.BKvm.Size = new System.Drawing.Size(235, 22);
             this.BKvm.TabIndex = 9;
             // 
             // BPostnr
             // 
-            this.BPostnr.Location = new System.Drawing.Point(371, 90);
-            this.BPostnr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BPostnr.Location = new System.Drawing.Point(330, 72);
             this.BPostnr.Name = "BPostnr";
-            this.BPostnr.Size = new System.Drawing.Size(264, 26);
+            this.BPostnr.Size = new System.Drawing.Size(235, 22);
             this.BPostnr.TabIndex = 8;
             // 
             // BAdresse
             // 
-            this.BAdresse.Location = new System.Drawing.Point(371, 36);
-            this.BAdresse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BAdresse.Location = new System.Drawing.Point(330, 29);
             this.BAdresse.Name = "BAdresse";
-            this.BAdresse.Size = new System.Drawing.Size(264, 26);
+            this.BAdresse.Size = new System.Drawing.Size(235, 22);
             this.BAdresse.TabIndex = 7;
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(196, 352);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox13.Location = new System.Drawing.Point(174, 282);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(139, 26);
+            this.textBox13.Size = new System.Drawing.Size(124, 22);
             this.textBox13.TabIndex = 6;
             this.textBox13.TabStop = false;
             this.textBox13.Text = "Ejendomsmægler";
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox13.MouseHover += new System.EventHandler(this.textBox13_MouseHover);
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(196, 298);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox12.Location = new System.Drawing.Point(174, 238);
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(139, 26);
+            this.textBox12.Size = new System.Drawing.Size(124, 22);
             this.textBox12.TabIndex = 5;
             this.textBox12.TabStop = false;
-            this.textBox12.Text = "Sælger";
+            this.textBox12.Text = "Sælger ID";
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox12.MouseHover += new System.EventHandler(this.textBox12_MouseHover);
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(196, 245);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox11.Location = new System.Drawing.Point(174, 196);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(139, 26);
+            this.textBox11.Size = new System.Drawing.Size(124, 22);
             this.textBox11.TabIndex = 4;
             this.textBox11.TabStop = false;
             this.textBox11.Text = "Handelspris";
@@ -309,11 +291,10 @@ namespace Semesterprojektet
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(196, 194);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox10.Location = new System.Drawing.Point(174, 155);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(139, 26);
+            this.textBox10.Size = new System.Drawing.Size(124, 22);
             this.textBox10.TabIndex = 3;
             this.textBox10.TabStop = false;
             this.textBox10.Text = "Salgspris";
@@ -322,11 +303,10 @@ namespace Semesterprojektet
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(196, 140);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox9.Location = new System.Drawing.Point(174, 112);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(139, 26);
+            this.textBox9.Size = new System.Drawing.Size(124, 22);
             this.textBox9.TabIndex = 2;
             this.textBox9.TabStop = false;
             this.textBox9.Text = "kvm";
@@ -334,11 +314,10 @@ namespace Semesterprojektet
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(196, 90);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox8.Location = new System.Drawing.Point(174, 72);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(139, 26);
+            this.textBox8.Size = new System.Drawing.Size(124, 22);
             this.textBox8.TabIndex = 1;
             this.textBox8.TabStop = false;
             this.textBox8.Text = "Postnummer";
@@ -346,11 +325,10 @@ namespace Semesterprojektet
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(196, 38);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox7.Location = new System.Drawing.Point(174, 30);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(139, 26);
+            this.textBox7.Size = new System.Drawing.Size(124, 22);
             this.textBox7.TabIndex = 0;
             this.textBox7.TabStop = false;
             this.textBox7.Text = "Adresse";
@@ -367,30 +345,27 @@ namespace Semesterprojektet
             this.f.Controls.Add(this.maskedTextBox3);
             this.f.Controls.Add(this.button6);
             this.f.Controls.Add(this.textBox14);
-            this.f.Location = new System.Drawing.Point(4, 29);
-            this.f.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.f.Location = new System.Drawing.Point(4, 25);
             this.f.Name = "f";
-            this.f.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.f.Size = new System.Drawing.Size(862, 479);
+            this.f.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.f.Size = new System.Drawing.Size(765, 381);
             this.f.TabIndex = 1;
             this.f.Text = "Rediger bolig";
             this.f.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox6
             // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(414, 278);
-            this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox6.Location = new System.Drawing.Point(368, 222);
             this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(180, 26);
+            this.maskedTextBox6.Size = new System.Drawing.Size(160, 22);
             this.maskedTextBox6.TabIndex = 8;
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(251, 278);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox18.Location = new System.Drawing.Point(223, 222);
             this.textBox18.Name = "textBox18";
             this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(112, 26);
+            this.textBox18.Size = new System.Drawing.Size(100, 22);
             this.textBox18.TabIndex = 7;
             this.textBox18.TabStop = false;
             this.textBox18.Text = "Handel dato";
@@ -398,19 +373,17 @@ namespace Semesterprojektet
             // 
             // maskedTextBox5
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(414, 215);
-            this.maskedTextBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox5.Location = new System.Drawing.Point(368, 172);
             this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(180, 26);
+            this.maskedTextBox5.Size = new System.Drawing.Size(160, 22);
             this.maskedTextBox5.TabIndex = 6;
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(251, 105);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox17.Location = new System.Drawing.Point(223, 84);
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(112, 26);
+            this.textBox17.Size = new System.Drawing.Size(100, 22);
             this.textBox17.TabIndex = 5;
             this.textBox17.TabStop = false;
             this.textBox17.Text = "Primærnøgle";
@@ -418,19 +391,17 @@ namespace Semesterprojektet
             // 
             // maskedTextBox4
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(414, 159);
-            this.maskedTextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox4.Location = new System.Drawing.Point(368, 127);
             this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(180, 26);
+            this.maskedTextBox4.Size = new System.Drawing.Size(160, 22);
             this.maskedTextBox4.TabIndex = 4;
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(251, 215);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox16.Location = new System.Drawing.Point(223, 172);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(112, 26);
+            this.textBox16.Size = new System.Drawing.Size(100, 22);
             this.textBox16.TabIndex = 3;
             this.textBox16.TabStop = false;
             this.textBox16.Text = "Handelspris";
@@ -438,18 +409,16 @@ namespace Semesterprojektet
             // 
             // maskedTextBox3
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(414, 105);
-            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox3.Location = new System.Drawing.Point(368, 84);
             this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(180, 26);
+            this.maskedTextBox3.Size = new System.Drawing.Size(160, 22);
             this.maskedTextBox3.TabIndex = 2;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(364, 342);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Location = new System.Drawing.Point(324, 274);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(126, 52);
+            this.button6.Size = new System.Drawing.Size(112, 42);
             this.button6.TabIndex = 1;
             this.button6.Text = "Updater bolig";
             this.button6.UseVisualStyleBackColor = true;
@@ -457,11 +426,10 @@ namespace Semesterprojektet
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(251, 159);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox14.Location = new System.Drawing.Point(223, 127);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(112, 26);
+            this.textBox14.Size = new System.Drawing.Size(100, 22);
             this.textBox14.TabIndex = 0;
             this.textBox14.TabStop = false;
             this.textBox14.Text = "Salgspris";
@@ -472,31 +440,28 @@ namespace Semesterprojektet
             this.tabPage2.Controls.Add(this.maskedTextBox7);
             this.tabPage2.Controls.Add(this.textBox15);
             this.tabPage2.Controls.Add(this.button7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(862, 479);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(765, 381);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Slet bolig";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox7
             // 
-            this.maskedTextBox7.Location = new System.Drawing.Point(424, 159);
-            this.maskedTextBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox7.Location = new System.Drawing.Point(377, 127);
             this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(203, 26);
+            this.maskedTextBox7.Size = new System.Drawing.Size(181, 22);
             this.maskedTextBox7.TabIndex = 2;
             this.maskedTextBox7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox7_MaskInputRejected);
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(256, 159);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox15.Location = new System.Drawing.Point(228, 127);
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(112, 26);
+            this.textBox15.Size = new System.Drawing.Size(100, 22);
             this.textBox15.TabIndex = 1;
             this.textBox15.TabStop = false;
             this.textBox15.Text = "Primærnøgle";
@@ -504,10 +469,9 @@ namespace Semesterprojektet
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(388, 274);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button7.Location = new System.Drawing.Point(345, 219);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(125, 54);
+            this.button7.Size = new System.Drawing.Size(111, 43);
             this.button7.TabIndex = 0;
             this.button7.Text = "Slet bolig";
             this.button7.UseVisualStyleBackColor = true;
@@ -515,10 +479,9 @@ namespace Semesterprojektet
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(40, 298);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Location = new System.Drawing.Point(36, 238);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(139, 26);
+            this.textBox6.Size = new System.Drawing.Size(124, 22);
             this.textBox6.TabIndex = 9;
             this.textBox6.TabStop = false;
             this.textBox6.Text = "Egendomsmægler id";
@@ -526,10 +489,9 @@ namespace Semesterprojektet
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(40, 245);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox5.Location = new System.Drawing.Point(36, 196);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 26);
+            this.textBox5.Size = new System.Drawing.Size(124, 22);
             this.textBox5.TabIndex = 8;
             this.textBox5.TabStop = false;
             this.textBox5.Text = "Handels pris";
@@ -537,10 +499,9 @@ namespace Semesterprojektet
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(40, 194);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Location = new System.Drawing.Point(36, 155);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 26);
+            this.textBox4.Size = new System.Drawing.Size(124, 22);
             this.textBox4.TabIndex = 7;
             this.textBox4.TabStop = false;
             this.textBox4.Text = "Salgs pris";
@@ -548,10 +509,9 @@ namespace Semesterprojektet
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(40, 140);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Location = new System.Drawing.Point(36, 112);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 26);
+            this.textBox3.Size = new System.Drawing.Size(124, 22);
             this.textBox3.TabIndex = 6;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Kvm";
@@ -559,31 +519,28 @@ namespace Semesterprojektet
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(454, 438);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Location = new System.Drawing.Point(404, 350);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 35);
+            this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 1;
             this.button4.Text = "D";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(335, 438);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Location = new System.Drawing.Point(298, 350);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 0;
             this.button3.Text = "U";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // CRUDBolig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CRUDBolig";
             this.Text = "CUD bolig";
             this.panel1.ResumeLayout(false);

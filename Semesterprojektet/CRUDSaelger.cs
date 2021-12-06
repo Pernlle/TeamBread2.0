@@ -32,7 +32,7 @@ namespace Semesterprojektet
             {
                 SqlConnection conn = new SqlConnection(strconn);
 
-                string sqlCom = "INSERT INTO Kunder VALUES (@fNavn, @eNavn, @email), INSERT INTO tlf VALUES (@tlf) ;";
+                string sqlCom = "INSERT INTO Kunder VALUES (@fNavn, @eNavn, @email); INSERT INTO tlf VALUES (@tlf) ;";
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
                 cmd.Parameters.Add("@fNavn", System.Data.SqlDbType.VarChar);
                 cmd.Parameters["@fNavn"].Value = Convert.ToString(fNavn);

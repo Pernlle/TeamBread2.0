@@ -70,17 +70,19 @@ namespace Semesterprojektet
             // Update
             // maskedmessagebox = 3-6
             string id = maskedTextBox3.Text;
-            string k = maskedTextBox4.Text;
+            string salgsPris = maskedTextBox4.Text;
             string j = maskedTextBox5.Text;
             string l = maskedTextBox6.Text;
 
             SqlConnection conn = new SqlConnection(strconn);
 
             // Update er ikke værdig
-            string sqlCom = "UPDATE Bolig ";
+            string sqlCom = "UPDATE Bolig set salgsPris=@salgsPris WHERE Id=@Id; ";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
             cmd.Parameters.Add("@Id", System.Data.SqlDbType.Int);
             cmd.Parameters["@Id"].Value = Convert.ToInt32(id);
+            cmd.Parameters.Add("@salgspris", System.Data.SqlDbType.Decimal);
+            cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(salgsPris);
 
             try
             {
@@ -121,11 +123,11 @@ namespace Semesterprojektet
             cmd.Parameters.Add("@postNr", System.Data.SqlDbType.Int);
             cmd.Parameters["@postNr"].Value = Convert.ToInt32(bPostnr);
             cmd.Parameters.Add("@kvm", System.Data.SqlDbType.Int);
-            cmd.Parameters["@kvm"].Value = Convert.ToDouble(bKvm);
+            cmd.Parameters["@kvm"].Value = Convert.ToDecimal(bKvm);
             cmd.Parameters.Add("@salgsPris", System.Data.SqlDbType.Decimal);
-            cmd.Parameters["@salgsPris"].Value = Convert.ToDouble(bSalgspris);
+            cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(bSalgspris);
             cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
-            cmd.Parameters["@handelsPris"].Value = Convert.ToDouble(bHandelspris);
+            cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(bHandelspris);
             cmd.Parameters.Add("@kID", System.Data.SqlDbType.Int);
             cmd.Parameters["@kID"].Value = Convert.ToInt32(bSælger);
             cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
@@ -151,6 +153,16 @@ namespace Semesterprojektet
                 MessageBox.Show("ERROR: \n\n" + exc.ToString());
             }
             
+        }
+
+        private void textBox12_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Sælger ID - nr på sælger", textBox12);
+        }
+
+        private void textBox13_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("ID nr for ejendomsmægler", textBox13);
         }
     }
 }
