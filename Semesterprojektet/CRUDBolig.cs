@@ -116,7 +116,7 @@ namespace Semesterprojektet
 
             SqlConnection conn = new SqlConnection(strconn);
             //Skal handelsdato og solgt sættes ind under mulige indtastninger??
-            string sqlCom = "INSERT INTO Bolig(adresse,kvm,salgsPris,handelsPris,kID,eID) VALUES (@adresse, @kvm, @salgsPris, @handelsPris, @kID, @eID); INSERT INTO Postnummer(postNr) VALUES (@postNr);"; 
+            string sqlCom = "INSERT INTO Bolig(adresse, postNr, kvm,salgsPris,handelsPris,kID,eID) VALUES (@adresse, @postNr @kvm, @salgsPris, @handelsPris, @kID, @eID);"; 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
             cmd.Parameters.Add("@adresse", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@adresse"].Value = Convert.ToString(bAdresse);
