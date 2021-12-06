@@ -1,4 +1,4 @@
-DROP TABLE Administrator;
+
 DROP TABLE Ejendomsmaegler;
 DROP TABLE Kunder;
 DROP TABLE Tlf;
@@ -9,6 +9,7 @@ CREATE TABLE Postnummer(
 	postNr INT PRIMARY KEY NOT NULL,
 	byNavn VARCHAR(50) NOT NULL,
 );
+
 
 CREATE TABLE Ejendomsmaegler(
 	eID Int IDENTITY(1,1) PRIMARY KEY NOT NULL,
@@ -64,9 +65,13 @@ INSERT INTO Postnummer (postNr, byNavn) VALUES
 (9000, 'Aalborg')
 
 
-
+INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Tom Pernille', 'Ali', 'tompernilleali@yahoo.com', '1', '2')
 INSERT INTO Ejendomsmaegler (pass, fNavn, eNavn, email) VALUES ('root','Admin', '','')
 INSERT INTO Ejendomsmaegler (pass, fNavn, eNavn, email) VALUES ('1234','Tom Ali', 'Hansen','tomalihansen@realbolig.dk')
+INSERT INTO Bolig (eID, kID, adresse, postNr, kvm, salgsPris) VALUES ('2','1','Mywaye','7100','110','2000000')
 
 SELECT * FROM Ejendomsmaegler
 
+SELECT * FROM Bolig
+
+SELECT * FROM Kunder

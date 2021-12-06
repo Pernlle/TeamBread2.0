@@ -88,6 +88,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>THEONETHEONLY.xsd</DependentUpon>
     </Compile>
+    <Compile Include="V2Forside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2Forside.Designer.cs">
+      <DependentUpon>V2Forside.cs</DependentUpon>
+    </Compile>
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>
