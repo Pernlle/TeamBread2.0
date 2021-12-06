@@ -119,17 +119,17 @@ namespace Semesterprojektet
             cmd.Parameters.Add("@adresse", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@adresse"].Value = Convert.ToString(bAdresse);
             cmd.Parameters.Add("@postNr", System.Data.SqlDbType.Int);
-            cmd.Parameters["@postNr"].Value = Convert.ToString(bPostnr);
+            cmd.Parameters["@postNr"].Value = Convert.ToInt32(bPostnr);
             cmd.Parameters.Add("@kvm", System.Data.SqlDbType.Int);
-            cmd.Parameters["@kvm"].Value = Convert.ToString(bKvm);
+            cmd.Parameters["@kvm"].Value = Convert.ToDouble(bKvm);
             cmd.Parameters.Add("@salgsPris", System.Data.SqlDbType.Decimal);
-            cmd.Parameters["@salgsPris"].Value = Convert.ToString(bSalgspris);
+            cmd.Parameters["@salgsPris"].Value = Convert.ToDouble(bSalgspris);
             cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
-            cmd.Parameters["@handelsPris"].Value = Convert.ToString(bHandelspris);
+            cmd.Parameters["@handelsPris"].Value = Convert.ToDouble(bHandelspris);
             cmd.Parameters.Add("@kID", System.Data.SqlDbType.Int);
-            cmd.Parameters["@kID"].Value = Convert.ToString(bSælger);
+            cmd.Parameters["@kID"].Value = Convert.ToInt32(bSælger);x
             cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
-            cmd.Parameters["@eID"].Value = Convert.ToString(bEjdm);
+            cmd.Parameters["@eID"].Value = Convert.ToInt32(bEjdm);
             
             /*
             //C(RUD): EKSEMPEL FRA JENS FRA DA VI STARTEDE MED CRUD
