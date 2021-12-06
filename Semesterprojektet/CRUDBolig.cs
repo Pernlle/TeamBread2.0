@@ -154,5 +154,15 @@ namespace Semesterprojektet
             }
             
         }
+
+        private void textBox12_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Sælger ID - nr på sælger", textBox12);
+        }
+
+        private void textBox13_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("ID nr for ejendomsmægler", textBox13);
+        }
     }
 }
