@@ -34,5 +34,20 @@ namespace Semesterprojektet
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            // Noget alla dette - så knappen kun er synlig hvis man er logget ind som admin.
+            if (true)
+            {
+                button2.Visible = true;
+
+                panel1.Controls.Clear();
+                CRUDSaelger frm = new CRUDSaelger() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                frm.FormBorderStyle = FormBorderStyle.None;
+                this.panel1.Controls.Add(frm);
+                frm.Show();
+            }
+        }
     }
 }
