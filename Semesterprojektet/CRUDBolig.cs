@@ -116,7 +116,7 @@ namespace Semesterprojektet
 
             SqlConnection conn = new SqlConnection(strconn);
             //Skal handelsdato og solgt sættes ind under mulige indtastninger??
-            string sqlCom = "INSERT INTO Bolig VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @kID, @eID);"; 
+            string sqlCom = "INSERT INTO Bolig(adresse,kvm,salgsPris,handelsPris,kID,eID) VALUES (@adresse, @kvm, @salgsPris, @handelsPris, @kID, @eID); INSERT INTO Postnummer(postNr) VALUES (@postNr);"; 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
             cmd.Parameters.Add("@adresse", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@adresse"].Value = Convert.ToString(bAdresse);
@@ -163,6 +163,11 @@ namespace Semesterprojektet
         private void textBox13_MouseHover(object sender, EventArgs e)
         {
             toolTip1.Show("ID nr for ejendomsmægler", textBox13);
+        }
+
+        private void BPostnr_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }
