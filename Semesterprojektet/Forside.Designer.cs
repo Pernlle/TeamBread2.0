@@ -52,37 +52,35 @@ namespace Semesterprojektet
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3});
-            this.menuStrip1.Location = new System.Drawing.Point(175, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(156, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(682, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(606, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(86, 29);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 24);
             this.toolStripMenuItem1.Text = "Forside";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(65, 29);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(55, 24);
             this.toolStripMenuItem2.Text = "View";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(16, 29);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(14, 24);
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // panel1
@@ -90,10 +88,9 @@ namespace Semesterprojektet
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(175, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(156, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(682, 503);
+            this.panel1.Size = new System.Drawing.Size(606, 401);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox2
@@ -102,20 +99,18 @@ namespace Semesterprojektet
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = global::Semesterprojektet.Properties.Resources.RealBoligLogo1;
             this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(235, 254);
+            this.pictureBox2.Size = new System.Drawing.Size(209, 203);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 46);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Location = new System.Drawing.Point(21, 37);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(112, 26);
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 2;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Id";
@@ -123,21 +118,19 @@ namespace Semesterprojektet
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(24, 80);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox1.Location = new System.Drawing.Point(21, 64);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(112, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
             this.maskedTextBox1.TabIndex = 3;
             this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             this.maskedTextBox1.MouseHover += new System.EventHandler(this.maskedTextBox1_MouseHover);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 155);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Location = new System.Drawing.Point(11, 124);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(112, 26);
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 4;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Password";
@@ -145,20 +138,18 @@ namespace Semesterprojektet
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(12, 190);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBox2.Location = new System.Drawing.Point(11, 152);
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(112, 26);
+            this.maskedTextBox2.Size = new System.Drawing.Size(100, 22);
             this.maskedTextBox2.TabIndex = 5;
             this.maskedTextBox2.UseSystemPasswordChar = true;
             this.maskedTextBox2.MouseHover += new System.EventHandler(this.maskedTextBox2_MouseHover);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 313);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(10, 250);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 40);
+            this.button1.Size = new System.Drawing.Size(100, 32);
             this.button1.TabIndex = 6;
             this.button1.Text = "-log in-";
             this.button1.UseVisualStyleBackColor = true;
@@ -170,15 +161,16 @@ namespace Semesterprojektet
             this.panel2.Controls.Add(this.maskedTextBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(175, 536);
+            this.panel2.Size = new System.Drawing.Size(156, 429);
             this.panel2.TabIndex = 7;
             // 
             // Forside
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 536);
+            this.ClientSize = new System.Drawing.Size(762, 429);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.maskedTextBox2);
@@ -186,7 +178,6 @@ namespace Semesterprojektet
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Forside";
             this.Text = "Forside";
             this.menuStrip1.ResumeLayout(false);
