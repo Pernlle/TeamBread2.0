@@ -56,5 +56,10 @@ namespace Semesterprojektet
         {
 
         }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
