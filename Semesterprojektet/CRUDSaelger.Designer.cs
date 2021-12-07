@@ -106,7 +106,7 @@ namespace Semesterprojektet
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(772, 425);
-            this.tabControl1.TabIndex = 3;
+            this.tabControl1.TabIndex = 1;
             this.tabControl1.TabStop = false;
             // 
             // tabPage1
@@ -133,7 +133,7 @@ namespace Semesterprojektet
             this.button3.Location = new System.Drawing.Point(388, 255);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 46);
-            this.button3.TabIndex = 8;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Opret sælger";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -143,21 +143,21 @@ namespace Semesterprojektet
             this.STlf.Location = new System.Drawing.Point(331, 192);
             this.STlf.Name = "STlf";
             this.STlf.Size = new System.Drawing.Size(213, 22);
-            this.STlf.TabIndex = 7;
+            this.STlf.TabIndex = 4;
             // 
             // SEmail
             // 
             this.SEmail.Location = new System.Drawing.Point(331, 152);
             this.SEmail.Name = "SEmail";
             this.SEmail.Size = new System.Drawing.Size(213, 22);
-            this.SEmail.TabIndex = 6;
+            this.SEmail.TabIndex = 3;
             // 
             // SEfternavn
             // 
             this.SEfternavn.Location = new System.Drawing.Point(331, 117);
             this.SEfternavn.Name = "SEfternavn";
             this.SEfternavn.Size = new System.Drawing.Size(213, 22);
-            this.SEfternavn.TabIndex = 5;
+            this.SEfternavn.TabIndex = 2;
             // 
             // SFornavn
             // 
@@ -233,7 +233,7 @@ namespace Semesterprojektet
             this.maskedTextBox6.Location = new System.Drawing.Point(386, 161);
             this.maskedTextBox6.Name = "maskedTextBox6";
             this.maskedTextBox6.Size = new System.Drawing.Size(178, 22);
-            this.maskedTextBox6.TabIndex = 4;
+            this.maskedTextBox6.TabIndex = 7;
             // 
             // textBox6
             // 
@@ -251,7 +251,7 @@ namespace Semesterprojektet
             this.maskedTextBox5.Location = new System.Drawing.Point(386, 117);
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(178, 22);
-            this.maskedTextBox5.TabIndex = 2;
+            this.maskedTextBox5.TabIndex = 6;
             // 
             // textBox5
             // 
@@ -269,7 +269,7 @@ namespace Semesterprojektet
             this.button4.Location = new System.Drawing.Point(334, 232);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 42);
-            this.button4.TabIndex = 0;
+            this.button4.TabIndex = 8;
             this.button4.Text = "Opdater sælger";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -292,7 +292,7 @@ namespace Semesterprojektet
             this.button5.Location = new System.Drawing.Point(321, 211);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(117, 46);
-            this.button5.TabIndex = 2;
+            this.button5.TabIndex = 10;
             this.button5.Text = "Slet sælger";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -302,7 +302,7 @@ namespace Semesterprojektet
             this.maskedTextBox7.Location = new System.Drawing.Point(371, 143);
             this.maskedTextBox7.Name = "maskedTextBox7";
             this.maskedTextBox7.Size = new System.Drawing.Size(187, 22);
-            this.maskedTextBox7.TabIndex = 1;
+            this.maskedTextBox7.TabIndex = 9;
             // 
             // textBox7
             // 
