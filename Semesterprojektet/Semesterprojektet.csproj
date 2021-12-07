@@ -94,6 +94,12 @@
     <Compile Include="V2Forside.Designer.cs">
       <DependentUpon>V2Forside.cs</DependentUpon>
     </Compile>
+    <Compile Include="V2View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2View.Designer.cs">
+      <DependentUpon>V2View.cs</DependentUpon>
+    </Compile>
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>

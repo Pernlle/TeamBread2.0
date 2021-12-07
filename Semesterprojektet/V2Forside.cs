@@ -62,8 +62,9 @@ namespace Semesterprojektet
             panel2.Controls.Clear();
             View frm = new View() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(frm);
+            this.panel2.Controls.Add(frm);
             frm.Show();
+            //SE JEG HAR FIXET DET GUYS
         }
     }
 }
