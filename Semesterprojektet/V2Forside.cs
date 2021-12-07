@@ -38,7 +38,7 @@ namespace Semesterprojektet
                 if (idId.Contains("1")) { /* admin */}
                 if (idId.Contains("2")) { /* Egendomsmægler */}
 
-                panel1.Controls.Clear();
+                panel2.Controls.Clear();
                 EMPanel frm = new EMPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                 frm.FormBorderStyle = FormBorderStyle.None;
                 this.panel2.Controls.Add(frm);

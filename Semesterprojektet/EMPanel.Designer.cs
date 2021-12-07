@@ -87,7 +87,7 @@ namespace Semesterprojektet
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
-            this.panel3.BackgroundImage = global::Semesterprojektet.Properties.Resources.RealBoligLogo;
+            this.panel3.BackgroundImage = global::Semesterprojektet.Properties.Resources.Billede1__2_;
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.bolig2);
             this.panel3.Controls.Add(this.button2);
