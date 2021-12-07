@@ -71,8 +71,8 @@ namespace Semesterprojektet
             // maskedmessagebox = 3-6
             string id = maskedTextBox3.Text;
             string salgsPris = maskedTextBox4.Text;
-            string j = maskedTextBox5.Text;
-            string l = maskedTextBox6.Text;
+            string handelPris = maskedTextBox5.Text;
+            string handelDato = maskedTextBox6.Text;
 
             SqlConnection conn = new SqlConnection(strconn);
 
@@ -83,6 +83,11 @@ namespace Semesterprojektet
             cmd.Parameters["@bID"].Value = Convert.ToInt32(id);
             cmd.Parameters.Add("@salgspris", System.Data.SqlDbType.Decimal);
             cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(salgsPris);
+            //Dette er ikke blevet inplimenteret endnu (nedenfor)
+            cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
+            cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(handelPris);
+            cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.Date);
+            cmd.Parameters["@handelsDato"].Value = Convert.ToDateTime(handelDato);
 
             try
             {
@@ -139,7 +144,7 @@ namespace Semesterprojektet
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
                         
             cmd.Parameters.Add("@", System.Data.SqlDbType.);
-            cmd.Parameters["@"].Value = Convert.ToString();
+            cmd.Parameters["@"].Value = Convert.To();
             */
             try
             {
@@ -168,6 +173,11 @@ namespace Semesterprojektet
         private void BPostnr_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            // Solgt knap
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,25 @@ namespace Semesterprojektet
 
         private void button1_Click(object sender, EventArgs e)
         {
+            StreamWriter Stream = null;
+            //Indsæt noget andet i string udfil
+            String UdFil = @"C:\Users\pkoe9\Downloads\Mappe\Dat21a.txt";
+            try
+            {
+                Stream = new StreamWriter(UdFil, true); // open file output append
 
+                Stream.WriteLine("email Santa@Claus.snow");
+            }
+            catch (IOException s)
+            {
+                Console.WriteLine(s.Message);
+                Console.ReadLine();
+            }
+            finally
+            {
+                if (Stream != null)
+                    Stream.Close();// close file
+            }
         }
     }
 }
