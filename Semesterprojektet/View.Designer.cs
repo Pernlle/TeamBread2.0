@@ -302,7 +302,7 @@ namespace Semesterprojektet
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.maskedTextBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(933, 584);
