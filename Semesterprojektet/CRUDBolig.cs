@@ -83,11 +83,11 @@ namespace Semesterprojektet
             cmd.Parameters["@bID"].Value = Convert.ToInt32(id);
             cmd.Parameters.Add("@salgspris", System.Data.SqlDbType.Decimal);
             cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(salgsPris);
-            //Dette er ikke blevet inplimenteret endnu
+            //Dette er ikke blevet inplimenteret endnu (nedenfor)
             cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
             cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(handelPris);
             cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.Date);
-            cmd.Parameters["@handelsDato"].Value = Convert.ToDate(handelDato);
+            cmd.Parameters["@handelsDato"].Value = Convert.ToDateTime(handelDato);
 
             try
             {
