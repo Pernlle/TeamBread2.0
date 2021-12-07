@@ -27,7 +27,7 @@ namespace Semesterprojektet
 
             // length check:
             if (id.Length > 5) id_ok = false;
-            if (pass.Length < 8) pass_ok = false;
+            if (pass.Length < 2) pass_ok = false;
 
             //"<" check for JS tags ... NO cross site scripting here:
             if (id.Contains("<")) id_ok = false;
