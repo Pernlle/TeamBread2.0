@@ -29,6 +29,11 @@ namespace Semesterprojektet
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             // den falske knap
+            panel1.Controls.Clear();
+            V2Forside frm = new V2Forside() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
