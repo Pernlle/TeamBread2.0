@@ -47,7 +47,7 @@ namespace Semesterprojektet
 
             SqlConnection conn = new SqlConnection(strconn);
 
-            string sqlCom = "DELETE FROM Bolig WHERE (Id =@Id);";
+            string sqlCom = "DELETE FROM Bolig WHERE (bID =@bID);";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
             cmd.Parameters.Add("@bID", System.Data.SqlDbType.Int);
             cmd.Parameters["@bID"].Value = Convert.ToInt32(id);
@@ -77,10 +77,10 @@ namespace Semesterprojektet
             SqlConnection conn = new SqlConnection(strconn);
 
             // Update er ikke værdig
-            string sqlCom = "UPDATE Bolig set salgsPris=@salgsPris WHERE Id=@Id; ";
+            string sqlCom = "UPDATE Bolig set salgsPris=@salgsPris WHERE bID=@bID; ";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
-            cmd.Parameters.Add("@Id", System.Data.SqlDbType.Int);
-            cmd.Parameters["@Id"].Value = Convert.ToInt32(id);
+            cmd.Parameters.Add("@bID", System.Data.SqlDbType.Int);
+            cmd.Parameters["@bID"].Value = Convert.ToInt32(id);
             cmd.Parameters.Add("@salgspris", System.Data.SqlDbType.Decimal);
             cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(salgsPris);
 
