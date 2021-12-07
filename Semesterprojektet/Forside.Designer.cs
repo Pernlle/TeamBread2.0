@@ -80,7 +80,8 @@ namespace Semesterprojektet
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(14, 24);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(40, 24);
+            this.toolStripMenuItem3.Text = "V2";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // panel1
