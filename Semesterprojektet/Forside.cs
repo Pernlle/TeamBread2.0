@@ -39,6 +39,11 @@ namespace Semesterprojektet
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             // forside knap, hvad skal den føre til?
+            panel1.Controls.Clear();
+            V2Forside frm = new V2Forside() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
