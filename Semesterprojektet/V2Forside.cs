@@ -41,7 +41,7 @@ namespace Semesterprojektet
                 panel1.Controls.Clear();
                 EMPanel frm = new EMPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                 frm.FormBorderStyle = FormBorderStyle.None;
-                this.panel1.Controls.Add(frm);
+                this.panel2.Controls.Add(frm);
                 frm.Show();
             }
             else { MessageBox.Show("Prøv igen du"); }
