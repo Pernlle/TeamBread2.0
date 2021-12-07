@@ -30,13 +30,13 @@ namespace Semesterprojektet
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.search = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -45,7 +45,7 @@ namespace Semesterprojektet
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(67)))), ((int)(((byte)(144)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.panel1.Controls.Add(this.search);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
@@ -55,8 +55,21 @@ namespace Semesterprojektet
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(253, 575);
+            this.panel1.Size = new System.Drawing.Size(253, 686);
             this.panel1.TabIndex = 0;
+            // 
+            // search
+            // 
+            this.search.BackColor = System.Drawing.Color.White;
+            this.search.FlatAppearance.BorderSize = 0;
+            this.search.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.Location = new System.Drawing.Point(27, 55);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(191, 58);
+            this.search.TabIndex = 9;
+            this.search.Text = "SØG";
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // textBox2
             // 
@@ -126,21 +139,8 @@ namespace Semesterprojektet
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(253, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(694, 575);
+            this.panel2.Size = new System.Drawing.Size(1033, 686);
             this.panel2.TabIndex = 1;
-            // 
-            // search
-            // 
-            this.search.BackColor = System.Drawing.Color.White;
-            this.search.FlatAppearance.BorderSize = 0;
-            this.search.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(27, 55);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(191, 58);
-            this.search.TabIndex = 9;
-            this.search.Text = "SØG";
-            this.search.UseVisualStyleBackColor = false;
-            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // pictureBox2
             // 
@@ -148,7 +148,7 @@ namespace Semesterprojektet
             this.pictureBox2.Image = global::Semesterprojektet.Properties.Resources.Billede1__2_;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(694, 575);
+            this.pictureBox2.Size = new System.Drawing.Size(1033, 686);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -157,7 +157,7 @@ namespace Semesterprojektet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 575);
+            this.ClientSize = new System.Drawing.Size(1286, 686);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "V2Forside";
