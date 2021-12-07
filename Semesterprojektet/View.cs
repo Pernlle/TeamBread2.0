@@ -37,25 +37,17 @@ namespace Semesterprojektet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StreamWriter Stream = null;
-            //Indsæt noget andet i string udfil
-            String UdFil = @"C:\Users\pkoe9\Downloads\Mappe\Dat21a.txt";
-            try
+            TextWriter sw = new StreamWriter(@"c:\Users\Semester.txt");
+            int rowcount = dataGridView1.Rows.Count;
+            for (int i = 0; i < rowcount - 1; i++)
             {
-                Stream = new StreamWriter(UdFil, true); // open file output append
+                sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
+            }
+            sw.Close();    
 
-                Stream.WriteLine("email Santa@Claus.snow");
-            }
-            catch (IOException s)
-            {
-                Console.WriteLine(s.Message);
-                Console.ReadLine();
-            }
-            finally
-            {
-                if (Stream != null)
-                    Stream.Close();// close file
-            }
+
+            MessageBox.Show("Data Successfully Exported");
         }
     }
 }
+
