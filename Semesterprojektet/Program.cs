@@ -17,7 +17,7 @@ namespace Semesterprojektet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forside());
+            Application.Run(new V2Forside());
         }
     }
 }
