@@ -84,10 +84,10 @@ namespace Semesterprojektet
             cmd.Parameters.Add("@salgspris", System.Data.SqlDbType.Decimal);
             cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(salgsPris);
             //Dette er ikke blevet inplimenteret endnu
-            cmd.Parameters.Add("@", System.Data.SqlDbType.Decimal);
-            cmd.Parameters["@"].Value = Convert.ToDecimal(handelPris);
-            cmd.Parameters.Add("@", System.Data.SqlDbType.Decimal);
-            cmd.Parameters["@"].Value = Convert.ToDecimal(handelDato);
+            cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
+            cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(handelPris);
+            cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.Date);
+            cmd.Parameters["@handelsDato"].Value = Convert.ToDate(handelDato);
 
             try
             {
