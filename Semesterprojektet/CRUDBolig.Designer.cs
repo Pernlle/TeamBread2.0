@@ -39,6 +39,7 @@ namespace Semesterprojektet
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button5 = new System.Windows.Forms.Button();
             this.BEjendomsmægler = new System.Windows.Forms.MaskedTextBox();
             this.BSælger = new System.Windows.Forms.MaskedTextBox();
@@ -75,7 +76,6 @@ namespace Semesterprojektet
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -89,6 +89,7 @@ namespace Semesterprojektet
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
+            this.button1.TabStop = false;
             this.button1.Text = "R";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -120,6 +121,7 @@ namespace Semesterprojektet
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(216, 22);
             this.maskedTextBox1.TabIndex = 3;
+            this.maskedTextBox1.TabStop = false;
             // 
             // maskedTextBox2
             // 
@@ -127,6 +129,7 @@ namespace Semesterprojektet
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(216, 22);
             this.maskedTextBox2.TabIndex = 4;
+            this.maskedTextBox2.TabStop = false;
             // 
             // button2
             // 
@@ -134,6 +137,7 @@ namespace Semesterprojektet
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 5;
+            this.button2.TabStop = false;
             this.button2.Text = "C";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -164,11 +168,12 @@ namespace Semesterprojektet
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.f);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Location = new System.Drawing.Point(0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(773, 410);
             this.tabControl1.TabIndex = 10;
+            this.tabControl1.TabStop = false;
             // 
             // tabPage1
             // 
@@ -190,11 +195,24 @@ namespace Semesterprojektet
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(765, 381);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Opret bolig";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(213, 327);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(62, 21);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "Solgt";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // button5
             // 
@@ -350,7 +368,7 @@ namespace Semesterprojektet
             this.f.Controls.Add(this.textBox14);
             this.f.Location = new System.Drawing.Point(4, 25);
             this.f.Name = "f";
-            this.f.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.f.Padding = new System.Windows.Forms.Padding(3);
             this.f.Size = new System.Drawing.Size(765, 381);
             this.f.TabIndex = 1;
             this.f.Text = "Rediger bolig";
@@ -445,7 +463,7 @@ namespace Semesterprojektet
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(765, 381);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Slet bolig";
@@ -526,6 +544,7 @@ namespace Semesterprojektet
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 1;
+            this.button4.TabStop = false;
             this.button4.Text = "D";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -535,21 +554,9 @@ namespace Semesterprojektet
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 0;
+            this.button3.TabStop = false;
             this.button3.Text = "U";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(213, 327);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(62, 21);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "Solgt";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // CRUDBolig
             // 
