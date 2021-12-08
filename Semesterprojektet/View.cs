@@ -37,7 +37,7 @@ namespace Semesterprojektet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TextWriter sw = new StreamWriter(@"c:\Users\Semester.txt");
+            TextWriter sw = new StreamWriter(@"..\Semester.txt");
             int rowcount = dataGridView1.Rows.Count;
             for (int i = 0; i < rowcount - 1; i++)
             {
