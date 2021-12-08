@@ -32,79 +32,56 @@ namespace Semesterprojektet
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            string searchValue = search.Text;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                bool valueResult = false;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    for (int i = 0; i < row.Cells.Count; i++)
+                    {
+                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
+                        {
+                            int rowIndex = row.Index;
+                            dataGridView1.Rows[rowIndex].Selected = true;
+                            valueResult = true;
+                            break;
+                        }
+                    }
+                }
+                if (!valueResult)
+                {
+                    MessageBox.Show("Unable to find " + search.Text, "Not Found");
+                    return;
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string search = Search.Text;
+            string search = this.search.Text;
 
             switch (search) 
             {
                 case "2650":
                 case "Hvidovre":
-                    {
-                        TextWriter sw = new StreamWriter(@"..\Semester1.txt");
-                        int rowcount = dataGridView1.Rows.Count;
-                        for (int i = 0; i < rowcount - 1; i++)
-                        {
-                            sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
-                        }
-                        sw.Close();
-                        MessageBox.Show("Data Successfully Exported");
-                    }
                     break;
                 case "6980":
                 case "Tim":
-                    {
-                        TextWriter sw = new StreamWriter(@"..\Semester1.txt");
-                        int rowcount = dataGridView1.Rows.Count;
-                        for (int i = 0; i < rowcount - 1; i++)
-                        {
-                            sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
-                        }
-                        sw.Close();
-                        MessageBox.Show("Data Successfully Exported");
-                    }
                     break;
                 case "7100":
                 case "Vejle":
-                    {
-                        TextWriter sw = new StreamWriter(@"..\Semester1.txt");
-                        int rowcount = dataGridView1.Rows.Count;
-                        for (int i = 0; i < rowcount - 1; i++)
-                        {
-                            sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
-                            }
-                        sw.Close();
-                        MessageBox.Show("Data Successfully Exported");
-                    }
                     break;
                 case "7323":
                 case "Give":
-                    {
-                        TextWriter sw = new StreamWriter(@"..\Semester1.txt");
-                        int rowcount = dataGridView1.Rows.Count;
-                        for (int i = 0; i < rowcount - 1; i++)
-                        {
-                            sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
-                           }
-                        sw.Close();
-                        MessageBox.Show("Data Successfully Exported");
-                    }
                     break;
                 case "8700":
                 case "Horsens":
-                    {
-                        TextWriter sw = new StreamWriter(@"..\Semester1.txt");
-                        int rowcount = dataGridView1.Rows.Count;
-                        for (int i = 0; i < rowcount - 1; i++)
-                        {
-                            sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());                            
-                        }
-                        sw.Close();
-                        MessageBox.Show("Data Successfully Exported");
-                    }
                     break;
                 default:
                     {
@@ -119,7 +96,16 @@ namespace Semesterprojektet
                         MessageBox.Show("Data Successfully Exported");
                     }
                     break;
-            }            
+            }
+            // nedenfor er til at lave søg - har også prøvet med switch
+            TextWriter sw = new StreamWriter(@"..\Semester1.txt");
+            int rowcount = dataGridView1.Rows.Count;
+            for (int i = 0; i < rowcount - 1; i++)
+            {
+                sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
+            }
+            sw.Close();
+            MessageBox.Show("Data Successfully Exported");
         }
     }
 }
