@@ -70,5 +70,15 @@ namespace Semesterprojektet
             frm.Show();
             //SE JEG HAR FIXET DET GUYS
         }
+
+        private void textBox1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Skriv dit ID | Max 5 tegn", textBox1);
+        }
+
+        private void textBox2_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Mindst 8 tegn", textBox2);
+        }
     }
 }
