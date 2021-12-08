@@ -42,26 +42,11 @@ namespace Semesterprojektet
         private void button7_Click(object sender, EventArgs e)
         {
             // Delete
-            // Maskedmessagebox 7
-            string id = maskedTextBox7.Text;
 
-            SqlConnection conn = new SqlConnection(strconn);
-
-            string sqlCom = "DELETE FROM Bolig WHERE (bID =@bID);";
-            SqlCommand cmd = new SqlCommand(sqlCom, conn);
-            cmd.Parameters.Add("@bID", System.Data.SqlDbType.Int);
-            cmd.Parameters["@bID"].Value = Convert.ToInt32(id);
-
-            try
+            foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
             {
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close(); 
-                MessageBox.Show("Deleting bolig from database");
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show("ERROR: \n\n" + exc.ToString());
+                if (oneCell.Selected)
+                    dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
             }
         }
 
@@ -178,6 +163,18 @@ namespace Semesterprojektet
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             // Solgt knap
+        }
+
+        private void CRUDBolig_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'tHEONETHEONLY.Bolig' table. You can move, or remove it, as needed.
+            this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
+
+        }
+
+        private void RefreshDGV_Click(object sender, EventArgs e)
+        {
+            this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
         }
     }
 }

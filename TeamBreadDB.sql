@@ -37,18 +37,15 @@ CREATE TABLE Tlf (
 
 CREATE TABLE Bolig (
 	bID INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
-	eID INT FOREIGN KEY REFERENCES Ejendomsmaegler(eID),
-	kID INT FOREIGN KEY REFERENCES Kunder(kID),
-
 	adresse VARCHAR (50),
 	postNr INT FOREIGN KEY REFERENCES Postnummer(postNr),
+	solgt INT,
 	kvm DECIMAL,
-
 	salgsPris DECIMAL,
-
 	handelsPris DECIMAL,
 	handelsDato DATE,
-	solgt INT,
+	eID INT FOREIGN KEY REFERENCES Ejendomsmaegler(eID),
+	kID INT FOREIGN KEY REFERENCES Kunder(kID),
 );
 
 INSERT INTO Postnummer (postNr, byNavn) VALUES
@@ -65,10 +62,12 @@ INSERT INTO Postnummer (postNr, byNavn) VALUES
 (9000, 'Aalborg')
 
 
-INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Tom Pernille', 'Ali', 'tompernilleali@yahoo.com', '1', '2')
+INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Tom Pernille', 'Ali', 'tompernilleali@yahoo.com', '1', '0')
+INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Ulla Karsten', 'Christensen', 'ukc@yahoo.com', '1', '0')
 INSERT INTO Ejendomsmaegler (pass, fNavn, eNavn, email) VALUES ('root','Admin', '','')
 INSERT INTO Ejendomsmaegler (pass, fNavn, eNavn, email) VALUES ('1234','Tom Ali', 'Hansen','tomalihansen@realbolig.dk')
 INSERT INTO Bolig (eID, kID, adresse, postNr, kvm, salgsPris) VALUES ('2','1','Mywaye','7100','110','2000000')
+INSERT INTO Bolig (eID, kID, adresse, postNr, kvm, salgsPris) VALUES ('2','2','Syrengården 19','7100','150','5000000')
 
 SELECT * FROM Ejendomsmaegler
 
