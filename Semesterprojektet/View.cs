@@ -85,7 +85,7 @@ namespace Semesterprojektet
                     break;
                 default:
                     {
-                        TextWriter sw = new StreamWriter(@"..\Semester1.txt");
+                        TextWriter sw = new StreamWriter(@"..\..\..\Søg_Bolig.txt");
                         int rowcount = dataGridView1.Rows.Count;
                         for (int i = 0; i < rowcount - 1; i++)
                         {
