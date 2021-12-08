@@ -24,11 +24,13 @@ namespace Semesterprojektet
 
         }
 
+        //POSTNUMMER
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        //ADRESSE
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
@@ -71,7 +73,25 @@ namespace Semesterprojektet
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-
+            /*
+            if (txtCarName.Text != "" && txtModel.Text != "" && txtYear.Text != "")
+            {
+                cmd = new SqlCommand("insert into tblCarDetails(Name,Model,Year) values(@name,@model,@year)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@name", txtCarName.Text);
+                cmd.Parameters.AddWithValue("@model", txtModel.Text);
+                cmd.Parameters.AddWithValue("@year", txtYear.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Car Details Inserted Successfully");
+                PopulateData();
+                ClearControls();
+            }
+            else
+            {
+                MessageBox.Show("Tast alle celler ind");
+            }
+            */
         }
 
         private void updateBtn_Click(object sender, EventArgs e)

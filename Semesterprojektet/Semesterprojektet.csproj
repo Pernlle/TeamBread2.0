@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="boligdataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>boligdataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CRUDSaelger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +93,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>THEONETHEONLY.xsd</DependentUpon>
     </Compile>
+    <Compile Include="V2CRUDBolig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2CRUDBolig.Designer.cs">
+      <DependentUpon>V2CRUDBolig.cs</DependentUpon>
+    </Compile>
     <Compile Include="V2Forside.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,12 +139,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="V2CRUDBolig.resx">
+      <DependentUpon>V2CRUDBolig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V2Forside.resx">
       <DependentUpon>V2Forside.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="boligdataset.xsc">
+      <DependentUpon>boligdataset.xsd</DependentUpon>
+    </None>
+    <None Include="boligdataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>boligdataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="boligdataset.xss">
+      <DependentUpon>boligdataset.xsd</DependentUpon>
+    </None>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
