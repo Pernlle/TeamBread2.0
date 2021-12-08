@@ -19,10 +19,7 @@ namespace Semesterprojektet
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            string kid = "1234";
-            string kpass = "5555";
-            
-
+ 
             string id = textBox1.Text;
             string pass = textBox2.Text;
 
@@ -36,8 +33,9 @@ namespace Semesterprojektet
             //"<" check for JS tags ... NO cross site scripting here:
             if (id.Contains("<")) id_ok = false;
             if (pass.Contains("<")) pass_ok = false;
-            if ((this.textBox1.Text == kid && this.textBox2.Text == kpass))
-            {
+            if (id_ok && pass_ok) 
+            
+                {
                 string idId = id.Substring(0, 1);
                 if (idId.Contains("1")) { /* admin */}
                 if (idId.Contains("2")) { /* Egendomsmægler */}
