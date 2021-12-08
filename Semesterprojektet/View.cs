@@ -98,6 +98,7 @@ namespace Semesterprojektet
                     break;
             }
             // nedenfor er til at lave søg - har også prøvet med switch
+            /*
             TextWriter sw = new StreamWriter(@"..\Semester1.txt");
             int rowcount = dataGridView1.Rows.Count;
             for (int i = 0; i < rowcount - 1; i++)
@@ -106,6 +107,7 @@ namespace Semesterprojektet
             }
             sw.Close();
             MessageBox.Show("Data Successfully Exported");
+            */
         }
     }
 }
