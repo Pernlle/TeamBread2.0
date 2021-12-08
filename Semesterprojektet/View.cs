@@ -37,16 +37,43 @@ namespace Semesterprojektet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TextWriter sw = new StreamWriter(@"..\Semester.txt");
-            int rowcount = dataGridView1.Rows.Count;
-            for (int i = 0; i < rowcount - 1; i++)
+            string search = Search.Text;
+
+            switch (search) 
             {
-                sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
-            }
-            sw.Close();    
-
-
-            MessageBox.Show("Data Successfully Exported");
+                case "2650":
+                case "Hvidovre":
+                    Console.WriteLine();
+                    break;
+                case "6980":
+                case "Tim":
+                    Console.WriteLine();
+                    break;
+                case "7100":
+                case "Vejle":
+                    Console.WriteLine();
+                    break;
+                case "7323":
+                case "Give":
+                    Console.WriteLine();
+                    break;
+                case "8700":
+                case "Horsens":
+                    Console.WriteLine();
+                    break;
+                default:
+                    {
+                        TextWriter sw = new StreamWriter(@"..\Semester.txt");
+                        int rowcount = dataGridView1.Rows.Count;
+                        for (int i = 0; i < rowcount - 1; i++)
+                        {
+                            sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
+                        }
+                        sw.Close();
+                        MessageBox.Show("Data Successfully Exported");
+                    }
+                    break;
+            }            
         }
     }
 }
