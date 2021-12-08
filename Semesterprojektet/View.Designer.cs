@@ -45,7 +45,7 @@ namespace Semesterprojektet
             this.boligTableAdapter1 = new Semesterprojektet.THEONETHEONLYTableAdapters.BoligTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Search = new System.Windows.Forms.MaskedTextBox();
+            this.search = new System.Windows.Forms.MaskedTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -144,15 +144,15 @@ namespace Semesterprojektet
             this.label2.TabIndex = 3;
             this.label2.Text = "Postnummer";
             // 
-            // Search
+            // search
             // 
-            this.Search.BackColor = System.Drawing.Color.Silver;
-            this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search.Location = new System.Drawing.Point(37, 102);
-            this.Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(125, 34);
-            this.Search.TabIndex = 4;
+            this.search.BackColor = System.Drawing.Color.Silver;
+            this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.Location = new System.Drawing.Point(37, 102);
+            this.search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(125, 34);
+            this.search.TabIndex = 4;
             // 
             // button2
             // 
@@ -186,7 +186,7 @@ namespace Semesterprojektet
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.Search);
+            this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(654, 0);
@@ -376,7 +376,7 @@ namespace Semesterprojektet
         private THEONETHEONLYTableAdapters.BoligTableAdapter boligTableAdapter1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox Search;
+        private System.Windows.Forms.MaskedTextBox search;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
