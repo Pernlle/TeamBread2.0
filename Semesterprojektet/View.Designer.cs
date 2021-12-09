@@ -50,7 +50,6 @@ namespace Semesterprojektet
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.bIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +60,11 @@ namespace Semesterprojektet
             this.solgtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.boligBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.boligBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.boligBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEONETHEONLYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEONETHEONLY)).BeginInit();
@@ -72,6 +76,9 @@ namespace Semesterprojektet
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource6)).BeginInit();
             this.SuspendLayout();
             // 
             // boligBindingSource3
@@ -183,6 +190,7 @@ namespace Semesterprojektet
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
@@ -242,18 +250,6 @@ namespace Semesterprojektet
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(654, 467);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 467);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bIDDataGridViewTextBoxColumn
             // 
@@ -336,6 +332,45 @@ namespace Semesterprojektet
             this.eIDDataGridViewTextBoxColumn.Name = "eIDDataGridViewTextBoxColumn";
             this.eIDDataGridViewTextBoxColumn.Width = 150;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(654, 467);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.boligBindingSource6, "adresse", true));
+            this.comboBox1.DataSource = this.boligBindingSource4;
+            this.comboBox1.DisplayMember = "adresse";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(43, 267);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.ValueMember = "bID";
+            // 
+            // boligBindingSource4
+            // 
+            this.boligBindingSource4.DataMember = "Bolig";
+            this.boligBindingSource4.DataSource = this.tHEONETHEONLYBindingSource;
+            // 
+            // boligBindingSource5
+            // 
+            this.boligBindingSource5.DataMember = "Bolig";
+            this.boligBindingSource5.DataSource = this.tHEONETHEONLY;
+            // 
+            // boligBindingSource6
+            // 
+            this.boligBindingSource6.DataMember = "Bolig";
+            this.boligBindingSource6.DataSource = this.tHEONETHEONLY;
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,6 +394,9 @@ namespace Semesterprojektet
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -392,5 +430,9 @@ namespace Semesterprojektet
         private System.Windows.Forms.DataGridViewTextBoxColumn solgtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource boligBindingSource6;
+        private System.Windows.Forms.BindingSource boligBindingSource4;
+        private System.Windows.Forms.BindingSource boligBindingSource5;
     }
 }

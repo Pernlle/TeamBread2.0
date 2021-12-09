@@ -32,6 +32,7 @@ namespace Semesterprojektet
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // søg knap
             string searchValue = search.Text;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
@@ -71,13 +72,51 @@ namespace Semesterprojektet
                 case "2650":
                 case "Hvidovre":
                     {
+                        String areaToPrint = "2650";
                         TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Hvidovre.txt");
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
+                        {
+                            String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                            if (area == areaToPrint)
+                            {
+                                for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                                {
+                                    if (j == dataGridView1.Columns.Count - 1) // if last column
+                                    {
+                                        writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    }
+                                    else
+                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                                }
+                            }
+                        }
+                        writer.Close();
+                        MessageBox.Show("Data Exported");
                     }
                     break;
                 case "6980":
                 case "Tim":
                     {
-                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Tim.txt");
+                        String areaToPrint = "6980";
+                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Tim.txt");                        
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
+                        {
+                            String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                            if (area == areaToPrint)
+                            {
+                                for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                                {
+                                    if (j == dataGridView1.Columns.Count - 1) // if last column
+                                    {
+                                        writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    }
+                                    else
+                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                                }
+                            }
+                        }
+                        writer.Close();
+                        MessageBox.Show("Data Exported");
                     }
                     break;
                 case "7100":
@@ -88,14 +127,13 @@ namespace Semesterprojektet
                         for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                         {
                             String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                            MessageBox.Show(area);
                            if (area == areaToPrint)
                             {
                                 for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
                                 {
                                     if (j == dataGridView1.Columns.Count - 1) // if last column
                                     {
-                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                        writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
                                     }
                                     else
                                         writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
@@ -109,7 +147,26 @@ namespace Semesterprojektet
                 case "7323":
                 case "Give":
                     {
+                        String areaToPrint = "7323";
                         TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Give.txt");
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
+                        {
+                            String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                            if (area == areaToPrint)
+                            {
+                                for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                                {
+                                    if (j == dataGridView1.Columns.Count - 1) // if last column
+                                    {
+                                        writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    }
+                                    else
+                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                                }
+                            }
+                        }
+                        writer.Close();
+                        MessageBox.Show("Data Exported");
                     }
                     break;
                 case "8700":
@@ -126,7 +183,7 @@ namespace Semesterprojektet
                                 {
                                     if (j == dataGridView1.Columns.Count - 1) // if last column
                                     {
-                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                        writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
                                     }
                                     else
                                         writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
@@ -146,29 +203,17 @@ namespace Semesterprojektet
                             {
                                 if (j == dataGridView1.Columns.Count - 1) // if last column
                                 {
-                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
                                 }
                                 else
                                     writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                             }
-                            writer.WriteLine("");
                         }
                         writer.Close();
                         MessageBox.Show("Data Exported");
 
                         break;
-                    }
-                    // nedenfor er til at lave søg - har også prøvet med switch
-                    /*
-                    TextWriter sw = new StreamWriter(@"..\Semester1.txt");
-                    int rowcount = dataGridView1.Rows.Count;
-                    for (int i = 0; i < rowcount - 1; i++)
-                    {
-                        sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
-                    }
-                    sw.Close();
-                    MessageBox.Show("Data Successfully Exported");
-                    */
+                    }                    
             }
         }
     }
