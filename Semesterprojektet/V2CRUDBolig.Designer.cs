@@ -213,7 +213,7 @@ namespace Semesterprojektet
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1007, 211);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 13;
             // 
             // label8
             // 
@@ -292,7 +292,7 @@ namespace Semesterprojektet
             this.handelsdato.Location = new System.Drawing.Point(669, 124);
             this.handelsdato.Name = "handelsdato";
             this.handelsdato.Size = new System.Drawing.Size(134, 26);
-            this.handelsdato.TabIndex = 12;
+            this.handelsdato.TabIndex = 8;
             this.handelsdato.Value = new System.DateTime(2021, 12, 9, 12, 10, 33, 0);
             this.handelsdato.ValueChanged += new System.EventHandler(this.handelsdato_ValueChanged);
             // 
@@ -302,7 +302,7 @@ namespace Semesterprojektet
             this.textBox7.Location = new System.Drawing.Point(88, 26);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(134, 19);
-            this.textBox7.TabIndex = 11;
+            this.textBox7.TabIndex = 1;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // eID
@@ -311,7 +311,7 @@ namespace Semesterprojektet
             this.eID.Location = new System.Drawing.Point(399, 119);
             this.eID.Name = "eID";
             this.eID.Size = new System.Drawing.Size(134, 19);
-            this.eID.TabIndex = 10;
+            this.eID.TabIndex = 6;
             this.eID.TextChanged += new System.EventHandler(this.eID_TextChanged);
             // 
             // sID
@@ -320,7 +320,7 @@ namespace Semesterprojektet
             this.sID.Location = new System.Drawing.Point(399, 71);
             this.sID.Name = "sID";
             this.sID.Size = new System.Drawing.Size(134, 19);
-            this.sID.TabIndex = 9;
+            this.sID.TabIndex = 5;
             this.sID.TextChanged += new System.EventHandler(this.sID_TextChanged);
             // 
             // handelspris
@@ -329,7 +329,7 @@ namespace Semesterprojektet
             this.handelspris.Location = new System.Drawing.Point(669, 76);
             this.handelspris.Name = "handelspris";
             this.handelspris.Size = new System.Drawing.Size(134, 19);
-            this.handelspris.TabIndex = 8;
+            this.handelspris.TabIndex = 7;
             this.handelspris.TextChanged += new System.EventHandler(this.handelspris_TextChanged);
             // 
             // kvm
@@ -338,7 +338,7 @@ namespace Semesterprojektet
             this.kvm.Location = new System.Drawing.Point(88, 121);
             this.kvm.Name = "kvm";
             this.kvm.Size = new System.Drawing.Size(134, 19);
-            this.kvm.TabIndex = 7;
+            this.kvm.TabIndex = 3;
             this.kvm.TextChanged += new System.EventHandler(this.kvm_TextChanged);
             // 
             // textBox2
@@ -347,7 +347,7 @@ namespace Semesterprojektet
             this.textBox2.Location = new System.Drawing.Point(88, 73);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(134, 19);
-            this.textBox2.TabIndex = 6;
+            this.textBox2.TabIndex = 2;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // salgspris
@@ -356,7 +356,7 @@ namespace Semesterprojektet
             this.salgspris.Location = new System.Drawing.Point(399, 27);
             this.salgspris.Name = "salgspris";
             this.salgspris.Size = new System.Drawing.Size(134, 19);
-            this.salgspris.TabIndex = 5;
+            this.salgspris.TabIndex = 4;
             this.salgspris.TextChanged += new System.EventHandler(this.salgspris_TextChanged);
             // 
             // refreshBtn
@@ -364,7 +364,7 @@ namespace Semesterprojektet
             this.refreshBtn.Location = new System.Drawing.Point(909, 154);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(86, 41);
-            this.refreshBtn.TabIndex = 4;
+            this.refreshBtn.TabIndex = 12;
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.UseVisualStyleBackColor = true;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
@@ -377,7 +377,7 @@ namespace Semesterprojektet
             this.deleteBtn.Location = new System.Drawing.Point(837, 114);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(158, 34);
-            this.deleteBtn.TabIndex = 3;
+            this.deleteBtn.TabIndex = 11;
             this.deleteBtn.Text = "Slet";
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
@@ -390,7 +390,7 @@ namespace Semesterprojektet
             this.updateBtn.Location = new System.Drawing.Point(837, 71);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(158, 34);
-            this.updateBtn.TabIndex = 2;
+            this.updateBtn.TabIndex = 10;
             this.updateBtn.Text = "Opdater";
             this.updateBtn.UseVisualStyleBackColor = true;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
@@ -403,7 +403,7 @@ namespace Semesterprojektet
             this.createBtn.Location = new System.Drawing.Point(837, 27);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(158, 34);
-            this.createBtn.TabIndex = 1;
+            this.createBtn.TabIndex = 9;
             this.createBtn.Text = "Opret";
             this.createBtn.UseVisualStyleBackColor = true;
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
@@ -426,7 +426,7 @@ namespace Semesterprojektet
             this.panel2.Location = new System.Drawing.Point(0, 211);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1007, 337);
-            this.panel2.TabIndex = 2;
+            this.panel2.TabIndex = 14;
             // 
             // boligBindingSource1
             // 
