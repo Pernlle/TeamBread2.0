@@ -32,6 +32,7 @@ namespace Semesterprojektet
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // søg knap
             string searchValue = search.Text;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
