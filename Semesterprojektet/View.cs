@@ -66,7 +66,7 @@ namespace Semesterprojektet
         {
             string search = this.search.Text;
 
-            switch (search) 
+            switch (search)
             {
                 case "2650":
                 case "Hvidovre":
@@ -116,6 +116,7 @@ namespace Semesterprojektet
                     MessageBox.Show("Data Successfully Exported");
                     */
             }
+        }
     }
 }
 
