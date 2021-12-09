@@ -120,7 +120,7 @@ namespace Semesterprojektet
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         //conn.Close(); // remember this HUSK ALTID AT LUKKE!
-                        MessageBox.Show("Solgt bolig");
+                        MessageBox.Show("Solgt bolig oprettet");
                         this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
                     }
                     catch (Exception exc)
@@ -165,7 +165,7 @@ namespace Semesterprojektet
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     //conn.Close(); // remember this HUSK ALTID AT LUKKE!
-                    MessageBox.Show("Solgt bolig");
+                    MessageBox.Show("Ny bolig oprettet");
                     this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
                 }
                 catch (Exception exc)
