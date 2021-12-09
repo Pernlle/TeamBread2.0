@@ -50,9 +50,8 @@ namespace Semesterprojektet
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.bIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kvmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +59,8 @@ namespace Semesterprojektet
             this.handelsPrisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.handelsDatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solgtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.kIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEONETHEONLYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEONETHEONLY)).BeginInit();
@@ -212,15 +212,15 @@ namespace Semesterprojektet
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bIDDataGridViewTextBoxColumn,
-            this.eIDDataGridViewTextBoxColumn,
-            this.kIDDataGridViewTextBoxColumn,
             this.adresseDataGridViewTextBoxColumn,
             this.postNrDataGridViewTextBoxColumn,
             this.kvmDataGridViewTextBoxColumn,
             this.salgsPrisDataGridViewTextBoxColumn,
             this.handelsPrisDataGridViewTextBoxColumn,
             this.handelsDatoDataGridViewTextBoxColumn,
-            this.solgtDataGridViewTextBoxColumn});
+            this.solgtDataGridViewTextBoxColumn,
+            this.kIDDataGridViewTextBoxColumn,
+            this.eIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.boligBindingSource3;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
@@ -243,6 +243,18 @@ namespace Semesterprojektet
             this.dataGridView1.Size = new System.Drawing.Size(654, 467);
             this.dataGridView1.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(654, 467);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // bIDDataGridViewTextBoxColumn
             // 
             this.bIDDataGridViewTextBoxColumn.DataPropertyName = "bID";
@@ -251,22 +263,6 @@ namespace Semesterprojektet
             this.bIDDataGridViewTextBoxColumn.Name = "bIDDataGridViewTextBoxColumn";
             this.bIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.bIDDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // eIDDataGridViewTextBoxColumn
-            // 
-            this.eIDDataGridViewTextBoxColumn.DataPropertyName = "eID";
-            this.eIDDataGridViewTextBoxColumn.HeaderText = "eID";
-            this.eIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.eIDDataGridViewTextBoxColumn.Name = "eIDDataGridViewTextBoxColumn";
-            this.eIDDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // kIDDataGridViewTextBoxColumn
-            // 
-            this.kIDDataGridViewTextBoxColumn.DataPropertyName = "kID";
-            this.kIDDataGridViewTextBoxColumn.HeaderText = "kID";
-            this.kIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.kIDDataGridViewTextBoxColumn.Name = "kIDDataGridViewTextBoxColumn";
-            this.kIDDataGridViewTextBoxColumn.Width = 150;
             // 
             // adresseDataGridViewTextBoxColumn
             // 
@@ -324,17 +320,21 @@ namespace Semesterprojektet
             this.solgtDataGridViewTextBoxColumn.Name = "solgtDataGridViewTextBoxColumn";
             this.solgtDataGridViewTextBoxColumn.Width = 150;
             // 
-            // panel1
+            // kIDDataGridViewTextBoxColumn
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 467);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.kIDDataGridViewTextBoxColumn.DataPropertyName = "kID";
+            this.kIDDataGridViewTextBoxColumn.HeaderText = "kID";
+            this.kIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.kIDDataGridViewTextBoxColumn.Name = "kIDDataGridViewTextBoxColumn";
+            this.kIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // eIDDataGridViewTextBoxColumn
+            // 
+            this.eIDDataGridViewTextBoxColumn.DataPropertyName = "eID";
+            this.eIDDataGridViewTextBoxColumn.HeaderText = "eID";
+            this.eIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.eIDDataGridViewTextBoxColumn.Name = "eIDDataGridViewTextBoxColumn";
+            this.eIDDataGridViewTextBoxColumn.Width = 150;
             // 
             // View
             // 
@@ -381,9 +381,8 @@ namespace Semesterprojektet
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn bIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postNrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kvmDataGridViewTextBoxColumn;
@@ -391,6 +390,7 @@ namespace Semesterprojektet
         private System.Windows.Forms.DataGridViewTextBoxColumn handelsPrisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn handelsDatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn solgtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eIDDataGridViewTextBoxColumn;
     }
 }
