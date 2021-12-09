@@ -85,30 +85,37 @@ namespace Semesterprojektet
                     break;
                 default:
                     {
-                        TextWriter sw = new StreamWriter(@"..\Semester1.txt");
-                        int rowcount = dataGridView1.Rows.Count;
-                        for (int i = 0; i < rowcount - 1; i++)
+                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg.txt");
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                         {
-                            for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                                sw.WriteLine(dataGridView1.Rows[i].Cells[j].Value.ToString());
+                            for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                            {
+                                if (j == dataGridView1.Columns.Count - 1) // if last column
+                                {
+                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                }
+                                else
+                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                            }
+                            writer.WriteLine("");
                         }
-                        sw.Close();
-                        MessageBox.Show("Data Successfully Exported");
+                        writer.Close();
+                        MessageBox.Show("Data Exported");
+
+                        break;
                     }
-                    break;
+                    // nedenfor er til at lave søg - har også prøvet med switch
+                    /*
+                    TextWriter sw = new StreamWriter(@"..\Semester1.txt");
+                    int rowcount = dataGridView1.Rows.Count;
+                    for (int i = 0; i < rowcount - 1; i++)
+                    {
+                        sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
+                    }
+                    sw.Close();
+                    MessageBox.Show("Data Successfully Exported");
+                    */
             }
-            // nedenfor er til at lave søg - har også prøvet med switch
-            /*
-            TextWriter sw = new StreamWriter(@"..\Semester1.txt");
-            int rowcount = dataGridView1.Rows.Count;
-            for (int i = 0; i < rowcount - 1; i++)
-            {
-                sw.WriteLine(dataGridView1.Rows[i].Cells[0].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "\t" + dataGridView1.Rows[i].Cells[2].Value.ToString());
-            }
-            sw.Close();
-            MessageBox.Show("Data Successfully Exported");
-            */
-        }
     }
 }
 
