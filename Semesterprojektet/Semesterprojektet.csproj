@@ -209,9 +209,6 @@
     <None Include="Resources\RealBoligLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RealBoligLogo1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Billede1 %282%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
