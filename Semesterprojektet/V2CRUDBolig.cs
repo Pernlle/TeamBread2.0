@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Semesterprojektet
 {
     public partial class V2CRUDBolig : Form
     {
+        public string strconn = @"Server=den1.mssql7.gear.host; Database=teambreaddb; User ID=teambreaddb; Password=Tg53?N_p6fzh";
         public V2CRUDBolig()
         {
             InitializeComponent();
@@ -73,26 +75,28 @@ namespace Semesterprojektet
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-            /*
-            if (txtCarName.Text != "" && txtModel.Text != "" && txtYear.Text != "")
-            {
-                cmd = new SqlCommand("insert into tblCarDetails(Name,Model,Year) values(@name,@model,@year)", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@name", txtCarName.Text);
-                cmd.Parameters.AddWithValue("@model", txtModel.Text);
-                cmd.Parameters.AddWithValue("@year", txtYear.Text);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Car Details Inserted Successfully");
-                PopulateData();
-                ClearControls();
-            }
-            else
-            {
-                MessageBox.Show("Tast alle celler ind");
-            }
-            */
+        
+            SqlConnection conn = new SqlConnection(strconn);
+        /*
+        if (txtCarName.Text != "" && txtModel.Text != "" && txtYear.Text != "")
+        {
+            cmd = new SqlCommand("insert into tblCarDetails(Name,Model,Year) values(@name,@model,@year)", con);
+            con.Open();
+            cmd.Parameters.AddWithValue("@name", txtCarName.Text);
+            cmd.Parameters.AddWithValue("@model", txtModel.Text);
+            cmd.Parameters.AddWithValue("@year", txtYear.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Car Details Inserted Successfully");
+            PopulateData();
+            ClearControls();
         }
+        else
+        {
+            MessageBox.Show("Tast alle celler ind");
+        }
+        */
+    }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
