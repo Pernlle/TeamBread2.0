@@ -75,28 +75,27 @@ namespace Semesterprojektet
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-        
             SqlConnection conn = new SqlConnection(strconn);
-        /*
-        if (txtCarName.Text != "" && txtModel.Text != "" && txtYear.Text != "")
-        {
-            cmd = new SqlCommand("insert into tblCarDetails(Name,Model,Year) values(@name,@model,@year)", con);
-            con.Open();
-            cmd.Parameters.AddWithValue("@name", txtCarName.Text);
-            cmd.Parameters.AddWithValue("@model", txtModel.Text);
-            cmd.Parameters.AddWithValue("@year", txtYear.Text);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Car Details Inserted Successfully");
-            PopulateData();
-            ClearControls();
+            /*
+                 if (textBox2.Text != "" && textBox7.Text != "" && kvm.Text != "" && salgspris.Text != "" .Text != "" salgspris.Text != "" salgspris.Text != "" salgspris.Text != "" salgspris.Text != "")
+                 {
+                     cmd = new SqlCommand("insert into tblCarDetails(Name,Model,Year) values(@name,@model,@year)", strconn);
+                     con.Open();
+                     cmd.Parameters.AddWithValue("@name", txtCarName.Text);
+                     cmd.Parameters.AddWithValue("@model", txtModel.Text);
+                     cmd.Parameters.AddWithValue("@year", txtYear.Text);
+                     cmd.ExecuteNonQuery();
+                     con.Close();
+                     MessageBox.Show("Car Details Inserted Successfully");
+                     ClearControls();
+                 }
+                 else
+                 {
+                     MessageBox.Show("Tast alle celler ind");
+                 }
+            */
         }
-        else
-        {
-            MessageBox.Show("Tast alle celler ind");
-        }
-        */
-    }
+    
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
