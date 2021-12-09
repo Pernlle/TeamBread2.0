@@ -41,8 +41,9 @@ namespace Semesterprojektet
             this.handelsDatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boligBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tHEONETHEONLY = new Semesterprojektet.THEONETHEONLY();
+            this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boligTableAdapter = new Semesterprojektet.THEONETHEONLYTableAdapters.BoligTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,19 +62,18 @@ namespace Semesterprojektet
             this.kvm = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.salgspris = new System.Windows.Forms.TextBox();
-            this.refreshBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.createBtn = new System.Windows.Forms.Button();
             this.soldCheck = new System.Windows.Forms.CheckBox();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.boligBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEONETHEONLY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -172,15 +172,20 @@ namespace Semesterprojektet
             this.eIDDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.eIDDataGridViewTextBoxColumn.Name = "eIDDataGridViewTextBoxColumn";
             // 
-            // boligBindingSource
+            // boligBindingSource1
             // 
-            this.boligBindingSource.DataMember = "Bolig";
-            this.boligBindingSource.DataSource = this.tHEONETHEONLY;
+            this.boligBindingSource1.DataMember = "Bolig";
+            this.boligBindingSource1.DataSource = this.tHEONETHEONLY;
             // 
             // tHEONETHEONLY
             // 
             this.tHEONETHEONLY.DataSetName = "THEONETHEONLY";
             this.tHEONETHEONLY.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // boligBindingSource
+            // 
+            this.boligBindingSource.DataMember = "Bolig";
+            this.boligBindingSource.DataSource = this.tHEONETHEONLY;
             // 
             // boligTableAdapter
             // 
@@ -204,7 +209,6 @@ namespace Semesterprojektet
             this.panel1.Controls.Add(this.kvm);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.salgspris);
-            this.panel1.Controls.Add(this.refreshBtn);
             this.panel1.Controls.Add(this.deleteBtn);
             this.panel1.Controls.Add(this.updateBtn);
             this.panel1.Controls.Add(this.createBtn);
@@ -218,7 +222,7 @@ namespace Semesterprojektet
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(569, 127);
+            this.label8.Location = new System.Drawing.Point(568, 152);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 20);
             this.label8.TabIndex = 20;
@@ -227,7 +231,7 @@ namespace Semesterprojektet
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(568, 76);
+            this.label7.Location = new System.Drawing.Point(568, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 20);
             this.label7.TabIndex = 19;
@@ -236,7 +240,7 @@ namespace Semesterprojektet
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(238, 122);
+            this.label6.Location = new System.Drawing.Point(238, 152);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 20);
             this.label6.TabIndex = 18;
@@ -245,7 +249,7 @@ namespace Semesterprojektet
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(311, 71);
+            this.label5.Location = new System.Drawing.Point(311, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 20);
             this.label5.TabIndex = 17;
@@ -254,7 +258,7 @@ namespace Semesterprojektet
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(319, 26);
+            this.label4.Location = new System.Drawing.Point(319, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 16;
@@ -263,7 +267,7 @@ namespace Semesterprojektet
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 124);
+            this.label3.Location = new System.Drawing.Point(43, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 15;
@@ -272,7 +276,7 @@ namespace Semesterprojektet
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 73);
+            this.label2.Location = new System.Drawing.Point(27, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 14;
@@ -289,7 +293,7 @@ namespace Semesterprojektet
             // 
             // handelsdato
             // 
-            this.handelsdato.Location = new System.Drawing.Point(669, 124);
+            this.handelsdato.Location = new System.Drawing.Point(669, 148);
             this.handelsdato.Name = "handelsdato";
             this.handelsdato.Size = new System.Drawing.Size(134, 26);
             this.handelsdato.TabIndex = 8;
@@ -308,7 +312,7 @@ namespace Semesterprojektet
             // eID
             // 
             this.eID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.eID.Location = new System.Drawing.Point(399, 119);
+            this.eID.Location = new System.Drawing.Point(399, 153);
             this.eID.Name = "eID";
             this.eID.Size = new System.Drawing.Size(134, 19);
             this.eID.TabIndex = 6;
@@ -317,7 +321,7 @@ namespace Semesterprojektet
             // sID
             // 
             this.sID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sID.Location = new System.Drawing.Point(399, 71);
+            this.sID.Location = new System.Drawing.Point(399, 86);
             this.sID.Name = "sID";
             this.sID.Size = new System.Drawing.Size(134, 19);
             this.sID.TabIndex = 5;
@@ -326,7 +330,7 @@ namespace Semesterprojektet
             // handelspris
             // 
             this.handelspris.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.handelspris.Location = new System.Drawing.Point(669, 76);
+            this.handelspris.Location = new System.Drawing.Point(669, 88);
             this.handelspris.Name = "handelspris";
             this.handelspris.Size = new System.Drawing.Size(134, 19);
             this.handelspris.TabIndex = 7;
@@ -335,7 +339,7 @@ namespace Semesterprojektet
             // kvm
             // 
             this.kvm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.kvm.Location = new System.Drawing.Point(88, 121);
+            this.kvm.Location = new System.Drawing.Point(88, 153);
             this.kvm.Name = "kvm";
             this.kvm.Size = new System.Drawing.Size(134, 19);
             this.kvm.TabIndex = 3;
@@ -344,7 +348,7 @@ namespace Semesterprojektet
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(88, 73);
+            this.textBox2.Location = new System.Drawing.Point(88, 87);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(134, 19);
             this.textBox2.TabIndex = 2;
@@ -359,22 +363,12 @@ namespace Semesterprojektet
             this.salgspris.TabIndex = 4;
             this.salgspris.TextChanged += new System.EventHandler(this.salgspris_TextChanged);
             // 
-            // refreshBtn
-            // 
-            this.refreshBtn.Location = new System.Drawing.Point(909, 154);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(86, 41);
-            this.refreshBtn.TabIndex = 12;
-            this.refreshBtn.Text = "Refresh";
-            this.refreshBtn.UseVisualStyleBackColor = true;
-            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
-            // 
             // deleteBtn
             // 
             this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteBtn.Location = new System.Drawing.Point(837, 114);
+            this.deleteBtn.Location = new System.Drawing.Point(837, 138);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(158, 34);
             this.deleteBtn.TabIndex = 11;
@@ -387,7 +381,7 @@ namespace Semesterprojektet
             this.updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateBtn.Location = new System.Drawing.Point(837, 71);
+            this.updateBtn.Location = new System.Drawing.Point(837, 85);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(158, 34);
             this.updateBtn.TabIndex = 10;
@@ -411,7 +405,7 @@ namespace Semesterprojektet
             // soldCheck
             // 
             this.soldCheck.AutoSize = true;
-            this.soldCheck.Location = new System.Drawing.Point(572, 24);
+            this.soldCheck.Location = new System.Drawing.Point(572, 28);
             this.soldCheck.Name = "soldCheck";
             this.soldCheck.Size = new System.Drawing.Size(72, 24);
             this.soldCheck.TabIndex = 0;
@@ -419,19 +413,25 @@ namespace Semesterprojektet
             this.soldCheck.UseVisualStyleBackColor = true;
             this.soldCheck.CheckedChanged += new System.EventHandler(this.soldCheck_CheckedChanged);
             // 
+            // refreshBtn
+            // 
+            this.refreshBtn.Location = new System.Drawing.Point(921, 21);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(74, 45);
+            this.refreshBtn.TabIndex = 12;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = true;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.refreshBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 211);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1007, 337);
             this.panel2.TabIndex = 14;
-            // 
-            // boligBindingSource1
-            // 
-            this.boligBindingSource1.DataMember = "Bolig";
-            this.boligBindingSource1.DataSource = this.tHEONETHEONLY;
             // 
             // V2CRUDBolig
             // 
@@ -444,12 +444,12 @@ namespace Semesterprojektet
             this.Text = "V2CRUDBolig";
             this.Load += new System.EventHandler(this.V2CRUDBolig_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEONETHEONLY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
