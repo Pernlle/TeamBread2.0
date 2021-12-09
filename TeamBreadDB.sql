@@ -59,6 +59,7 @@ INSERT INTO Postnummer (postNr, byNavn) VALUES
 (8700, 'Horsens'),
 (8800, 'Viborg'),
 (9000, 'Aalborg')
+
 INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Pernille', 'Ali', 'pa@yahoo.com', '1', '0')
 INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Ulla', 'Christensen', 'uc@yahoo.com', '1', '1')
 INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Karen', 'Christensen', 'kc@yahoo.com', '0', '1')
