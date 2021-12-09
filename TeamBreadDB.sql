@@ -1,4 +1,3 @@
-
 DROP TABLE Ejendomsmaegler;
 DROP TABLE Kunder;
 DROP TABLE Tlf;
@@ -43,7 +42,7 @@ CREATE TABLE Bolig (
 	kvm DECIMAL,
 	salgsPris DECIMAL,
 	handelsPris DECIMAL,
-	handelsDato DATE,
+	handelsDato VARCHAR(50),
 	eID INT FOREIGN KEY REFERENCES Ejendomsmaegler(eID),
 	kID INT FOREIGN KEY REFERENCES Kunder(kID),
 );
@@ -66,8 +65,8 @@ INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Tom Pernille',
 INSERT INTO Kunder(fNavn, eNavn, email, saelger, koeber) VALUES ('Ulla Karsten', 'Christensen', 'ukc@yahoo.com', '1', '0')
 INSERT INTO Ejendomsmaegler (pass, fNavn, eNavn, email) VALUES ('root','Admin', '','')
 INSERT INTO Ejendomsmaegler (pass, fNavn, eNavn, email) VALUES ('1234','Tom Ali', 'Hansen','tomalihansen@realbolig.dk')
-INSERT INTO Bolig (eID, kID, adresse, postNr, kvm, salgsPris) VALUES ('2','1','Mywaye','7100','110','2000000')
-INSERT INTO Bolig (eID, kID, adresse, postNr, kvm, salgsPris) VALUES ('2','2','Syrengården 19','7100','150','5000000')
+INSERT INTO Bolig (eID, kID, adresse, postNr, kvm, salgsPris, solgt) VALUES ('2','1','Mywaye','7100','110','2000000','0')
+INSERT INTO Bolig (eID, kID, adresse, postNr, kvm, salgsPris, solgt) VALUES ('2','2','Syrengården 19','7100','150','5000000','1')
 
 SELECT * FROM Ejendomsmaegler
 
