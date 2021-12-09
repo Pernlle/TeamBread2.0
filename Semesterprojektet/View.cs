@@ -76,7 +76,6 @@ namespace Semesterprojektet
                         for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                         {
                             String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                            MessageBox.Show(area);
                             if (area == areaToPrint)
                             {
                                 for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
@@ -102,7 +101,6 @@ namespace Semesterprojektet
                         for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                         {
                             String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                            MessageBox.Show(area);
                             if (area == areaToPrint)
                             {
                                 for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
@@ -128,7 +126,6 @@ namespace Semesterprojektet
                         for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                         {
                             String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                            MessageBox.Show(area);
                            if (area == areaToPrint)
                             {
                                 for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
@@ -154,7 +151,6 @@ namespace Semesterprojektet
                         for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                         {
                             String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                            MessageBox.Show(area);
                             if (area == areaToPrint)
                             {
                                 for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
