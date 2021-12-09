@@ -83,19 +83,24 @@ namespace Semesterprojektet
                 case "7100":
                 case "Vejle":
                     {
+                        String areaToPrint = "7100"; // Læs det her ind fra dit textfield 
                         TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Vejle.txt");
-                        for (int i = 0; i < dataGridView1.Rows.Count; i++) // rows
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                         {
-                            for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                            String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                            MessageBox.Show(area);
+                           if (area == areaToPrint)
                             {
-                                if (j == dataGridView1.Columns.Count - 1) // if last column
+                                for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
                                 {
-                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    if (j == dataGridView1.Columns.Count - 1) // if last column
+                                    {
+                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    }
+                                    else
+                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                                 }
-                                else
-                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                             }
-                            writer.WriteLine("");
                         }
                         writer.Close();
                         MessageBox.Show("Data Exported");
@@ -110,19 +115,23 @@ namespace Semesterprojektet
                 case "8700":
                 case "Horsens":
                     {
+                        String areaToPrint = "8700"; // Læs det her ind fra dit textfield 
                         TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Horsens.txt");
-                        for (int i = 0; i == search.Length; i++) // rows
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                         {
-                            for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                            String area = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                            if (area == areaToPrint)
                             {
-                                if (j == dataGridView1.Columns.Count - 1) // if last column
+                                for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
                                 {
-                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    if (j == dataGridView1.Columns.Count - 1) // if last column
+                                    {
+                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    }
+                                    else
+                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                                 }
-                                else
-                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                             }
-                            writer.WriteLine("");
                         }
                         writer.Close();
                         MessageBox.Show("Data Exported");
