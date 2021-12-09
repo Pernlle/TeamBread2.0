@@ -70,18 +70,63 @@ namespace Semesterprojektet
             {
                 case "2650":
                 case "Hvidovre":
+                    {
+                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Hvidovre.txt");
+                    }
                     break;
                 case "6980":
                 case "Tim":
+                    {
+                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Tim.txt");
+                    }
                     break;
                 case "7100":
                 case "Vejle":
+                    {
+                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Vejle.txt");
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++) // rows
+                        {
+                            for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                            {
+                                if (j == dataGridView1.Columns.Count - 1) // if last column
+                                {
+                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                }
+                                else
+                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                            }
+                            writer.WriteLine("");
+                        }
+                        writer.Close();
+                        MessageBox.Show("Data Exported");
+                    }
                     break;
                 case "7323":
                 case "Give":
+                    {
+                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Give.txt");
+                    }
                     break;
                 case "8700":
                 case "Horsens":
+                    {
+                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Horsens.txt");
+                        for (int i = 0; i == search.Length; i++) // rows
+                        {
+                            for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                            {
+                                if (j == dataGridView1.Columns.Count - 1) // if last column
+                                {
+                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                }
+                                else
+                                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                            }
+                            writer.WriteLine("");
+                        }
+                        writer.Close();
+                        MessageBox.Show("Data Exported");
+                    }
                     break;
                 default:
                     {
