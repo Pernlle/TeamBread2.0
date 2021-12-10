@@ -68,6 +68,50 @@ namespace Semesterprojektet
         {
             string search = this.search.Text;
 
+            String areaToPrint = "";
+            if(areaToPrint==search)
+                {
+                TextWriter writer = new StreamWriter($@"..\..\..\Bolig_Søg_{search}.txt");
+                MessageBox.Show(areaToPrint);
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
+                {
+                    String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    if (area == areaToPrint)
+                    {
+                        for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                        {
+                            if (j == dataGridView1.Columns.Count - 1) // if last column
+                            {
+                                writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                            }
+                            else
+                                writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                        }
+                    }
+                }
+
+                writer.Close();
+                MessageBox.Show("Data Exported");
+            }
+            else
+            {
+                TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg.txt");
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
+                {
+                    for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                    {
+                        if (j == dataGridView1.Columns.Count - 1) // if last column
+                        {
+                            writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                        }
+                        else
+                            writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                    }
+                }
+                writer.Close();
+                MessageBox.Show("Data Exported");                
+            }
+            /*
             switch (search)
             {
                 case "2650":
@@ -214,8 +258,9 @@ namespace Semesterprojektet
                         MessageBox.Show("Data Exported");
 
                         break;
-                    }                    
-            }
+                    }
+            
+            }*/
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -236,6 +281,38 @@ namespace Semesterprojektet
                 eID.Text = dgvRow.Cells[9].Value.ToString();
             }
              */
+        }
+
+        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string searchValue = cbSearch.Text;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                bool valueResult = false;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    for (int i = 0; i < row.Cells.Count; i++)
+                    {
+                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
+                        {
+                            int rowIndex = row.Index;
+                            dataGridView1.Rows[rowIndex].Selected = true;
+                            valueResult = true;
+                            break;
+                        }
+                    }
+                }
+                if (!valueResult)
+                {
+                    MessageBox.Show("Unable to find " + search.Text, "Not Found");
+                    return;
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
     }
 }
