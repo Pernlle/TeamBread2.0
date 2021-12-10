@@ -21,8 +21,9 @@ namespace Semesterprojektet
 
         private void V2CRUDBolig_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tHEONETHEONLY.Bolig' table. You can move, or remove it, as needed.
-            this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
+            // TODO: This line of code loads data into the 'tHEDATASETOFALL.Bolig' table. You can move, or remove it, as needed.
+            this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
+           
 
         }
 
@@ -271,20 +272,7 @@ namespace Semesterprojektet
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            string boligID = Convert.ToString(bIDDataGridViewTextBoxColumn);
-            string solgt = Convert.ToString(solgtDataGridViewTextBoxColumn);
-
-            boligID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            adresse.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            postnr.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            kvm.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            salgspris.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            eID.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            sID.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            solgt = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            handelspris.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            handelsdato.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-
+          
         }
     }
 }

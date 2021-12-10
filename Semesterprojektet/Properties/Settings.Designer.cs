@@ -42,5 +42,16 @@ namespace Semesterprojektet.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=den1.mssql7.gear.host;Initial Catalog=teambreaddb;User ID=teambreaddb" +
+            ";Password=Tg53?N_p6fzh")]
+        public string teambreaddbConnectionString1 {
+            get {
+                return ((string)(this["teambreaddbConnectionString1"]));
+            }
+        }
     }
 }
