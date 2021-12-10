@@ -28,18 +28,18 @@ namespace Semesterprojektet
         private void cbSearchPostNr_SelectedIndexChanged(object sender, EventArgs e)
         {
             string searchValue = cbSearchPostNr.Text;
-            dgv1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvB.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
                 bool valueResult = false;
-                foreach (DataGridViewRow row in dgv1.Rows)
+                foreach (DataGridViewRow row in dgvB.Rows)
                 {
                     for (int i = 0; i < row.Cells.Count; i++)
                     {
                         if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
                         {                            
                             int rowIndex = row.Index;
-                            dgv1.Rows[rowIndex].Selected = true;
+                            dgvB.Rows[rowIndex].Selected = true;
                             valueResult = true;
                             break;
                         }
@@ -66,19 +66,19 @@ namespace Semesterprojektet
             if (areaToPrint == search)
             {
                 TextWriter writer = new StreamWriter($@"..\..\..\Bolig_Søg_{search}.txt");
-                for (int i = 0; i < dgv1.Rows.Count - 1; i++) // rows
+                for (int i = 0; i < dgvB.Rows.Count - 1; i++) // rows
                 {
-                    string area = dgv1.Rows[i].Cells[2].Value.ToString();
+                    string area = dgvB.Rows[i].Cells[2].Value.ToString();
                     if (area == areaToPrint)
                     {
-                        for (int j = 0; j < dgv1.Columns.Count; j++) // columns
+                        for (int j = 0; j < dgvB.Columns.Count; j++) // columns
                         {
-                            if (j == dgv1.Columns.Count - 1) // if last column
+                            if (j == dgvB.Columns.Count - 1) // if last column
                             {
-                                writer.WriteLine("\t" + dgv1.Rows[i].Cells[j].Value.ToString());
+                                writer.WriteLine("\t" + dgvB.Rows[i].Cells[j].Value.ToString());
                             }
                             else
-                                writer.Write("\t" + dgv1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                                writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                         }
                     }
                 }
@@ -88,16 +88,16 @@ namespace Semesterprojektet
             else
             {
                 TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg.txt");
-                for (int i = 0; i < dgv1.Rows.Count - 1; i++) // rows
+                for (int i = 0; i < dgvB.Rows.Count - 1; i++) // rows
                 {
-                    for (int j = 0; j < dgv1.Columns.Count; j++) // columns
+                    for (int j = 0; j < dgvB.Columns.Count; j++) // columns
                     {
-                        if (j == dgv1.Columns.Count - 1) // if last column
+                        if (j == dgvB.Columns.Count - 1) // if last column
                         {
-                            writer.WriteLine("\t" + dgv1.Rows[i].Cells[j].Value.ToString());
+                            writer.WriteLine("\t" + dgvB.Rows[i].Cells[j].Value.ToString());
                         }
                         else
-                            writer.Write("\t" + dgv1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                            writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                     }
                 }
                 writer.Close();
@@ -107,12 +107,12 @@ namespace Semesterprojektet
 
         private void clear_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgv1.Rows)
+            foreach (DataGridViewRow row in dgvB.Rows)
             {
                 for (int i = 0; i < row.Cells.Count; i++)
                 {
                     int rowIndex = row.Index;
-                    dgv1.Rows[rowIndex].Selected = false;
+                    dgvB.Rows[rowIndex].Selected = false;
                     break;
                 }
             }
