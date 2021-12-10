@@ -30,8 +30,8 @@ namespace Semesterprojektet
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbSearchPostNr = new System.Windows.Forms.ComboBox();
             this.boligBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -51,6 +51,7 @@ namespace Semesterprojektet
             this.koeberIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boligTableAdapter = new Semesterprojektet.tHEDATASETOFALLTableAdapters.BoligTableAdapter();
+            this.print = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEDATASETOFALLBindingSource)).BeginInit();
@@ -62,6 +63,7 @@ namespace Semesterprojektet
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            this.panel1.Controls.Add(this.print);
             this.panel1.Controls.Add(this.cbSearchPostNr);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -74,9 +76,9 @@ namespace Semesterprojektet
             this.cbSearchPostNr.DataSource = this.boligBindingSource1;
             this.cbSearchPostNr.DisplayMember = "postNr";
             this.cbSearchPostNr.FormattingEnabled = true;
-            this.cbSearchPostNr.Location = new System.Drawing.Point(110, 22);
+            this.cbSearchPostNr.Location = new System.Drawing.Point(188, 24);
             this.cbSearchPostNr.Name = "cbSearchPostNr";
-            this.cbSearchPostNr.Size = new System.Drawing.Size(154, 24);
+            this.cbSearchPostNr.Size = new System.Drawing.Size(109, 24);
             this.cbSearchPostNr.TabIndex = 0;
             this.cbSearchPostNr.ValueMember = "postNr";
             this.cbSearchPostNr.SelectedIndexChanged += new System.EventHandler(this.cbSearchPostNr_SelectedIndexChanged);
@@ -115,23 +117,23 @@ namespace Semesterprojektet
             this.saeglerIDDataGridViewTextBoxColumn,
             this.koeberIDDataGridViewTextBoxColumn});
             this.dgv1.DataSource = this.boligBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv1.GridColor = System.Drawing.Color.Silver;
             this.dgv1.Location = new System.Drawing.Point(0, 64);
             this.dgv1.Name = "dgv1";
             this.dgv1.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv1.RowTemplate.Height = 24;
             this.dgv1.Size = new System.Drawing.Size(836, 399);
             this.dgv1.TabIndex = 1;
@@ -223,6 +225,16 @@ namespace Semesterprojektet
             // 
             this.boligTableAdapter.ClearBeforeFill = true;
             // 
+            // print
+            // 
+            this.print.Location = new System.Drawing.Point(581, 24);
+            this.print.Name = "print";
+            this.print.Size = new System.Drawing.Size(75, 23);
+            this.print.TabIndex = 1;
+            this.print.Text = "Print";
+            this.print.UseVisualStyleBackColor = true;
+            this.print.Click += new System.EventHandler(this.print_Click);
+            // 
             // V2View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,5 +277,6 @@ namespace Semesterprojektet
         private System.Windows.Forms.DataGridViewTextBoxColumn koeberIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cbSearchPostNr;
         private System.Windows.Forms.BindingSource boligBindingSource1;
+        private System.Windows.Forms.Button print;
     }
 }

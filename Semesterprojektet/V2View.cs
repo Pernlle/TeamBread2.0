@@ -36,7 +36,7 @@ namespace Semesterprojektet
                     for (int i = 0; i < row.Cells.Count; i++)
                     {
                         if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
-                        {
+                        {                            
                             int rowIndex = row.Index;
                             dgv1.Rows[rowIndex].Selected = true;
                             valueResult = true;
@@ -54,6 +54,11 @@ namespace Semesterprojektet
             {
                 MessageBox.Show(exc.Message);
             }
+        }
+
+        private void print_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
