@@ -155,6 +155,9 @@
     <EmbeddedResource Include="V2Forside.resx">
       <DependentUpon>V2Forside.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V2View.resx">
+      <DependentUpon>V2View.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>
     </EmbeddedResource>
