@@ -30,8 +30,8 @@ namespace Semesterprojektet
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.print = new System.Windows.Forms.Button();
@@ -164,25 +164,24 @@ namespace Semesterprojektet
             this.saeglerIDDataGridViewTextBoxColumn,
             this.koeberIDDataGridViewTextBoxColumn});
             this.dgvB.DataSource = this.boligBindingSource;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvB.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dgvB.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvB.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvB.GridColor = System.Drawing.Color.Silver;
             this.dgvB.Location = new System.Drawing.Point(0, 104);
             this.dgvB.Name = "dgvB";
             this.dgvB.RowHeadersWidth = 51;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvB.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvB.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvB.RowTemplate.Height = 24;
-            this.dgvB.Size = new System.Drawing.Size(836, 359);
+            this.dgvB.Size = new System.Drawing.Size(836, 190);
             this.dgvB.TabIndex = 1;
             // 
             // bIDDataGridViewTextBoxColumn
@@ -276,6 +275,7 @@ namespace Semesterprojektet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(836, 463);
             this.Controls.Add(this.dgvB);
             this.Controls.Add(this.panel1);
