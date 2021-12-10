@@ -62,16 +62,30 @@ namespace Semesterprojektet
         private void print_Click(object sender, EventArgs e)
         {
             // Antager at sælger i dette tilfælde er SÆLGER! Da der ikke står sælger(Mægler) i opgaveteksten.
-            // Det som sker her er, at, der først printes den tilhørende Sælger, herefter Boligen, og til sidst ALLE Sælgere - og dette går i loop til der ikke er flere boligere.
+            // Det som sker her er, at, der først printes Boligen, og til sidst ALLE Sælgere - og dette går i loop til der ikke er flere boligere.
             dgvK.Columns.Count.ToString();
             string search = cbSearchPostNr.Text;
             string areaToPrint = search;
             if (areaToPrint == search)
             {
-                TextWriter writer = new StreamWriter($@"..\..\..\Bolig_Søg_{search}.txt");
+                TextWriter writer = new StreamWriter($@"..\..\..\txt\Bolig_Søg_{search}.txt");
                 for (int i = 0; i < dgvB.Rows.Count - 1; i++) // Bolig rows
                 {
-                    // Sælger                    
+                    //Bolig
+                    string area = dgvB.Rows[i].Cells[2].Value.ToString();
+                    if (area == areaToPrint)
+                    {
+                        for (int j = 0; j < dgvB.Columns.Count; j++) // Bolig columns
+                        {
+                            if (j == dgvB.Columns.Count - 1) // Bolig if last column
+                            {
+                                writer.WriteLine("\t" + dgvB.Rows[i].Cells[j].Value.ToString());
+                            }
+                            else
+                                writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                        }
+                    }
+                    // Sælger - Virker ikke som det skal :(
                     for (int k = 0; k < dgvK.Rows.Count - 1; k++) // Sælger rows
                     {
                         string areaK = dgvK.Rows[k].Cells[0].Value.ToString(); // 0 er index på kID (kundeID)
@@ -89,27 +103,13 @@ namespace Semesterprojektet
                             }
                         }
                     }
-                    //Bolig
-                    string area = dgvB.Rows[i].Cells[2].Value.ToString();
-                    if (area == areaToPrint)
-                    {
-                        for (int j = 0; j < dgvB.Columns.Count; j++) // Bolig columns
-                        {
-                            if (j == dgvB.Columns.Count - 1) // Bolig if last column
-                            {
-                                writer.WriteLine("\t" + dgvB.Rows[i].Cells[j].Value.ToString());
-                            }
-                            else
-                                writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
-                        }
-                    }
                 }
                 writer.Close();
                 MessageBox.Show("Selected data Exported");
             }
             else
             {
-                TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg.txt");
+                TextWriter writer = new StreamWriter(@"..\..\..\txt\Bolig_Søg.txt");
                 for (int i = 0; i < dgvB.Rows.Count - 1; i++) // rows
                 {
                     for (int j = 0; j < dgvB.Columns.Count; j++) // columns
