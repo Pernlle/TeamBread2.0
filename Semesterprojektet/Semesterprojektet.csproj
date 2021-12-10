@@ -88,6 +88,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TeamBreadDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="tHEDATASETOFALL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tHEDATASETOFALL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="THENEWONE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THENEWONE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="THEONETHEONLY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,6 +199,28 @@
     </None>
     <None Include="TeamBreadDBDataSet.xss">
       <DependentUpon>TeamBreadDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tHEDATASETOFALL.xsc">
+      <DependentUpon>tHEDATASETOFALL.xsd</DependentUpon>
+    </None>
+    <None Include="tHEDATASETOFALL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tHEDATASETOFALL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tHEDATASETOFALL.xss">
+      <DependentUpon>tHEDATASETOFALL.xsd</DependentUpon>
+    </None>
+    <None Include="THENEWONE.xsc">
+      <DependentUpon>THENEWONE.xsd</DependentUpon>
+    </None>
+    <None Include="THENEWONE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>THENEWONE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="THENEWONE.xss">
+      <DependentUpon>THENEWONE.xsd</DependentUpon>
     </None>
     <None Include="THEONETHEONLY.xsc">
       <DependentUpon>THEONETHEONLY.xsd</DependentUpon>
