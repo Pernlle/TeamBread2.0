@@ -33,7 +33,8 @@ namespace Semesterprojektet
         private void button2_Click(object sender, EventArgs e)
         {
             // søg knap
-            string searchValue = search.Text;
+            string searchValueCb = cbSearch.Text;
+            string searchValueT = search.Text;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
@@ -42,7 +43,7 @@ namespace Semesterprojektet
                 {
                     for (int i = 0; i < row.Cells.Count; i++)
                     {
-                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
+                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValueCb) || row.Cells[i].Value.ToString().Equals(searchValueT))
                         {
                             int rowIndex = row.Index;
                             dataGridView1.Rows[rowIndex].Selected = true;
