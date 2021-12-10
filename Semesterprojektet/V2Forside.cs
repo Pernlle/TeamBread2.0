@@ -64,7 +64,7 @@ namespace Semesterprojektet
         private void search_Click(object sender, EventArgs e)
         {
             panel2.Controls.Clear();
-            View frm = new View() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            V2View frm = new V2View() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.panel2.Controls.Add(frm);
             frm.Show();
