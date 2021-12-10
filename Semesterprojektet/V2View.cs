@@ -58,7 +58,15 @@ namespace Semesterprojektet
 
         private void print_Click(object sender, EventArgs e)
         {
-
+            foreach (DataGridViewRow row in dgv1.Rows)
+            {
+                for (int i = 0; i < row.Cells.Count; i++)
+                {
+                    int rowIndex = row.Index;
+                    dgv1.Rows[rowIndex].Selected = false;
+                    break;
+                }
+            }            
         }
     }
 }
