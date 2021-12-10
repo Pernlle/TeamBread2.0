@@ -20,6 +20,8 @@ namespace Semesterprojektet
 
         private void V2View_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tHEDATASETOFALL.Kunder' table. You can move, or remove it, as needed.
+            this.kunderTableAdapter.Fill(this.tHEDATASETOFALL.Kunder);
             // TODO: This line of code loads data into the 'tHEDATASETOFALL.Bolig' table. You can move, or remove it, as needed.
             this.boligTableAdapter.Fill(this.tHEDATASETOFALL.Bolig);
 
@@ -79,6 +81,24 @@ namespace Semesterprojektet
                             }
                             else
                                 writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                        }
+                    }
+                    for (int k = 0; k < dgvK.Rows.Count - 1; k++) // rows
+                    {
+                        string areaB = dgvB.Rows[i].Cells[9].Value.ToString();
+                        string areaK = dgvK.Rows[k].Cells[0].Value.ToString();
+                        MessageBox.Show(areaToPrint);
+                        if (areaB == areaK)
+                        {
+                            for (int j = 0; j < dgvK.Columns.Count; j++) // columns
+                            {
+                                if (j == dgvK.Columns.Count - 1) // if last column
+                                {
+                                    writer.WriteLine("\t" + dgvK.Rows[k].Cells[j].Value.ToString());
+                                }
+                                else
+                                    writer.Write("\t" + dgvK.Rows[k].Cells[j].Value.ToString() + "\t" + "|");
+                            }
                         }
                     }
                 }

@@ -32,6 +32,8 @@ namespace Semesterprojektet
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.print = new System.Windows.Forms.Button();
@@ -55,6 +57,15 @@ namespace Semesterprojektet
             this.koeberIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boligTableAdapter = new Semesterprojektet.tHEDATASETOFALLTableAdapters.BoligTableAdapter();
+            this.dgvK = new System.Windows.Forms.DataGridView();
+            this.kunderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kunderTableAdapter = new Semesterprojektet.tHEDATASETOFALLTableAdapters.KunderTableAdapter();
+            this.kIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saelgerDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.koeberDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource1)).BeginInit();
@@ -62,6 +73,8 @@ namespace Semesterprojektet
             ((System.ComponentModel.ISupportInitialize)(this.tHEDATASETOFALL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kunderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +86,7 @@ namespace Semesterprojektet
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 104);
+            this.panel1.Size = new System.Drawing.Size(1200, 104);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -81,7 +94,7 @@ namespace Semesterprojektet
             this.panel2.Controls.Add(this.print);
             this.panel2.Controls.Add(this.searchTextBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(666, 0);
+            this.panel2.Location = new System.Drawing.Point(1030, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(170, 104);
             this.panel2.TabIndex = 4;
@@ -172,6 +185,7 @@ namespace Semesterprojektet
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvB.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvB.GridColor = System.Drawing.Color.Silver;
             this.dgvB.Location = new System.Drawing.Point(0, 104);
             this.dgvB.Name = "dgvB";
@@ -181,7 +195,7 @@ namespace Semesterprojektet
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvB.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvB.RowTemplate.Height = 24;
-            this.dgvB.Size = new System.Drawing.Size(836, 190);
+            this.dgvB.Size = new System.Drawing.Size(1200, 437);
             this.dgvB.TabIndex = 1;
             // 
             // bIDDataGridViewTextBoxColumn
@@ -271,12 +285,101 @@ namespace Semesterprojektet
             // 
             this.boligTableAdapter.ClearBeforeFill = true;
             // 
+            // dgvK
+            // 
+            this.dgvK.AutoGenerateColumns = false;
+            this.dgvK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvK.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            this.dgvK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvK.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kIDDataGridViewTextBoxColumn,
+            this.fNavnDataGridViewTextBoxColumn,
+            this.eNavnDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.saelgerDataGridViewCheckBoxColumn,
+            this.koeberDataGridViewCheckBoxColumn});
+            this.dgvK.DataSource = this.kunderBindingSource;
+            this.dgvK.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvK.GridColor = System.Drawing.Color.White;
+            this.dgvK.Location = new System.Drawing.Point(0, 391);
+            this.dgvK.Name = "dgvK";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvK.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvK.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvK.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvK.RowTemplate.Height = 24;
+            this.dgvK.Size = new System.Drawing.Size(1200, 150);
+            this.dgvK.TabIndex = 2;
+            // 
+            // kunderBindingSource
+            // 
+            this.kunderBindingSource.DataMember = "Kunder";
+            this.kunderBindingSource.DataSource = this.tHEDATASETOFALLBindingSource;
+            // 
+            // kunderTableAdapter
+            // 
+            this.kunderTableAdapter.ClearBeforeFill = true;
+            // 
+            // kIDDataGridViewTextBoxColumn
+            // 
+            this.kIDDataGridViewTextBoxColumn.DataPropertyName = "kID";
+            this.kIDDataGridViewTextBoxColumn.HeaderText = "kID";
+            this.kIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kIDDataGridViewTextBoxColumn.Name = "kIDDataGridViewTextBoxColumn";
+            this.kIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fNavnDataGridViewTextBoxColumn
+            // 
+            this.fNavnDataGridViewTextBoxColumn.DataPropertyName = "fNavn";
+            this.fNavnDataGridViewTextBoxColumn.HeaderText = "fNavn";
+            this.fNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fNavnDataGridViewTextBoxColumn.Name = "fNavnDataGridViewTextBoxColumn";
+            // 
+            // eNavnDataGridViewTextBoxColumn
+            // 
+            this.eNavnDataGridViewTextBoxColumn.DataPropertyName = "eNavn";
+            this.eNavnDataGridViewTextBoxColumn.HeaderText = "eNavn";
+            this.eNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eNavnDataGridViewTextBoxColumn.Name = "eNavnDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // saelgerDataGridViewCheckBoxColumn
+            // 
+            this.saelgerDataGridViewCheckBoxColumn.DataPropertyName = "saelger";
+            this.saelgerDataGridViewCheckBoxColumn.HeaderText = "saelger";
+            this.saelgerDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.saelgerDataGridViewCheckBoxColumn.Name = "saelgerDataGridViewCheckBoxColumn";
+            // 
+            // koeberDataGridViewCheckBoxColumn
+            // 
+            this.koeberDataGridViewCheckBoxColumn.DataPropertyName = "koeber";
+            this.koeberDataGridViewCheckBoxColumn.HeaderText = "koeber";
+            this.koeberDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.koeberDataGridViewCheckBoxColumn.Name = "koeberDataGridViewCheckBoxColumn";
+            // 
             // V2View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(836, 463);
+            this.ClientSize = new System.Drawing.Size(1200, 541);
+            this.Controls.Add(this.dgvK);
             this.Controls.Add(this.dgvB);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -291,6 +394,8 @@ namespace Semesterprojektet
             ((System.ComponentModel.ISupportInitialize)(this.tHEDATASETOFALL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kunderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +425,14 @@ namespace Semesterprojektet
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvK;
+        private System.Windows.Forms.BindingSource kunderBindingSource;
+        private tHEDATASETOFALLTableAdapters.KunderTableAdapter kunderTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn saelgerDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn koeberDataGridViewCheckBoxColumn;
     }
 }

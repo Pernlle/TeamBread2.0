@@ -77,19 +77,19 @@ namespace Semesterprojektet
         private void createBtn_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(strconn);
+            // Definerer strings, for at kunne converte værdien til den korrekte værdi i databasen når man inserter (create)
+            string badresse = adresse.Text;
+            string bpostnr = postnr.Text;
+            string bkvm = kvm.Text;
+            string spris = salgspris.Text;
+            string saegler = sID.Text;
+            string ejendomsmaegler = eID.Text;
 
+            // Hvis den er solgt
             if (soldCheck.Checked)
             {
                 if (postnr.Text != "" && adresse.Text != "" && kvm.Text != "" && salgspris.Text != "" && handelspris.Text != "" && handelsdato.Text != "" && sID.Text != "" && eID.Text != "")
-                {
-                    // Definerer strings, for at kunne converte værdien til den korrekte værdi i databasen når man inserter (create)
-                    string badresse = adresse.Text;
-                    string bpostnr = postnr.Text;
-                    string bkvm = kvm.Text;
-                    string spris = salgspris.Text;
-                    string saegler = sID.Text;
-                    string ejendomsmaegler = eID.Text;
-
+                {                    
                     string hpris = handelspris.Text;
                     // Handelsdatoen er en value, fordi vi bruger DateTimePicker, for at gemme informationen i databasen converter vi den til en string
                     string hdato = Convert.ToString(handelsdato.Value);
@@ -136,14 +136,7 @@ namespace Semesterprojektet
 
             // HVIS DEN IKKE ER SOLGT
             else
-            {
-                string badresse = adresse.Text;
-                string bpostnr = postnr.Text;
-                string bkvm = kvm.Text;
-                string spris = salgspris.Text;
-                string saegler = sID.Text;
-                string ejendomsmaegler = eID.Text;
-
+            {                
                 string sqlCom = "INSERT INTO Bolig(adresse,postNr,kvm,salgsPris,kID,eID,solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @kID, @eID,'0');";
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
