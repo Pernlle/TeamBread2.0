@@ -216,6 +216,26 @@ namespace Semesterprojektet
                     }                    
             }
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1) 
+            {
+                
+            }
+            /*
+                if (e.RowIndex != -1)
+            {
+                DataGridViewRow dgvRow = dataGridView1.Rows[e.RowIndex];
+                adresse.Text = dgvRow.Cells[1].Value.ToString();
+                postnr.Text = dgvRow.Cells[2].Value.ToString();
+                kvm.Text = dgvRow.Cells[4].Value.ToString();
+                salgspris.Text = dgvRow.Cells[5].Value.ToString();
+                sID.Text = dgvRow.Cells[8].Value.ToString();
+                eID.Text = dgvRow.Cells[9].Value.ToString();
+            }
+             */
+        }
     }
 }
 
