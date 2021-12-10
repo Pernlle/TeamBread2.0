@@ -15,6 +15,8 @@ namespace Semesterprojektet
         public V2Forside()
         {
             InitializeComponent();
+            int height = Screen.PrimaryScreen.Bounds.Height;
+            int width = Screen.PrimaryScreen.Bounds.Width;
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
