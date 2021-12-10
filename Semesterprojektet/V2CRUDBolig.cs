@@ -79,11 +79,11 @@ namespace Semesterprojektet
 
             if (soldCheck.Checked)
             {
-                if (textBox2.Text != "" && textBox7.Text != "" && kvm.Text != "" && salgspris.Text != "" && handelspris.Text != "" && handelsdato.Text != "" && sID.Text != "" && eID.Text != "")
+                if (postnr.Text != "" && adresse.Text != "" && kvm.Text != "" && salgspris.Text != "" && handelspris.Text != "" && handelsdato.Text != "" && sID.Text != "" && eID.Text != "")
                 {
                     // Definerer strings, for at kunne converte værdien til den korrekte værdi i databasen når man inserter (create)
-                    string badresse = textBox7.Text;
-                    string bpostnr = textBox2.Text;
+                    string badresse = adresse.Text;
+                    string bpostnr = postnr.Text;
                     string bkvm = kvm.Text;
                     string spris = salgspris.Text;
                     string saegler = sID.Text;
@@ -136,8 +136,8 @@ namespace Semesterprojektet
             // HVIS DEN IKKE ER SOLGT
             else
             {
-                string badresse = textBox7.Text;
-                string bpostnr = textBox2.Text;
+                string badresse = adresse.Text;
+                string bpostnr = postnr.Text;
                 string bkvm = kvm.Text;
                 string spris = salgspris.Text;
                 string saegler = sID.Text;
@@ -275,8 +275,8 @@ namespace Semesterprojektet
             string solgt = Convert.ToString(solgtDataGridViewTextBoxColumn);
 
             boligID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            textBox7.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            adresse.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            postnr.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             kvm.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             salgspris.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             eID.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
