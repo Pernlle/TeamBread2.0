@@ -61,10 +61,12 @@ namespace Semesterprojektet
             this.handelsPrisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.handelsDatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solgtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.boligBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.tHEDATASETOFALL = new Semesterprojektet.tHEDATASETOFALL();
+            this.boligBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.boligTableAdapter2 = new Semesterprojektet.tHEDATASETOFALLTableAdapters.BoligTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEONETHEONLYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEONETHEONLY)).BeginInit();
@@ -79,6 +81,8 @@ namespace Semesterprojektet
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHEDATASETOFALL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource7)).BeginInit();
             this.SuspendLayout();
             // 
             // boligBindingSource3
@@ -250,9 +254,8 @@ namespace Semesterprojektet
             this.handelsPrisDataGridViewTextBoxColumn,
             this.handelsDatoDataGridViewTextBoxColumn,
             this.solgtDataGridViewTextBoxColumn,
-            this.kIDDataGridViewTextBoxColumn,
             this.eIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.boligBindingSource3;
+            this.dataGridView1.DataSource = this.boligBindingSource7;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,14 +343,6 @@ namespace Semesterprojektet
             this.solgtDataGridViewTextBoxColumn.Name = "solgtDataGridViewTextBoxColumn";
             this.solgtDataGridViewTextBoxColumn.Width = 150;
             // 
-            // kIDDataGridViewTextBoxColumn
-            // 
-            this.kIDDataGridViewTextBoxColumn.DataPropertyName = "kID";
-            this.kIDDataGridViewTextBoxColumn.HeaderText = "kID";
-            this.kIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.kIDDataGridViewTextBoxColumn.Name = "kIDDataGridViewTextBoxColumn";
-            this.kIDDataGridViewTextBoxColumn.Width = 150;
-            // 
             // eIDDataGridViewTextBoxColumn
             // 
             this.eIDDataGridViewTextBoxColumn.DataPropertyName = "eID";
@@ -372,6 +367,20 @@ namespace Semesterprojektet
             // 
             this.boligBindingSource5.DataMember = "Bolig";
             this.boligBindingSource5.DataSource = this.tHEONETHEONLY;
+            // 
+            // tHEDATASETOFALL
+            // 
+            this.tHEDATASETOFALL.DataSetName = "tHEDATASETOFALL";
+            this.tHEDATASETOFALL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // boligBindingSource7
+            // 
+            this.boligBindingSource7.DataMember = "Bolig";
+            this.boligBindingSource7.DataSource = this.tHEDATASETOFALL;
+            // 
+            // boligTableAdapter2
+            // 
+            this.boligTableAdapter2.ClearBeforeFill = true;
             // 
             // View
             // 
@@ -399,6 +408,8 @@ namespace Semesterprojektet
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHEDATASETOFALL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,11 +441,13 @@ namespace Semesterprojektet
         private System.Windows.Forms.DataGridViewTextBoxColumn handelsPrisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn handelsDatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn solgtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cbSearch;
         private System.Windows.Forms.BindingSource boligBindingSource6;
         private System.Windows.Forms.BindingSource boligBindingSource4;
         private System.Windows.Forms.BindingSource boligBindingSource5;
+        private tHEDATASETOFALL tHEDATASETOFALL;
+        private System.Windows.Forms.BindingSource boligBindingSource7;
+        private tHEDATASETOFALLTableAdapters.BoligTableAdapter boligTableAdapter2;
     }
 }
