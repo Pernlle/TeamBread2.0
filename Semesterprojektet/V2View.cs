@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -58,6 +59,54 @@ namespace Semesterprojektet
 
         private void print_Click(object sender, EventArgs e)
         {
+            // her mangler stadig sælger info (ejendodmsmægler /eller kunde?)
+            
+            string search = cbSearchPostNr.Text;
+            string areaToPrint = search;
+            if (areaToPrint == search)
+            {
+                TextWriter writer = new StreamWriter($@"..\..\..\Bolig_Søg_{search}.txt");
+                for (int i = 0; i < dgv1.Rows.Count - 1; i++) // rows
+                {
+                    string area = dgv1.Rows[i].Cells[2].Value.ToString();
+                    if (area == areaToPrint)
+                    {
+                        for (int j = 0; j < dgv1.Columns.Count; j++) // columns
+                        {
+                            if (j == dgv1.Columns.Count - 1) // if last column
+                            {
+                                writer.WriteLine("\t" + dgv1.Rows[i].Cells[j].Value.ToString());
+                            }
+                            else
+                                writer.Write("\t" + dgv1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                        }
+                    }
+                }
+                writer.Close();
+                MessageBox.Show("Selected data Exported");
+            }
+            else
+            {
+                TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg.txt");
+                for (int i = 0; i < dgv1.Rows.Count - 1; i++) // rows
+                {
+                    for (int j = 0; j < dgv1.Columns.Count; j++) // columns
+                    {
+                        if (j == dgv1.Columns.Count - 1) // if last column
+                        {
+                            writer.WriteLine("\t" + dgv1.Rows[i].Cells[j].Value.ToString());
+                        }
+                        else
+                            writer.Write("\t" + dgv1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                    }
+                }
+                writer.Close();
+                MessageBox.Show("Full data Exported");
+            }
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
             foreach (DataGridViewRow row in dgv1.Rows)
             {
                 for (int i = 0; i < row.Cells.Count; i++)
@@ -66,7 +115,7 @@ namespace Semesterprojektet
                     dgv1.Rows[rowIndex].Selected = false;
                     break;
                 }
-            }            
+            }
         }
     }
 }
