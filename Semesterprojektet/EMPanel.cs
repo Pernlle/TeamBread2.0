@@ -43,7 +43,7 @@ namespace Semesterprojektet
                 button2.Visible = true;
 
                 panel1.Controls.Clear();
-                CRUDSaelger frm = new CRUDSaelger() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                CRUDEjendomsmaegler frm = new CRUDEjendomsmaegler() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                 frm.FormBorderStyle = FormBorderStyle.None;
                 this.panel1.Controls.Add(frm);
                 frm.Show();

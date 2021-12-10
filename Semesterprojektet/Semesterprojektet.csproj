@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>boligdataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CRUDEjendomsmaegler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDEjendomsmaegler.Designer.cs">
+      <DependentUpon>CRUDEjendomsmaegler.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUDSaelger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CRUDEjendomsmaegler.resx">
+      <DependentUpon>CRUDEjendomsmaegler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUDSaelger.resx">
       <DependentUpon>CRUDSaelger.cs</DependentUpon>
     </EmbeddedResource>
