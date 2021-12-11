@@ -39,14 +39,24 @@ namespace Semesterprojektet
             
                 {
                 string idId = id.Substring(0, 1);
-                if (idId.Contains("1")) { /* admin */}
-                if (idId.Contains("2")) { /* Egendomsmægler */}
+                if (idId.Contains("1")) 
+                { // Admin 
+                    panel2.Controls.Clear();
+                    ADPanel frm = new ADPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    frm.FormBorderStyle = FormBorderStyle.None;
+                    this.panel2.Controls.Add(frm);
+                    frm.Show();
+                }
+                else
+                { // Egendomsmægler 
+                    panel2.Controls.Clear();
+                    EMPanel frm = new EMPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    frm.FormBorderStyle = FormBorderStyle.None;
+                    this.panel2.Controls.Add(frm);
+                    frm.Show();
+                }
 
-                panel2.Controls.Clear();
-                EMPanel frm = new EMPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                frm.FormBorderStyle = FormBorderStyle.None;
-                this.panel2.Controls.Add(frm);
-                frm.Show();
+                
             }
             else { MessageBox.Show("Prøv igen du"); }
         }

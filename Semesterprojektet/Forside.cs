@@ -74,7 +74,7 @@ namespace Semesterprojektet
                 if (idId.Contains("2")) { /* Egendomsmægler */}
 
                 panel1.Controls.Clear();
-                EMPanel frm = new EMPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                ADPanel frm = new ADPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                 frm.FormBorderStyle = FormBorderStyle.None;
                 this.panel1.Controls.Add(frm);
                 frm.Show();

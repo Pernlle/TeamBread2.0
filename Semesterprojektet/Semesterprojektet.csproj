@@ -69,6 +69,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EMPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMPanel.Designer.cs">
+      <DependentUpon>EMPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forside.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,11 +87,11 @@
     <Compile Include="CRUDBolig.Designer.cs">
       <DependentUpon>CRUDBolig.cs</DependentUpon>
     </Compile>
-    <Compile Include="EMPanel.cs">
+    <Compile Include="ADPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EMPanel.Designer.cs">
-      <DependentUpon>EMPanel.cs</DependentUpon>
+    <Compile Include="ADPanel.Designer.cs">
+      <DependentUpon>ADPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,14 +145,17 @@
     <EmbeddedResource Include="CRUDSaelger.resx">
       <DependentUpon>CRUDSaelger.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EMPanel.resx">
+      <DependentUpon>EMPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forside.resx">
       <DependentUpon>Forside.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUDBolig.resx">
       <DependentUpon>CRUDBolig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EMPanel.resx">
-      <DependentUpon>EMPanel.cs</DependentUpon>
+    <EmbeddedResource Include="ADPanel.resx">
+      <DependentUpon>ADPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
