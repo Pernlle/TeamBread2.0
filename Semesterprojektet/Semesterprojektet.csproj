@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>boligdataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CRUDKunder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDKunder.Designer.cs">
+      <DependentUpon>CRUDKunder.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUDSaelger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CRUDKunder.resx">
+      <DependentUpon>CRUDKunder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUDSaelger.resx">
       <DependentUpon>CRUDSaelger.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V2Forside.resx">
       <DependentUpon>V2Forside.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="V2View.resx">
-      <DependentUpon>V2View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>
