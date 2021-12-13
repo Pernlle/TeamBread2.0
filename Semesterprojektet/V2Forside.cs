@@ -46,14 +46,15 @@ namespace Semesterprojektet
                     this.panel2.Controls.Add(frm);
                     frm.Show();
                 }
-                else if (idId != "") 
+                else if (idId != "")
                 { // Egendomsmægler 
                     panel2.Controls.Clear();
                     EMPanel frm = new EMPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     frm.FormBorderStyle = FormBorderStyle.None;
                     this.panel2.Controls.Add(frm);
                     frm.Show();
-                }                
+                }
+                else MessageBox.Show("Halå du skal jo udfylde boxene");
             }
             else { MessageBox.Show("Prøv igen du"); }
         }
