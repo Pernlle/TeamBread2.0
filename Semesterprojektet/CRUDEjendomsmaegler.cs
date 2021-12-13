@@ -99,31 +99,43 @@ namespace Semesterprojektet
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
 
-            if (cellValue != "" || cellValue == "0")
-            {
-                string sqlCom = $"DELETE Ejendomsmaegler WHERE eID = {cellValue};";
-                SqlCommand cmd = new SqlCommand(sqlCom, conn);
-
-                try
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close(); 
-                    MessageBox.Show("Ejendomsmægler slettet");
-                    this.ejendomsmaeglerTableAdapter.Fill(this.tHEDATASETOFALL.Ejendomsmaegler);
-                }
-                catch (Exception exc)
-                {
-                    MessageBox.Show("ERROR: \n\n" + exc.ToString());
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Vælg noget at slette");
-            }
+            Yes_no(conn, cellValue);
         }
+        // Metode som spørger om du er sikker på om du vil slette ejendomsmægler eller ej.
+        public void Yes_no(SqlConnection conn, string cellValue)
+        {
+            string box_msg = $"Er du sikker på at du vil slette denne ejendomsmægler {cellValue} ";
+            string box_title = "Vælg ja eller nej";
 
+            MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
+
+            var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
+            if (selectedOption == DialogResult.Yes)
+            {
+                if (cellValue != "" || cellValue == "0") 
+                {
+                    string sqlCom = $"DELETE Ejendomsmaegler WHERE eID = {cellValue};";
+                    SqlCommand cmd = new SqlCommand(sqlCom, conn);
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Ejendomsmægler slettet");
+                        this.ejendomsmaeglerTableAdapter.Fill(this.tHEDATASETOFALL.Ejendomsmaegler);
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("ERROR: \n\n" + exc.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vælg noget at slette");
+                }
+            }
+            else if (selectedOption == DialogResult.No) { MessageBox.Show("Gør noget andet så :) "); }
+        }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -138,7 +150,12 @@ namespace Semesterprojektet
 
         private void updatebtn_MouseHover(object sender, EventArgs e)
         {
-            toolTip1.Show("Du kan kun opdatere email", updatebtn);
+            toolTip1.Show("Du kan kun opdatere email | Vælg en ejendomsmægler i data sættet", updatebtn);
+        }
+
+        private void id_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Tryk på data sættet for at indsætte ID", id);
         }
     }
 }

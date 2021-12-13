@@ -48,6 +48,8 @@ namespace Semesterprojektet
             this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boligTableAdapter = new Semesterprojektet.THEONETHEONLYTableAdapters.BoligTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.boligID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.koeberID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -79,8 +81,6 @@ namespace Semesterprojektet
             this.boligBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.boligBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.boligTableAdapter2 = new Semesterprojektet.tHEDATASETOFALLTableAdapters.BoligTableAdapter();
-            this.boligID = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEDATASETOFALL)).BeginInit();
@@ -271,6 +271,25 @@ namespace Semesterprojektet
             this.panel1.Size = new System.Drawing.Size(1010, 169);
             this.panel1.TabIndex = 13;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(600, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 17);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Bolig ID";
+            // 
+            // boligID
+            // 
+            this.boligID.Location = new System.Drawing.Point(677, 19);
+            this.boligID.Name = "boligID";
+            this.boligID.ReadOnly = true;
+            this.boligID.Size = new System.Drawing.Size(45, 22);
+            this.boligID.TabIndex = 23;
+            this.boligID.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -288,7 +307,7 @@ namespace Semesterprojektet
             this.koeberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.koeberID.Name = "koeberID";
             this.koeberID.Size = new System.Drawing.Size(119, 15);
-            this.koeberID.TabIndex = 21;
+            this.koeberID.TabIndex = 7;
             // 
             // label8
             // 
@@ -417,7 +436,7 @@ namespace Semesterprojektet
             this.handelspris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.handelspris.Name = "handelspris";
             this.handelspris.Size = new System.Drawing.Size(119, 15);
-            this.handelspris.TabIndex = 7;
+            this.handelspris.TabIndex = 8;
             this.handelspris.TextChanged += new System.EventHandler(this.handelspris_TextChanged);
             // 
             // kvm
@@ -559,25 +578,6 @@ namespace Semesterprojektet
             // boligTableAdapter2
             // 
             this.boligTableAdapter2.ClearBeforeFill = true;
-            // 
-            // boligID
-            // 
-            this.boligID.Location = new System.Drawing.Point(677, 19);
-            this.boligID.Name = "boligID";
-            this.boligID.ReadOnly = true;
-            this.boligID.Size = new System.Drawing.Size(45, 22);
-            this.boligID.TabIndex = 23;
-            this.boligID.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(600, 23);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 17);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Bolig ID";
             // 
             // V2CRUDBolig
             // 
