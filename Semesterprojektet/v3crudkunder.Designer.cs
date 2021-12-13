@@ -98,7 +98,7 @@ namespace Semesterprojektet
             this.panel2.Location = new System.Drawing.Point(258, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(540, 612);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -116,7 +116,7 @@ namespace Semesterprojektet
             this.createBtn.Location = new System.Drawing.Point(59, 274);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(137, 42);
-            this.createBtn.TabIndex = 0;
+            this.createBtn.TabIndex = 7;
             this.createBtn.Text = "Opret";
             this.createBtn.UseVisualStyleBackColor = true;
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
@@ -126,7 +126,7 @@ namespace Semesterprojektet
             this.updateBtn.Location = new System.Drawing.Point(59, 323);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(137, 42);
-            this.updateBtn.TabIndex = 1;
+            this.updateBtn.TabIndex = 8;
             this.updateBtn.Text = "Opdater";
             this.updateBtn.UseVisualStyleBackColor = true;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
@@ -136,7 +136,7 @@ namespace Semesterprojektet
             this.deleteBtn.Location = new System.Drawing.Point(59, 372);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(137, 37);
-            this.deleteBtn.TabIndex = 2;
+            this.deleteBtn.TabIndex = 9;
             this.deleteBtn.Text = "Slet";
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
@@ -191,7 +191,7 @@ namespace Semesterprojektet
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(540, 612);
-            this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // tHEDATASETOFALL
@@ -287,7 +287,7 @@ namespace Semesterprojektet
             this.saeglerCheck.Location = new System.Drawing.Point(31, 220);
             this.saeglerCheck.Name = "saeglerCheck";
             this.saeglerCheck.Size = new System.Drawing.Size(22, 21);
-            this.saeglerCheck.TabIndex = 9;
+            this.saeglerCheck.TabIndex = 5;
             this.saeglerCheck.UseVisualStyleBackColor = true;
             // 
             // koeberCheck
@@ -296,7 +296,7 @@ namespace Semesterprojektet
             this.koeberCheck.Location = new System.Drawing.Point(140, 220);
             this.koeberCheck.Name = "koeberCheck";
             this.koeberCheck.Size = new System.Drawing.Size(22, 21);
-            this.koeberCheck.TabIndex = 10;
+            this.koeberCheck.TabIndex = 6;
             this.koeberCheck.UseVisualStyleBackColor = true;
             // 
             // email
@@ -304,28 +304,28 @@ namespace Semesterprojektet
             this.email.Location = new System.Drawing.Point(130, 148);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(100, 26);
-            this.email.TabIndex = 11;
+            this.email.TabIndex = 4;
             // 
             // efternavn
             // 
             this.efternavn.Location = new System.Drawing.Point(130, 110);
             this.efternavn.Name = "efternavn";
             this.efternavn.Size = new System.Drawing.Size(100, 26);
-            this.efternavn.TabIndex = 12;
+            this.efternavn.TabIndex = 3;
             // 
             // fornavn
             // 
             this.fornavn.Location = new System.Drawing.Point(130, 71);
             this.fornavn.Name = "fornavn";
             this.fornavn.Size = new System.Drawing.Size(100, 26);
-            this.fornavn.TabIndex = 13;
+            this.fornavn.TabIndex = 2;
             // 
             // id
             // 
             this.id.Location = new System.Drawing.Point(130, 33);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(100, 26);
-            this.id.TabIndex = 14;
+            this.id.TabIndex = 1;
             // 
             // v3crudkunder
             // 
