@@ -128,8 +128,8 @@ namespace Semesterprojektet
         {
             SqlConnection conn = new SqlConnection(strconn);
 
-            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+            int selectedRowIndex = dataGridView2.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView2.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
 
             if (cellValue != "" || cellValue == "0")
@@ -161,7 +161,7 @@ namespace Semesterprojektet
         {
             if (e.RowIndex != -1)
             {
-                DataGridViewRow dgvRow = dataGridView1.Rows[e.RowIndex];
+                DataGridViewRow dgvRow = dataGridView2.Rows[e.RowIndex];
                 id.Text = dgvRow.Cells[0].Value.ToString();
                 fornavn.Text = dgvRow.Cells[2].Value.ToString();
                 efternavn.Text = dgvRow.Cells[3].Value.ToString();
