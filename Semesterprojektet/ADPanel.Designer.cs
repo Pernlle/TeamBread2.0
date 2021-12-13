@@ -107,7 +107,7 @@ namespace Semesterprojektet
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Semesterprojektet.Properties.Resources.Billede1__2_;
+            this.pictureBox1.Image = global::Semesterprojektet.Properties.Resources.Billede11__2_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
