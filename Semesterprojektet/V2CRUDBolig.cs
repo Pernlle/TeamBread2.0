@@ -226,7 +226,6 @@ namespace Semesterprojektet
         public void Yes_no(SqlConnection conn, string cellValue)
         {
             string box_msg = "Er du sikker på at du vil slette denne bolig";
-
             string box_title = "Vær sød at svare ja eller nej";
 
             MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
