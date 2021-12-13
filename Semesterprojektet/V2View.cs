@@ -175,11 +175,11 @@ namespace Semesterprojektet
 
         private void mlDatoer_Click(object sender, EventArgs e)
         {
-            string dato1 = Convert.ToString(datostartbox);
-            string dato2 = Convert.ToString(datoslutbox);
+            string dato1 = Convert.ToString(datobox1);
+            string dato2 = Convert.ToString(datobox2);
 
             SqlConnection conn = new SqlConnection(strconn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Bolig WHERE handelsDato BETWEEN '" + dato1 + "' AND '" + dato2 + "' GROUP BY adresse, handelsPris, handelsDato, eID, saeglerID, koeberID, postnr, bID, solgt, kvm, salgsPris", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Bolig WHERE handelsDato BETWEEN '" + dato1 + "' AND '" + dato2 + "'", conn);
             DataTable dt1 = new DataTable();
             SqlDataAdapter SDA1 = new SqlDataAdapter(cmd);
             SDA1.Fill(dt1);

@@ -30,12 +30,14 @@ namespace Semesterprojektet
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.datobox2 = new System.Windows.Forms.TextBox();
+            this.datobox1 = new System.Windows.Forms.TextBox();
             this.prisInput = new System.Windows.Forms.TextBox();
             this.prisSearch = new System.Windows.Forms.Button();
             this.mlDatoer = new System.Windows.Forms.Button();
@@ -74,6 +76,7 @@ namespace Semesterprojektet
             this.kunderTableAdapter = new Semesterprojektet.tHEDATASETOFALLTableAdapters.KunderTableAdapter();
             this.dgvSD = new System.Windows.Forms.DataGridView();
             this.boligBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,15 +107,32 @@ namespace Semesterprojektet
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.datobox2);
+            this.panel3.Controls.Add(this.datobox1);
             this.panel3.Controls.Add(this.prisInput);
             this.panel3.Controls.Add(this.prisSearch);
             this.panel3.Controls.Add(this.mlDatoer);
             this.panel3.Controls.Add(this.datoslutbox);
             this.panel3.Controls.Add(this.datostartbox);
-            this.panel3.Location = new System.Drawing.Point(12, 12);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(561, 111);
+            this.panel3.Size = new System.Drawing.Size(568, 130);
             this.panel3.TabIndex = 5;
+            // 
+            // datobox2
+            // 
+            this.datobox2.Location = new System.Drawing.Point(17, 65);
+            this.datobox2.Name = "datobox2";
+            this.datobox2.Size = new System.Drawing.Size(200, 26);
+            this.datobox2.TabIndex = 6;
+            // 
+            // datobox1
+            // 
+            this.datobox1.Location = new System.Drawing.Point(17, 28);
+            this.datobox1.Name = "datobox1";
+            this.datobox1.Size = new System.Drawing.Size(200, 26);
+            this.datobox1.TabIndex = 5;
             // 
             // prisInput
             // 
@@ -150,7 +170,7 @@ namespace Semesterprojektet
             // 
             // datostartbox
             // 
-            this.datostartbox.Location = new System.Drawing.Point(17, 20);
+            this.datostartbox.Location = new System.Drawing.Point(17, 28);
             this.datostartbox.Name = "datostartbox";
             this.datostartbox.Size = new System.Drawing.Size(200, 26);
             this.datostartbox.TabIndex = 0;
@@ -248,25 +268,26 @@ namespace Semesterprojektet
             this.saeglerIDDataGridViewTextBoxColumn,
             this.koeberIDDataGridViewTextBoxColumn});
             this.dgvB.DataSource = this.boligBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvB.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvB.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvB.GridColor = System.Drawing.Color.Silver;
-            this.dgvB.Location = new System.Drawing.Point(12, 130);
+            this.dgvB.Location = new System.Drawing.Point(0, 130);
             this.dgvB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvB.Name = "dgvB";
             this.dgvB.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvB.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvB.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvB.RowTemplate.Height = 24;
-            this.dgvB.Size = new System.Drawing.Size(1338, 546);
+            this.dgvB.Size = new System.Drawing.Size(1350, 546);
             this.dgvB.TabIndex = 1;
             this.dgvB.TabStop = false;
             // 
@@ -376,20 +397,20 @@ namespace Semesterprojektet
             this.dgvK.Location = new System.Drawing.Point(0, 487);
             this.dgvK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvK.Name = "dgvK";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvK.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvK.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvK.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvK.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvK.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvK.RowTemplate.Height = 24;
             this.dgvK.Size = new System.Drawing.Size(1350, 189);
             this.dgvK.TabIndex = 2;
@@ -462,6 +483,14 @@ namespace Semesterprojektet
             this.boligBindingSource2.DataMember = "Bolig";
             this.boligBindingSource2.DataSource = this.tHEDATASETOFALLBindingSource;
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1350, 676);
+            this.panel4.TabIndex = 4;
+            // 
             // V2View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -472,6 +501,7 @@ namespace Semesterprojektet
             this.Controls.Add(this.dgvB);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvSD);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "V2View";
@@ -537,5 +567,8 @@ namespace Semesterprojektet
         private System.Windows.Forms.BindingSource boligBindingSource2;
         private System.Windows.Forms.TextBox prisInput;
         private System.Windows.Forms.Button prisSearch;
+        private System.Windows.Forms.TextBox datobox2;
+        private System.Windows.Forms.TextBox datobox1;
+        private System.Windows.Forms.Panel panel4;
     }
 }
