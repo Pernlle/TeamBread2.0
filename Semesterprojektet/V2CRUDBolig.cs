@@ -195,8 +195,8 @@ namespace Semesterprojektet
 
                 cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
                 cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(hPris);
-                cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.Date);
-                cmd.Parameters["@handelsDato"].Value = Convert.ToDateTime(hDato);
+                cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.VarChar);
+                cmd.Parameters["@handelsDato"].Value = Convert.ToString(hDato);
                 try
                 {
                     conn.Open();
