@@ -47,7 +47,7 @@ namespace Semesterprojektet
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
             this.panel1.Controls.Add(this.search);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
@@ -58,7 +58,7 @@ namespace Semesterprojektet
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 549);
+            this.panel1.Size = new System.Drawing.Size(253, 686);
             this.panel1.TabIndex = 0;
             // 
             // search
@@ -66,10 +66,10 @@ namespace Semesterprojektet
             this.search.BackColor = System.Drawing.Color.White;
             this.search.FlatAppearance.BorderSize = 0;
             this.search.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(24, 44);
+            this.search.Location = new System.Drawing.Point(27, 55);
             this.search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(170, 46);
+            this.search.Size = new System.Drawing.Size(191, 58);
             this.search.TabIndex = 9;
             this.search.Text = "SØG";
             this.search.UseVisualStyleBackColor = false;
@@ -80,10 +80,10 @@ namespace Semesterprojektet
             this.textBox2.BackColor = System.Drawing.Color.LightGray;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(25, 198);
+            this.textBox2.Location = new System.Drawing.Point(28, 248);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 27);
+            this.textBox2.Size = new System.Drawing.Size(191, 32);
             this.textBox2.TabIndex = 7;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -94,10 +94,10 @@ namespace Semesterprojektet
             this.textBox1.BackColor = System.Drawing.Color.LightGray;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(25, 129);
+            this.textBox1.Location = new System.Drawing.Point(28, 161);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 27);
+            this.textBox1.Size = new System.Drawing.Size(191, 32);
             this.textBox1.TabIndex = 6;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.MouseHover += new System.EventHandler(this.textBox1_MouseHover);
@@ -107,9 +107,9 @@ namespace Semesterprojektet
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 169);
+            this.label2.Location = new System.Drawing.Point(22, 211);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 23);
+            this.label2.Size = new System.Drawing.Size(130, 28);
             this.label2.TabIndex = 9;
             this.label2.Text = "PASSWORD";
             // 
@@ -121,10 +121,10 @@ namespace Semesterprojektet
             this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.loginBtn.Font = new System.Drawing.Font("Tw Cen MT", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(24, 253);
+            this.loginBtn.Location = new System.Drawing.Point(27, 316);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(171, 35);
+            this.loginBtn.Size = new System.Drawing.Size(192, 44);
             this.loginBtn.TabIndex = 8;
             this.loginBtn.Text = "LOGIN";
             this.loginBtn.UseVisualStyleBackColor = false;
@@ -135,9 +135,9 @@ namespace Semesterprojektet
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 100);
+            this.label1.Location = new System.Drawing.Point(22, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 23);
+            this.label1.Size = new System.Drawing.Size(33, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID";
             // 
@@ -146,10 +146,10 @@ namespace Semesterprojektet
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(225, 0);
+            this.panel2.Location = new System.Drawing.Point(253, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(918, 549);
+            this.panel2.Size = new System.Drawing.Size(1033, 686);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox2
@@ -159,16 +159,16 @@ namespace Semesterprojektet
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(918, 549);
+            this.pictureBox2.Size = new System.Drawing.Size(1033, 686);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // V2Forside
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 549);
+            this.ClientSize = new System.Drawing.Size(1286, 686);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
