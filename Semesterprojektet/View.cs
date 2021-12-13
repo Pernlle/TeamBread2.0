@@ -20,8 +20,8 @@ namespace Semesterprojektet
 
         private void View_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tHEONETHEONLY.Bolig' table. You can move, or remove it, as needed.
-            this.boligTableAdapter1.Fill(this.tHEONETHEONLY.Bolig);
+            // TODO: This line of code loads data into the 'tHEDATASETOFALL.Bolig' table. You can move, or remove it, as needed.
+            this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
 
         }
 
@@ -67,15 +67,38 @@ namespace Semesterprojektet
         {
             string search = this.search.Text;
 
-            String areaToPrint = "";
-            if(areaToPrint==search)
-                {
-                TextWriter writer = new StreamWriter($@"..\..\..\Bolig_Søg_{search}.txt");
-                MessageBox.Show(areaToPrint);
-                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
-                {
-                    String area = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                    if (area == areaToPrint)
+            switch (search)
+            {
+                case "2650":
+                case "Hvidovre":
+                    {
+                        string areaToPrint = "2650";
+                        TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg_Hvidovre.txt");
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
+                        {
+                            string area = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                            MessageBox.Show(area);
+                            if (area == areaToPrint)
+                            {
+                                for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
+                                {
+                                    if (j == dataGridView1.Columns.Count - 1) // if last column
+                                    {
+                                        writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
+                                    }
+                                    else
+                                        writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                                }
+                            }
+                        }
+                        writer.Close();
+                        MessageBox.Show("Data Exported");
+                    }
+                    break;
+                default:
+                    { 
+                    TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg.txt");
+                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
                     {
                         for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
                         {
@@ -87,29 +110,13 @@ namespace Semesterprojektet
                                 writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                         }
                     }
-                }
-
-                writer.Close();
-                MessageBox.Show("Data Exported");
+                    writer.Close();
+                    MessageBox.Show("Full data Exported");
             }
-            else
-            {
-                TextWriter writer = new StreamWriter(@"..\..\..\Bolig_Søg.txt");
-                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++) // rows
-                {
-                    for (int j = 0; j < dataGridView1.Columns.Count; j++) // columns
-                    {
-                        if (j == dataGridView1.Columns.Count - 1) // if last column
-                        {
-                            writer.WriteLine("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString());
-                        }
-                        else
-                            writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
-                    }
-                }
-                writer.Close();
-                MessageBox.Show("Data Exported");                
+            break;
             }
+            
+           
             /*
             switch (search)
             {
