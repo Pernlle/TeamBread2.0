@@ -43,8 +43,9 @@ namespace Semesterprojektet
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Semesterprojektet.Properties.Resources.Billede1__2_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(659, 403);
+            this.pictureBox1.Size = new System.Drawing.Size(741, 504);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -53,9 +54,10 @@ namespace Semesterprojektet
             // 
             this.boligbtn.BackColor = System.Drawing.Color.Silver;
             this.boligbtn.Font = new System.Drawing.Font("Tw Cen MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boligbtn.Location = new System.Drawing.Point(84, 96);
+            this.boligbtn.Location = new System.Drawing.Point(94, 120);
+            this.boligbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boligbtn.Name = "boligbtn";
-            this.boligbtn.Size = new System.Drawing.Size(293, 70);
+            this.boligbtn.Size = new System.Drawing.Size(330, 88);
             this.boligbtn.TabIndex = 1;
             this.boligbtn.Text = "BOLIG";
             this.boligbtn.UseVisualStyleBackColor = false;
@@ -65,11 +67,12 @@ namespace Semesterprojektet
             // 
             this.saelgerbtn.BackColor = System.Drawing.Color.Silver;
             this.saelgerbtn.Font = new System.Drawing.Font("Tw Cen MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saelgerbtn.Location = new System.Drawing.Point(84, 217);
+            this.saelgerbtn.Location = new System.Drawing.Point(94, 271);
+            this.saelgerbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.saelgerbtn.Name = "saelgerbtn";
-            this.saelgerbtn.Size = new System.Drawing.Size(293, 70);
+            this.saelgerbtn.Size = new System.Drawing.Size(330, 88);
             this.saelgerbtn.TabIndex = 2;
-            this.saelgerbtn.Text = "SÆLGER";
+            this.saelgerbtn.Text = "KUNDER";
             this.saelgerbtn.UseVisualStyleBackColor = false;
             this.saelgerbtn.Click += new System.EventHandler(this.saelgerbtn_Click);
             // 
@@ -77,21 +80,23 @@ namespace Semesterprojektet
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(659, 403);
+            this.panel1.Size = new System.Drawing.Size(741, 504);
             this.panel1.TabIndex = 3;
             // 
             // EMPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(659, 403);
+            this.ClientSize = new System.Drawing.Size(741, 504);
             this.Controls.Add(this.saelgerbtn);
             this.Controls.Add(this.boligbtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EMPanel";
             this.Text = "EMPanel";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
