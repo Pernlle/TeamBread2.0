@@ -79,6 +79,8 @@ namespace Semesterprojektet
             this.boligBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.boligBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.boligTableAdapter2 = new Semesterprojektet.tHEDATASETOFALLTableAdapters.BoligTableAdapter();
+            this.boligID = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEDATASETOFALL)).BeginInit();
@@ -118,7 +120,7 @@ namespace Semesterprojektet
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1136, 337);
+            this.dataGridView1.Size = new System.Drawing.Size(1010, 269);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -238,6 +240,8 @@ namespace Semesterprojektet
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.boligID);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.koeberID);
             this.panel1.Controls.Add(this.label8);
@@ -264,35 +268,35 @@ namespace Semesterprojektet
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1136, 211);
+            this.panel1.Size = new System.Drawing.Size(1010, 169);
             this.panel1.TabIndex = 13;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(554, 68);
+            this.label9.Location = new System.Drawing.Point(492, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 20);
+            this.label9.Size = new System.Drawing.Size(70, 17);
             this.label9.TabIndex = 22;
             this.label9.Text = "Købers ID";
             // 
             // koeberID
             // 
             this.koeberID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.koeberID.Location = new System.Drawing.Point(678, 69);
+            this.koeberID.Location = new System.Drawing.Point(603, 55);
             this.koeberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.koeberID.Name = "koeberID";
-            this.koeberID.Size = new System.Drawing.Size(134, 19);
+            this.koeberID.Size = new System.Drawing.Size(119, 15);
             this.koeberID.TabIndex = 21;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(553, 151);
+            this.label8.Location = new System.Drawing.Point(492, 121);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 20);
+            this.label8.Size = new System.Drawing.Size(106, 17);
             this.label8.TabIndex = 20;
             this.label8.Text = "Dato for handel";
             // 
@@ -300,9 +304,9 @@ namespace Semesterprojektet
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(554, 112);
+            this.label7.Location = new System.Drawing.Point(492, 90);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 20);
+            this.label7.Size = new System.Drawing.Size(81, 17);
             this.label7.TabIndex = 19;
             this.label7.Text = "Solgt til pris";
             // 
@@ -310,9 +314,9 @@ namespace Semesterprojektet
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(238, 152);
+            this.label6.Location = new System.Drawing.Point(212, 122);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 20);
+            this.label6.Size = new System.Drawing.Size(135, 17);
             this.label6.TabIndex = 18;
             this.label6.Text = "Ejendomsmægler ID";
             // 
@@ -320,9 +324,9 @@ namespace Semesterprojektet
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(310, 88);
+            this.label5.Location = new System.Drawing.Point(276, 70);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 20);
+            this.label5.Size = new System.Drawing.Size(71, 17);
             this.label5.TabIndex = 17;
             this.label5.Text = "Sælger ID";
             // 
@@ -330,9 +334,9 @@ namespace Semesterprojektet
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(320, 28);
+            this.label4.Location = new System.Drawing.Point(284, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.Size = new System.Drawing.Size(66, 17);
             this.label4.TabIndex = 16;
             this.label4.Text = "Salgspris";
             // 
@@ -340,9 +344,9 @@ namespace Semesterprojektet
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(43, 152);
+            this.label3.Location = new System.Drawing.Point(38, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 20);
+            this.label3.Size = new System.Drawing.Size(35, 17);
             this.label3.TabIndex = 15;
             this.label3.Text = "Kvm";
             // 
@@ -350,9 +354,9 @@ namespace Semesterprojektet
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(27, 86);
+            this.label2.Location = new System.Drawing.Point(24, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 14;
             this.label2.Text = "Postnr";
             // 
@@ -360,18 +364,18 @@ namespace Semesterprojektet
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 25);
+            this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
+            this.label1.Size = new System.Drawing.Size(60, 17);
             this.label1.TabIndex = 13;
             this.label1.Text = "Adresse";
             // 
             // handelsdato
             // 
-            this.handelsdato.Location = new System.Drawing.Point(678, 148);
+            this.handelsdato.Location = new System.Drawing.Point(603, 118);
             this.handelsdato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.handelsdato.Name = "handelsdato";
-            this.handelsdato.Size = new System.Drawing.Size(134, 26);
+            this.handelsdato.Size = new System.Drawing.Size(120, 22);
             this.handelsdato.TabIndex = 8;
             this.handelsdato.Value = new System.DateTime(2021, 12, 9, 12, 10, 33, 0);
             this.handelsdato.ValueChanged += new System.EventHandler(this.handelsdato_ValueChanged);
@@ -379,70 +383,70 @@ namespace Semesterprojektet
             // adresse
             // 
             this.adresse.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adresse.Location = new System.Drawing.Point(88, 26);
+            this.adresse.Location = new System.Drawing.Point(78, 21);
             this.adresse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.adresse.Name = "adresse";
-            this.adresse.Size = new System.Drawing.Size(134, 19);
+            this.adresse.Size = new System.Drawing.Size(119, 15);
             this.adresse.TabIndex = 1;
             this.adresse.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // eID
             // 
             this.eID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.eID.Location = new System.Drawing.Point(399, 152);
+            this.eID.Location = new System.Drawing.Point(355, 122);
             this.eID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.eID.Name = "eID";
-            this.eID.Size = new System.Drawing.Size(134, 19);
+            this.eID.Size = new System.Drawing.Size(119, 15);
             this.eID.TabIndex = 6;
             this.eID.TextChanged += new System.EventHandler(this.eID_TextChanged);
             // 
             // sID
             // 
             this.sID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sID.Location = new System.Drawing.Point(399, 86);
+            this.sID.Location = new System.Drawing.Point(355, 69);
             this.sID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sID.Name = "sID";
-            this.sID.Size = new System.Drawing.Size(134, 19);
+            this.sID.Size = new System.Drawing.Size(119, 15);
             this.sID.TabIndex = 5;
             this.sID.TextChanged += new System.EventHandler(this.sID_TextChanged);
             // 
             // handelspris
             // 
             this.handelspris.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.handelspris.Location = new System.Drawing.Point(678, 113);
+            this.handelspris.Location = new System.Drawing.Point(603, 90);
             this.handelspris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.handelspris.Name = "handelspris";
-            this.handelspris.Size = new System.Drawing.Size(134, 19);
+            this.handelspris.Size = new System.Drawing.Size(119, 15);
             this.handelspris.TabIndex = 7;
             this.handelspris.TextChanged += new System.EventHandler(this.handelspris_TextChanged);
             // 
             // kvm
             // 
             this.kvm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.kvm.Location = new System.Drawing.Point(88, 152);
+            this.kvm.Location = new System.Drawing.Point(78, 122);
             this.kvm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kvm.Name = "kvm";
-            this.kvm.Size = new System.Drawing.Size(134, 19);
+            this.kvm.Size = new System.Drawing.Size(119, 15);
             this.kvm.TabIndex = 3;
             this.kvm.TextChanged += new System.EventHandler(this.kvm_TextChanged);
             // 
             // postnr
             // 
             this.postnr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.postnr.Location = new System.Drawing.Point(88, 88);
+            this.postnr.Location = new System.Drawing.Point(78, 70);
             this.postnr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.postnr.Name = "postnr";
-            this.postnr.Size = new System.Drawing.Size(134, 19);
+            this.postnr.Size = new System.Drawing.Size(119, 15);
             this.postnr.TabIndex = 2;
             this.postnr.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // salgspris
             // 
             this.salgspris.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salgspris.Location = new System.Drawing.Point(399, 28);
+            this.salgspris.Location = new System.Drawing.Point(355, 22);
             this.salgspris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.salgspris.Name = "salgspris";
-            this.salgspris.Size = new System.Drawing.Size(134, 19);
+            this.salgspris.Size = new System.Drawing.Size(119, 15);
             this.salgspris.TabIndex = 4;
             this.salgspris.TextChanged += new System.EventHandler(this.salgspris_TextChanged);
             // 
@@ -451,10 +455,10 @@ namespace Semesterprojektet
             this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteBtn.Location = new System.Drawing.Point(837, 138);
+            this.deleteBtn.Location = new System.Drawing.Point(744, 110);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(287, 34);
+            this.deleteBtn.Size = new System.Drawing.Size(255, 27);
             this.deleteBtn.TabIndex = 11;
             this.deleteBtn.Text = "Slet";
             this.deleteBtn.UseVisualStyleBackColor = true;
@@ -465,10 +469,10 @@ namespace Semesterprojektet
             this.updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateBtn.Location = new System.Drawing.Point(837, 85);
+            this.updateBtn.Location = new System.Drawing.Point(744, 68);
             this.updateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(287, 34);
+            this.updateBtn.Size = new System.Drawing.Size(255, 27);
             this.updateBtn.TabIndex = 10;
             this.updateBtn.Text = "Opdater";
             this.updateBtn.UseVisualStyleBackColor = true;
@@ -479,10 +483,10 @@ namespace Semesterprojektet
             this.createBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.createBtn.Location = new System.Drawing.Point(837, 28);
+            this.createBtn.Location = new System.Drawing.Point(744, 22);
             this.createBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(287, 34);
+            this.createBtn.Size = new System.Drawing.Size(255, 27);
             this.createBtn.TabIndex = 9;
             this.createBtn.Text = "Opret";
             this.createBtn.UseVisualStyleBackColor = true;
@@ -492,10 +496,10 @@ namespace Semesterprojektet
             // 
             this.soldCheck.AutoSize = true;
             this.soldCheck.ForeColor = System.Drawing.Color.White;
-            this.soldCheck.Location = new System.Drawing.Point(558, 24);
+            this.soldCheck.Location = new System.Drawing.Point(496, 19);
             this.soldCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.soldCheck.Name = "soldCheck";
-            this.soldCheck.Size = new System.Drawing.Size(72, 24);
+            this.soldCheck.Size = new System.Drawing.Size(62, 21);
             this.soldCheck.TabIndex = 0;
             this.soldCheck.Text = "Solgt";
             this.soldCheck.UseVisualStyleBackColor = true;
@@ -503,10 +507,10 @@ namespace Semesterprojektet
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(921, 21);
+            this.refreshBtn.Location = new System.Drawing.Point(819, 17);
             this.refreshBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(74, 45);
+            this.refreshBtn.Size = new System.Drawing.Size(66, 36);
             this.refreshBtn.TabIndex = 12;
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.UseVisualStyleBackColor = true;
@@ -517,10 +521,10 @@ namespace Semesterprojektet
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.refreshBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 211);
+            this.panel2.Location = new System.Drawing.Point(0, 169);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1136, 337);
+            this.panel2.Size = new System.Drawing.Size(1010, 269);
             this.panel2.TabIndex = 14;
             // 
             // tHENEWONE
@@ -556,11 +560,30 @@ namespace Semesterprojektet
             // 
             this.boligTableAdapter2.ClearBeforeFill = true;
             // 
+            // boligID
+            // 
+            this.boligID.Location = new System.Drawing.Point(677, 19);
+            this.boligID.Name = "boligID";
+            this.boligID.ReadOnly = true;
+            this.boligID.Size = new System.Drawing.Size(45, 22);
+            this.boligID.TabIndex = 23;
+            this.boligID.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(600, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 17);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Bolig ID";
+            // 
             // V2CRUDBolig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 548);
+            this.ClientSize = new System.Drawing.Size(1010, 438);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -635,5 +658,7 @@ namespace Semesterprojektet
         private System.Windows.Forms.DataGridViewTextBoxColumn handelsPrisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn handelsDatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn koeberIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox boligID;
     }
 }
