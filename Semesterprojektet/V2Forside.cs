@@ -35,11 +35,10 @@ namespace Semesterprojektet
             //"<" check for JS tags ... NO cross site scripting here:
             if (id.Contains("<")) id_ok = false;
             if (pass.Contains("<")) pass_ok = false;
-            if (id_ok && pass_ok) 
-            
-                {
+            if (id_ok && pass_ok)             
+            {
                 string idId = id.Substring(0, 1);
-                if (idId.Contains("1")) 
+                if (idId.Contains("1"))
                 { // Admin 
                     panel2.Controls.Clear();
                     ADPanel frm = new ADPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -47,16 +46,14 @@ namespace Semesterprojektet
                     this.panel2.Controls.Add(frm);
                     frm.Show();
                 }
-                else
+                else if (idId != "") 
                 { // Egendomsmægler 
                     panel2.Controls.Clear();
                     EMPanel frm = new EMPanel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     frm.FormBorderStyle = FormBorderStyle.None;
                     this.panel2.Controls.Add(frm);
                     frm.Show();
-                }
-
-                
+                }                
             }
             else { MessageBox.Show("Prøv igen du"); }
         }
