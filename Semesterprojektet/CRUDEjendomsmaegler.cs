@@ -67,16 +67,16 @@ namespace Semesterprojektet
         {
             //JEG HAR INGEN ANELSE om hvad som skal kunne opdateres - men her kan man opdatere efternavnet :)
             string eID = id.Text;
-            string eEfternavn = efternavn.Text;
+            string eEmail = email.Text;
 
-            string sqlCom = "UPDATE Ejendomsmaegler set eNavn=@eNavn WHERE eID=@eID; ";
+            string sqlCom = "UPDATE Ejendomsmaegler set email=@email WHERE eID=@eID; ";
             SqlConnection conn = new SqlConnection(strconn);
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
             cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
             cmd.Parameters["@eID"].Value = Convert.ToInt32(eID);
-            cmd.Parameters.Add("@eNavn", System.Data.SqlDbType.VarChar);
-            cmd.Parameters["@eNavn"].Value = Convert.ToString(eEfternavn);
+            cmd.Parameters.Add("@email", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@email"].Value = Convert.ToString(eEmail);
             try
             {
                 conn.Open();
@@ -134,6 +134,11 @@ namespace Semesterprojektet
                 efternavn.Text = dgvRow.Cells[3].Value.ToString();
                 email.Text = dgvRow.Cells[4].Value.ToString();
             }
+        }
+
+        private void updatebtn_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Du kan kun opdatere email", updatebtn);
         }
     }
 }
