@@ -168,5 +168,10 @@ namespace Semesterprojektet
                 email.Text = dgvRow.Cells[4].Value.ToString();
             }
         }
+
+        private void id_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Kan ikke ændres", id);
+        }
     }
 }
