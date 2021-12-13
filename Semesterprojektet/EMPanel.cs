@@ -34,5 +34,10 @@ namespace Semesterprojektet
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

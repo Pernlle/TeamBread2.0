@@ -103,7 +103,7 @@ namespace Semesterprojektet
         // Metode som spørger om du er sikker på om du vil slette ejendomsmægler eller ej.
         public void Yes_no(SqlConnection conn, string cellValue)
         {
-            string box_msg = $"Er du sikker på at du vil slette denne ejendomsmægler {cellValue} ";
+            string box_msg = $"Er du sikker på at du vil slette denne ejendomsmægler ID = {cellValue} ";
             string box_title = "Vælg ja eller nej";
 
             var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
