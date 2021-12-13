@@ -133,6 +133,12 @@
     <Compile Include="V2View.Designer.cs">
       <DependentUpon>V2View.cs</DependentUpon>
     </Compile>
+    <Compile Include="v3crudkunder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="v3crudkunder.Designer.cs">
+      <DependentUpon>v3crudkunder.cs</DependentUpon>
+    </Compile>
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V2View.resx">
       <DependentUpon>V2View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="v3crudkunder.resx">
+      <DependentUpon>v3crudkunder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>

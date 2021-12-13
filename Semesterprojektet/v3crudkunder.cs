@@ -36,7 +36,7 @@ namespace Semesterprojektet
 
             if (saeglerCheck.Checked)
             {
-                string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saegler) VALUES (@fNavn, @eNavn, @email, '0', '1' );";
+                string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saelger) VALUES (@fNavn, @eNavn, @email, '0', '1' );";
                 SqlConnection conn = new SqlConnection(strconn);
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
@@ -63,7 +63,7 @@ namespace Semesterprojektet
 
             else if (koeberCheck.Checked)
             {
-                string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saegler) VALUES (@fNavn, @eNavn, @email, '1', '0' );";
+                string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saelger) VALUES (@fNavn, @eNavn, @email, '1', '0' );";
                 SqlConnection conn = new SqlConnection(strconn);
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
@@ -91,7 +91,7 @@ namespace Semesterprojektet
 
             else if (koeberCheck.Checked && saeglerCheck.Checked)
             {
-                string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saegler) VALUES (@fNavn, @eNavn, @email, '1', '1' );";
+                string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saelger) VALUES (@fNavn, @eNavn, @email, '1', '1' );";
                 SqlConnection conn = new SqlConnection(strconn);
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
