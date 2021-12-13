@@ -96,10 +96,10 @@ namespace Semesterprojektet
                             {
                                 if (j == dgvK.Columns.Count - 1) // Sælger if last column
                                 {
-                                    writer.WriteLine("\t" + dgvK.Rows[k].Cells[j].Value.ToString());
+                                    writer.WriteLine("\t" + dgvK.Rows[1].Cells[j].Value.ToString());
                                 }
                                 else
-                                    writer.Write("\t" + dgvK.Rows[k].Cells[j].Value.ToString() + "\t" + "|");
+                                    writer.Write("\t" + dgvK.Rows[1].Cells[j].Value.ToString() + "\t" + "|");
                             }
                         }
                     }
@@ -129,7 +129,19 @@ namespace Semesterprojektet
 
         private void clear_Click(object sender, EventArgs e)
         {
+            // Fjerne de valgte felter 
+            foreach (DataGridViewRow row in dgvB.Rows)
+            {
+                for (int i = 0; i < row.Cells.Count; i++)
+                {
+                    int rowIndex = row.Index;
+                    dgvB.Rows[rowIndex].Selected = false;
+                    break;
+                }
+            }
+
             // print af sælger informationer
+            /*
             string search = "6";
             string areaToPrint = search;
             if (areaToPrint == search)
@@ -154,19 +166,8 @@ namespace Semesterprojektet
                 writer.Close();
                 MessageBox.Show("Selected data Exported");
             }
-            
+            ^*/
 
-            /*
-            // Fjerne de valgte felter 
-            foreach (DataGridViewRow row in dgvB.Rows)
-            {
-                for (int i = 0; i < row.Cells.Count; i++)
-                {
-                    int rowIndex = row.Index;
-                    dgvB.Rows[rowIndex].Selected = false;
-                    break;
-                }
-            }*/
         }
     }
 }

@@ -1,0 +1,20 @@
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	5	|	Rainbow 4	|	7323	|	False	|	130	|	2000000	|		|		|	2	|	1	|	
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	15	|	Regnbue 68	|	7323	|	True	|	130	|	5000000	|	5500000	|	01-12-2021 00:00:00	|	2	|	1	|	5
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
