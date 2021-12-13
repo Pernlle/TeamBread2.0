@@ -44,9 +44,10 @@ namespace Semesterprojektet
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Tw Cen MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(84, 62);
+            this.button1.Location = new System.Drawing.Point(94, 78);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(293, 70);
+            this.button1.Size = new System.Drawing.Size(330, 88);
             this.button1.TabIndex = 0;
             this.button1.Text = "BOLIG";
             this.button1.UseVisualStyleBackColor = false;
@@ -56,11 +57,12 @@ namespace Semesterprojektet
             // 
             this.bolig2.BackColor = System.Drawing.Color.Silver;
             this.bolig2.Font = new System.Drawing.Font("Tw Cen MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bolig2.Location = new System.Drawing.Point(84, 168);
+            this.bolig2.Location = new System.Drawing.Point(94, 210);
+            this.bolig2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bolig2.Name = "bolig2";
-            this.bolig2.Size = new System.Drawing.Size(293, 70);
+            this.bolig2.Size = new System.Drawing.Size(330, 88);
             this.bolig2.TabIndex = 1;
-            this.bolig2.Text = "SÆLGER";
+            this.bolig2.Text = "KUNDER";
             this.bolig2.UseVisualStyleBackColor = false;
             this.bolig2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -71,7 +73,7 @@ namespace Semesterprojektet
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(657, 430);
+            this.panel1.Size = new System.Drawing.Size(739, 538);
             this.panel1.TabIndex = 2;
             // 
             // panel3
@@ -86,16 +88,17 @@ namespace Semesterprojektet
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(657, 430);
+            this.panel3.Size = new System.Drawing.Size(739, 538);
             this.panel3.TabIndex = 4;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Tw Cen MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(84, 270);
+            this.button2.Location = new System.Drawing.Point(94, 338);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 70);
+            this.button2.Size = new System.Drawing.Size(330, 88);
             this.button2.TabIndex = 2;
             this.button2.Text = "EJENDOMSMÆGLER";
             this.button2.UseVisualStyleBackColor = false;
@@ -108,18 +111,19 @@ namespace Semesterprojektet
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(657, 430);
+            this.pictureBox1.Size = new System.Drawing.Size(739, 538);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // ADPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 430);
+            this.ClientSize = new System.Drawing.Size(739, 538);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ADPanel";
             this.Text = "EMPanel";
             this.panel1.ResumeLayout(false);

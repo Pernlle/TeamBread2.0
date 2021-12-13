@@ -34,6 +34,7 @@
             this.updatebtn = new System.Windows.Forms.Button();
             this.createbtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.pass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             this.panel1.Controls.Add(this.updatebtn);
             this.panel1.Controls.Add(this.createbtn);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pass);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.email);
             this.panel1.Controls.Add(this.label3);
@@ -121,11 +123,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(39, 286);
+            this.label5.Location = new System.Drawing.Point(39, 305);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 38;
             this.label5.Text = "Password";
+            // 
+            // pass
+            // 
+            this.pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pass.Location = new System.Drawing.Point(121, 308);
+            this.pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pass.Name = "pass";
+            this.pass.Size = new System.Drawing.Size(134, 19);
+            this.pass.TabIndex = 37;
             // 
             // label4
             // 
@@ -321,6 +332,7 @@
         private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.Button createbtn;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox pass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.Label label3;
