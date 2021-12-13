@@ -231,33 +231,47 @@ namespace Semesterprojektet
             int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
+
+            Yes_no(conn, cellValue);
             
-            if (cellValue != "" || cellValue == "0")
-            {
-                string sqlCom = $"DELETE Bolig WHERE bID = {cellValue};";
-                SqlCommand cmd = new SqlCommand(sqlCom, conn);
-
-                try
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    //conn.Close(); // remember this HUSK ALTID AT LUKKE!
-                    MessageBox.Show("Bolig slettet");
-                    this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
-                }
-                catch (Exception exc)
-                {
-                    MessageBox.Show("ERROR: \n\n" + exc.ToString());
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Vælg noget at slette");
-            }
-
         }
+        public void Yes_no(SqlConnection conn, string cellValue)
+        {
+            string box_msg = "Er du sikker på at du vil slette denne bolig";
 
+            string box_title = "Vær sød at svare ja eller nej";
+
+            MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
+
+            var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
+            if (selectedOption == DialogResult.Yes)
+            {
+                if (cellValue != "" || cellValue == "0")
+                {
+                    string sqlCom = $"DELETE Bolig WHERE bID = {cellValue};";
+                    SqlCommand cmd = new SqlCommand(sqlCom, conn);
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        //conn.Close(); // remember this HUSK ALTID AT LUKKE!
+                        MessageBox.Show("Bolig slettet");
+                        this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("ERROR: \n\n" + exc.ToString());
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Vælg noget at slette");
+                }
+            }
+            else if (selectedOption == DialogResult.No) { MessageBox.Show("Gør noget andet så :) "); }
+        }
         private void refreshBtn_Click(object sender, EventArgs e)
         {
             this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
