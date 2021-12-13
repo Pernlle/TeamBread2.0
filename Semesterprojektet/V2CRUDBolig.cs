@@ -107,7 +107,7 @@ namespace Semesterprojektet
                     cmd.Parameters.Add("@salgsPris", System.Data.SqlDbType.Decimal);
                     cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(spris);
 
-                    cmd.Parameters.Add("@saelgerID", System.Data.SqlDbType.Int);
+                    cmd.Parameters.Add("@saeglerID", System.Data.SqlDbType.Int);
                     cmd.Parameters["@saeglerID"].Value = Convert.ToInt32(saelger);
 
                     cmd.Parameters.Add("@koeberID", System.Data.SqlDbType.Int);
@@ -125,7 +125,7 @@ namespace Semesterprojektet
                     {
                         conn.Open();
                         cmd.ExecuteNonQuery();
-                        //conn.Close(); // remember this HUSK ALTID AT LUKKE!
+                        conn.Close(); // remember this HUSK ALTID AT LUKKE!
                         MessageBox.Show("Solgt bolig oprettet");
                         this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
                     }
@@ -165,7 +165,7 @@ namespace Semesterprojektet
                 {
                     conn.Open();
                     cmd.ExecuteNonQuery();
-                    //conn.Close(); // remember this HUSK ALTID AT LUKKE!
+                    conn.Close(); // remember this HUSK ALTID AT LUKKE!
                     MessageBox.Show("Ny bolig oprettet");
                     this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
                 }
@@ -180,55 +180,35 @@ namespace Semesterprojektet
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            /*
-             * 
-             * // 
+            // Update - ikke værdig
+            string hPris = handelspris.Text;
+            string hDato = Convert.ToString(handelsdato.Value);
 
-                    string hpris = handelspris.Text;
-                    // Handelsdatoen er en value, fordi vi bruger DateTimePicker, for at gemme informationen i databasen converter vi den til en string
-                    string hdato = Convert.ToString(handelsdato.Value);
-
-                    string sqlCom = "INSERT INTO Bolig(adresse,postNr,kvm,salgsPris,handelsPris,handelsDato,kID,eID,solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @handelsDato, @kID, @eID,'1');";
-                    SqlCommand cmd = new SqlCommand(sqlCom, conn);
-            // Update
-
-            string badresse = textBox7.Text;
-            string bpostnr = textBox2.Text;
-            string bkvm = kvm.Text;
-            string spris = salgspris.Text;
-            string saegler = sID.Text;
-            string ejendomsmaegler = eID.Text;
-            string hpris = handelspris.Text;
-            string hdato = Convert.ToString(handelsdato.Value);
-
-            SqlConnection conn = new SqlConnection(strconn);
-
-            // Update er ikke værdig
-            string sqlCom = "UPDATE Bolig set salgsPris=@salgsPris WHERE bID=@bID; ";
-            SqlCommand cmd = new SqlCommand(sqlCom, conn);
-            cmd.Parameters.Add("@bID", System.Data.SqlDbType.Int);
-            cmd.Parameters["@bID"].Value = Convert.ToInt32(id);
-            cmd.Parameters.Add("@salgspris", System.Data.SqlDbType.Decimal);
-            cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(salgsPris);
-            //Dette er ikke blevet inplimenteret endnu (nedenfor)
-            cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
-            cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(handelPris);
-            cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.Date);
-            cmd.Parameters["@handelsDato"].Value = Convert.ToDateTime(handelDato);
-
-            try
+            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+            string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
+            if (cellValue != "" || cellValue == "0")
             {
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Updatere bolig i database");
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show("ERROR: \n\n" + exc.ToString());
-            }
-            */
+                string sqlCom = $"UPDATE Bolig set handelsPris=@handelsPris WHERE {cellValue}";
+                SqlConnection conn = new SqlConnection(strconn);
+                SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
+                cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
+                cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(hPris);
+                cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.Date);
+                cmd.Parameters["@handelsDato"].Value = Convert.ToDateTime(hDato);
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Updatere bolig i database");
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show("ERROR: \n\n" + exc.ToString());
+                }
+            }            
         }
 
 
@@ -246,7 +226,6 @@ namespace Semesterprojektet
         public void Yes_no(SqlConnection conn, string cellValue)
         {
             string box_msg = "Er du sikker på at du vil slette denne bolig";
-
             string box_title = "Vær sød at svare ja eller nej";
 
             MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
@@ -263,7 +242,7 @@ namespace Semesterprojektet
                     {
                         conn.Open();
                         cmd.ExecuteNonQuery();
-                        //conn.Close(); // remember this HUSK ALTID AT LUKKE!
+                        conn.Close(); // remember this HUSK ALTID AT LUKKE!
                         MessageBox.Show("Bolig slettet");
                         this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
                     }
@@ -297,10 +276,13 @@ namespace Semesterprojektet
                 DataGridViewRow dgvRow = dataGridView1.Rows[e.RowIndex];
                 adresse.Text = dgvRow.Cells[1].Value.ToString();
                 postnr.Text = dgvRow.Cells[2].Value.ToString();
-                kvm.Text = dgvRow.Cells[4].Value.ToString();
-                salgspris.Text = dgvRow.Cells[5].Value.ToString();
-                sID.Text = dgvRow.Cells[8].Value.ToString();
-                eID.Text = dgvRow.Cells[9].Value.ToString();
+                kvm.Text = dgvRow.Cells[3].Value.ToString();
+                salgspris.Text = dgvRow.Cells[7].Value.ToString();
+                sID.Text = dgvRow.Cells[4].Value.ToString();
+                eID.Text = dgvRow.Cells[5].Value.ToString();
+                boligID.Text = dgvRow.Cells[0].Value.ToString();
+                handelspris.Text = dgvRow.Cells[8].Value.ToString();
+                koeberID.Text = dgvRow.Cells[10].Value.ToString();
             }
         }
     }

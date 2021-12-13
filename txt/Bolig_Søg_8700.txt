@@ -1,0 +1,22 @@
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	14	|	Dum Dum Vej 50	|	8700	|	True	|	160	|	4000000	|	3900000	|	01-12-2021 00:00:00	|	2	|	6	|	4
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	25	|	WHATUP	|	8700	|	True	|	110	|	1000000	|	895000	|	05-12-2021 00:00:00	|	2	|	3	|	4
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	26	|	Boligvej 28	|	8700	|	True	|	115	|	240000	|	220000	|	03-12-2021 12:10:33	|	3	|	4	|	3
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
