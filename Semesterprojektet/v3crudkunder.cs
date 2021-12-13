@@ -143,7 +143,7 @@ namespace Semesterprojektet
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Ejendomsmægleren er opdateret");
+                MessageBox.Show("Kunden er opdateret");
                 this.kunderTableAdapter.Fill(this.tHEDATASETOFALL.Kunder);
             }
             catch (Exception exc)
