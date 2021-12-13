@@ -89,7 +89,7 @@ namespace Semesterprojektet
             // Hvis den er solgt
             if (soldCheck.Checked)
             {
-                if (postnr.Text != "" && adresse.Text != "" && kvm.Text != "" && salgspris.Text != "" && handelspris.Text != "" && handelsdato.Text != "" && sID.Text != "" && eID.Text != "")
+                if (postnr.Text != "" && adresse.Text != "" && kvm.Text != "" && salgspris.Text != "" && handelspris.Text != "" && handelsdato.Text != "" && koeberID.Text != "" && sID.Text != "" && eID.Text != "")
                 {                    
                     string hpris = handelspris.Text;
                     // Handelsdatoen er en value, fordi vi bruger DateTimePicker, for at gemme informationen i databasen converter vi den til en string
@@ -143,7 +143,7 @@ namespace Semesterprojektet
             // HVIS DEN IKKE ER SOLGT
             else
             {                
-                string sqlCom = "INSERT INTO Bolig(adresse,postNr,kvm,salgsPris,kID,eID,solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @kID, @eID,'0');";
+                string sqlCom = "INSERT INTO Bolig(adresse,postNr,kvm,salgsPris,sID,eID,solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @saeglerID, @eID,'0');";
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
                 cmd.Parameters.Add("@adresse", System.Data.SqlDbType.VarChar);
@@ -155,8 +155,8 @@ namespace Semesterprojektet
                 cmd.Parameters.Add("@salgsPris", System.Data.SqlDbType.Decimal);
                 cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(spris);
 
-                cmd.Parameters.Add("@saelgerID", System.Data.SqlDbType.Int);
-                cmd.Parameters["@saelgerID"].Value = Convert.ToInt32(saelger);
+                cmd.Parameters.Add("@saeglerID", System.Data.SqlDbType.Int);
+                cmd.Parameters["@saeglerID"].Value = Convert.ToInt32(saelger);
 
                 cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
                 cmd.Parameters["@eID"].Value = Convert.ToInt32(ejendomsmaegler);
