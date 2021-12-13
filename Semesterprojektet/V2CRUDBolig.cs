@@ -228,8 +228,6 @@ namespace Semesterprojektet
             string box_msg = "Er du sikker på at du vil slette denne bolig";
             string box_title = "Vær sød at svare ja eller nej";
 
-            MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
-
             var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
             if (selectedOption == DialogResult.Yes)
             {

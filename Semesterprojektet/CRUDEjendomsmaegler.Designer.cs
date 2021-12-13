@@ -175,6 +175,7 @@ namespace Semesterprojektet
             this.id.Size = new System.Drawing.Size(119, 15);
             this.id.TabIndex = 16;
             this.id.TabStop = false;
+            this.id.MouseHover += new System.EventHandler(this.id_MouseHover);
             // 
             // label2
             // 
@@ -218,6 +219,7 @@ namespace Semesterprojektet
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
