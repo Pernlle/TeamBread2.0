@@ -82,7 +82,8 @@ namespace Semesterprojektet
             string bpostnr = postnr.Text;
             string bkvm = kvm.Text;
             string spris = salgspris.Text;
-            string saegler = sID.Text;
+            string koeber = koeberID.Text;
+            string saelger = sID.Text;
             string ejendomsmaegler = eID.Text;
 
             // Hvis den er solgt
@@ -94,7 +95,7 @@ namespace Semesterprojektet
                     // Handelsdatoen er en value, fordi vi bruger DateTimePicker, for at gemme informationen i databasen converter vi den til en string
                     string hdato = Convert.ToString(handelsdato.Value);
 
-                    string sqlCom = "INSERT INTO Bolig(adresse,postNr,kvm,salgsPris,handelsPris,handelsDato,kID,eID,solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @handelsDato, @kID, @eID,'1');";
+                    string sqlCom = "INSERT INTO Bolig(adresse,postNr,kvm,salgsPris,handelsPris,handelsDato,saelgerID,koeberID,eID,solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @handelsDato,@saelgerID, @koeberID, @eID,'1');";
                     SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
                     cmd.Parameters.Add("@adresse", System.Data.SqlDbType.VarChar);
@@ -105,8 +106,13 @@ namespace Semesterprojektet
                     cmd.Parameters["@kvm"].Value = Convert.ToDecimal(bkvm);
                     cmd.Parameters.Add("@salgsPris", System.Data.SqlDbType.Decimal);
                     cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(spris);
-                    cmd.Parameters.Add("@kID", System.Data.SqlDbType.Int);
-                    cmd.Parameters["@kID"].Value = Convert.ToInt32(saegler);
+
+                    cmd.Parameters.Add("@saelgerID", System.Data.SqlDbType.Int);
+                    cmd.Parameters["@saelgerID"].Value = Convert.ToInt32(saelger);
+
+                    cmd.Parameters.Add("@koeberID", System.Data.SqlDbType.Int);
+                    cmd.Parameters["@koeberID"].Value = Convert.ToInt32(koeber);
+
                     cmd.Parameters.Add("@eID", System.Data.SqlDbType.Int);
                     cmd.Parameters["@eID"].Value = Convert.ToInt32(ejendomsmaegler);
 
