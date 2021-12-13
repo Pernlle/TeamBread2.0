@@ -160,32 +160,45 @@ namespace Semesterprojektet
             DataGridViewRow selectedRow = dataGridView2.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
 
-            if (cellValue != "" || cellValue == "0")
-            {
-                string sqlCom = $"DELETE Kunder WHERE kID = {cellValue};";
-                SqlCommand cmd = new SqlCommand(sqlCom, conn);
-
-                try
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show("Kunden er slettet");
-                    this.kunderTableAdapter.Fill(this.tHEDATASETOFALL.Kunder);
-                }
-                catch (Exception exc)
-                {
-                    MessageBox.Show("ERROR: \n\n" + exc.ToString());
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Vælg noget at slette");
-            }
+            Yes_no(conn, cellValue);
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void Yes_no(SqlConnection conn, string cellValue)
+        {
+            string box_msg = "Er du sikker på at du vil slette denne kunde";
+            string box_title = "Tryk ja eller nej";
+
+            var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
+            if (selectedOption == DialogResult.Yes)
+            {
+                if (cellValue != "" || cellValue == "0")
+                {
+                    string sqlCom = $"DELETE Kunder WHERE kID = {cellValue};";
+                    SqlCommand cmd = new SqlCommand(sqlCom, conn);
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Kunden er slettet");
+                        this.kunderTableAdapter.Fill(this.tHEDATASETOFALL.Kunder);
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("ERROR: \n\n" + exc.ToString());
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Vælg noget at slette");
+                }
+            }
+            else if (selectedOption == DialogResult.No) { MessageBox.Show("Gør noget andet så :) "); }
+        }
+
+            private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
