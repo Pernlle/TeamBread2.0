@@ -65,7 +65,6 @@ namespace Semesterprojektet
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            //JEG HAR INGEN ANELSE om hvad som skal kunne opdateres - men her kan man opdatere efternavnet :)
             string eID = id.Text;
             string eEmail = email.Text;
 
@@ -106,8 +105,6 @@ namespace Semesterprojektet
         {
             string box_msg = $"Er du sikker på at du vil slette denne ejendomsmægler {cellValue} ";
             string box_title = "Vælg ja eller nej";
-
-            MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
 
             var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
             if (selectedOption == DialogResult.Yes)
