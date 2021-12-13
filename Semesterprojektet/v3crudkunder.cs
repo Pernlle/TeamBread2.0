@@ -121,7 +121,35 @@ namespace Semesterprojektet
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
+            string kID = id.Text;
+            string kFornavn = fornavn.Text;
+            string kEfternavn = efternavn.Text;
+            string kEmail = email.Text;
+            string sqlCom = "UPDATE Kunder set email=@email, fNavn=@fNavn, eNavn=@eNavn, WHERE kID=@kID; ";
+            SqlConnection conn = new SqlConnection(strconn);
+            SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
+            cmd.Parameters.Add("@kID", System.Data.SqlDbType.Int);
+            cmd.Parameters["@kID"].Value = Convert.ToInt32(kID);
+            cmd.Parameters.Add("@email", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@email"].Value = Convert.ToString(kEmail);
+            cmd.Parameters.Add("@fNavn", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@fNavn"].Value = Convert.ToString(kFornavn);
+            cmd.Parameters.Add("@eNavn", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@eNavn"].Value = Convert.ToString(kEfternavn);
+           
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Ejendomsmægleren er opdateret");
+                this.kunderTableAdapter.Fill(this.tHEDATASETOFALL.Kunder);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("ERROR: \n\n" + exc.ToString());
+            }
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
