@@ -165,7 +165,7 @@ namespace Semesterprojektet
 
         public void Yes_no(SqlConnection conn, string cellValue)
         {
-            string box_msg = "Er du sikker på at du vil slette denne kunde";
+            string box_msg = $"Er du sikker på at du vil slette denne kunde ID = {cellValue}";
             string box_title = "Tryk ja eller nej";
 
             var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
