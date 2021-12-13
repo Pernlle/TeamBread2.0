@@ -8,11 +8,14 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Semesterprojektet
 {
     public partial class V2View : Form
     {
+        public string strconn = @"Server=den1.mssql7.gear.host; Database=teambreaddb; User ID=teambreaddb; Password=Tg53?N_p6fzh";
+
         public V2View()
         {
             InitializeComponent();
@@ -168,6 +171,43 @@ namespace Semesterprojektet
             }
             ^*/
 
+        }
+
+        private void mlDatoer_Click(object sender, EventArgs e)
+        {
+            string dato1 = Convert.ToString(datostartbox);
+            string dato2 = Convert.ToString(datoslutbox);
+
+            SqlConnection conn = new SqlConnection(strconn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Bolig WHERE handelsDato BETWEEN '" + dato1 + "' AND '" + dato2 + "' GROUP BY adresse, handelsPris, handelsDato, eID, saeglerID, koeberID, postnr, bID, solgt, kvm, salgsPris", conn);
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter SDA1 = new SqlDataAdapter(cmd);
+            SDA1.Fill(dt1);
+            dgvB.DataSource = dt1;
+
+        }
+
+        private void prisSearch_Click(object sender, EventArgs e)
+        {
+            string pris = Convert.ToString(prisInput.Text);
+
+            SqlConnection conn = new SqlConnection(strconn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Bolig WHERE handelsPris >= '" + pris + "'", conn);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter SDA2 = new SqlDataAdapter(cmd);
+            SDA2.Fill(dt2);
+            dgvB.DataSource = dt2;
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("ERROR: \n\n" + exc.ToString());
+            }
         }
     }
 }
