@@ -95,7 +95,7 @@ namespace Semesterprojektet
                     // Handelsdatoen er en value, fordi vi bruger DateTimePicker, for at gemme informationen i databasen converter vi den til en string
                     string hdato = Convert.ToString(handelsdato.Value);
 
-                    string sqlCom = "INSERT INTO Bolig(adresse,postNr,kvm,salgsPris,handelsPris,handelsDato,saelgerID,koeberID,eID,solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @handelsDato,@saelgerID, @koeberID, @eID,'1');";
+                    string sqlCom = "INSERT INTO Bolig(adresse,postNr,kvm,salgsPris,handelsPris,handelsDato,saeglerID,koeberID,eID,solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @handelsPris, @handelsDato,@saeglerID, @koeberID, @eID,'1');";
                     SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
                     cmd.Parameters.Add("@adresse", System.Data.SqlDbType.VarChar);
@@ -108,7 +108,7 @@ namespace Semesterprojektet
                     cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(spris);
 
                     cmd.Parameters.Add("@saelgerID", System.Data.SqlDbType.Int);
-                    cmd.Parameters["@saelgerID"].Value = Convert.ToInt32(saelger);
+                    cmd.Parameters["@saeglerID"].Value = Convert.ToInt32(saelger);
 
                     cmd.Parameters.Add("@koeberID", System.Data.SqlDbType.Int);
                     cmd.Parameters["@koeberID"].Value = Convert.ToInt32(koeber);
