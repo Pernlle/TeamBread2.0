@@ -228,7 +228,7 @@ namespace Semesterprojektet
                 string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
                 if (cellValue != "" || cellValue == "0")
                 {
-                    string sqlCom = $"UPDATE Bolig SET solgt = '0' koeberID=@koeberID handelsPris=@handelsPris WHERE {cellValue}";
+                    string sqlCom = $"UPDATE Bolig SET solgt = '0' koeberid=@koeberID handelsPris=@handelsPris WHERE {cellValue}";
                     SqlConnection conn = new SqlConnection(strconn);
                     SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
