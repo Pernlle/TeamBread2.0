@@ -13,6 +13,7 @@ namespace Semesterprojektet
 {
     public partial class v3crudkunder : Form
     {
+        // Connect to database 
         public string strconn = @"Server=den1.mssql7.gear.host; Database=teambreaddb; User ID=teambreaddb; Password=Tg53?N_p6fzh";
 
         public v3crudkunder()
@@ -22,18 +23,20 @@ namespace Semesterprojektet
 
         private void v3crudkunder_Load(object sender, EventArgs e)
         {
+            // Loader datasættet ind i datagridview
             // TODO: This line of code loads data into the 'tHEDATASETOFALL.Kunder' table. You can move, or remove it, as needed.
             this.kunderTableAdapter.Fill(this.tHEDATASETOFALL.Kunder);
-
         }
 
         private void createBtn_Click(object sender, EventArgs e)
         {
+            // C(RUD) - opret en kunde (sælger/køber)
             string kId = id.Text;
             string kFornavn = fornavn.Text;
             string kEfternavn = efternavn.Text;
             string kEmail = email.Text;
 
+            // Hvis checkboksen 'sælger' er krydset af
             if (saeglerCheck.Checked)
             {
                 string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saelger) VALUES (@fNavn, @eNavn, @email, '0', '1' );";
@@ -61,6 +64,7 @@ namespace Semesterprojektet
                 }
             }
 
+            // Hvis checkboksen 'køber' er krydset af
             else if (koeberCheck.Checked)
             {
                 string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saelger) VALUES (@fNavn, @eNavn, @email, '1', '0' );";
@@ -89,6 +93,7 @@ namespace Semesterprojektet
 
             }
 
+            // Hvis checkboksen 'sælger' og 'køber' er krydset af
             else if (koeberCheck.Checked && saeglerCheck.Checked)
             {
                 string sqlCom = "INSERT INTO Kunder(fNavn, eNavn, email, koeber, saelger) VALUES (@fNavn, @eNavn, @email, '1', '1' );";
@@ -121,6 +126,7 @@ namespace Semesterprojektet
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
+            // (CR)U(D) - opdater en kunde
             string kID = id.Text;
             string kFornavn = fornavn.Text;
             string kEfternavn = efternavn.Text;
@@ -154,21 +160,26 @@ namespace Semesterprojektet
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
+            // (CRU)D - slet en kunde
             SqlConnection conn = new SqlConnection(strconn);
 
             int selectedRowIndex = dataGridView2.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView2.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
 
+            // Call metoden 'Yes_No'
             Yes_no(conn, cellValue);
         }
 
+        // Metode Yes_No, som spørger om du er sikker på om du vil slette kunde eller ej.
         public void Yes_no(SqlConnection conn, string cellValue)
         {
             string box_msg = $"Er du sikker på at du vil slette denne kunde ID = {cellValue}";
             string box_title = "Tryk ja eller nej";
 
+            // Viser en messagebox med to valg - yes, no
             var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
+            //Hvis du trykker ja til at slette kunde
             if (selectedOption == DialogResult.Yes)
             {
                 if (cellValue != "" || cellValue == "0")
@@ -195,11 +206,13 @@ namespace Semesterprojektet
                     MessageBox.Show("Vælg noget at slette");
                 }
             }
+            // Hvis du trykker nej til at slette kunde
             else if (selectedOption == DialogResult.No) { MessageBox.Show("Gør noget andet så :) "); }
         }
 
-            private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Hvis der trykkes på grid vises værdierne i feltet
             if (e.RowIndex != -1)
             {
                 DataGridViewRow dgvRow = dataGridView2.Rows[e.RowIndex];
@@ -212,6 +225,7 @@ namespace Semesterprojektet
 
         private void id_MouseHover(object sender, EventArgs e)
         {
+            //Viser 'beskeden' hvis du hover over valgte felt
             toolTip1.Show("Kan ikke ændres", id);
         }
     }
