@@ -291,5 +291,14 @@
   <ItemGroup>
     <None Include="Resources\RealRealBoligLogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RealRealBoligLogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realrealrealbolig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realrealrealrealbolig.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -113,6 +113,36 @@ namespace Semesterprojektet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RealRealBoligLogo2 {
+            get {
+                object obj = ResourceManager.GetObject("RealRealBoligLogo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap realrealrealbolig {
+            get {
+                object obj = ResourceManager.GetObject("realrealrealbolig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap realrealrealrealbolig {
+            get {
+                object obj = ResourceManager.GetObject("realrealrealrealbolig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sidebar {
             get {
                 object obj = ResourceManager.GetObject("sidebar", resourceCulture);
