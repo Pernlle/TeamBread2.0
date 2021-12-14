@@ -39,36 +39,43 @@ namespace Semesterprojektet
 
         }
 
+        // OBSOLETE
         private void soldCheck_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
+        // OBSOLETE
         private void kvm_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        // OBSOLETE
         private void salgspris_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        // OBSOLETE
         private void sID_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        // OBSOLETE
         private void eID_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        // OBSOLETE
         private void handelspris_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        // OBSOLETE
         private void handelsdato_ValueChanged(object sender, EventArgs e)
         {
             
@@ -76,6 +83,7 @@ namespace Semesterprojektet
 
         private void createBtn_Click(object sender, EventArgs e)
         {
+            //(C)RUD
             SqlConnection conn = new SqlConnection(strconn);
             // Definerer strings, for at kunne converte værdien til den korrekte værdi i databasen når man inserter (create)
             string badresse = adresse.Text;
@@ -291,6 +299,7 @@ namespace Semesterprojektet
         }
 
 
+        // CRU(D)
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(strconn);
