@@ -279,5 +279,17 @@
   <ItemGroup>
     <None Include="Resources\Billede11 %282%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RealRealBoligLogo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
