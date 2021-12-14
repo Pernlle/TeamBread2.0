@@ -53,6 +53,7 @@ namespace Semesterprojektet
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Login button
             
             string id = maskedTextBox1.Text;
             string pass = maskedTextBox2.Text;
