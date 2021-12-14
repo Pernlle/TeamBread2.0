@@ -31,47 +31,19 @@ namespace Semesterprojektet
         }
 
         private void cbSearchPostNr_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string searchValue = cbSearchPostNr.Text;
-            dgvB.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
-            {
-                bool valueResult = false;
-                foreach (DataGridViewRow row in dgvB.Rows)
-                {
-                    for (int i = 0; i < row.Cells.Count; i++)
-                    {
-                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
-                        {                            
-                            int rowIndex = row.Index;
-                            dgvB.Rows[rowIndex].Selected = true;
-                            valueResult = true;
-                            break;
-                        }
-                    }
-                }
-                if (!valueResult)
-                {
-                    MessageBox.Show("Unable to find " + cbSearchPostNr.Text, "Not Found");
-                    return;
-                }
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
+        { 
+            //Det fungerede ikke helt med printknappen
         }
 
         private void print_Click(object sender, EventArgs e)
         {
             // Antager at sælger i dette tilfælde er SÆLGER! Da der ikke står sælger(Mægler) i opgaveteksten.
             // Det som sker her er, at, der først printes Boligen, og til sidst ALLE Sælgere - og dette går i loop til der ikke er flere boligere.
-            dgvK.Columns.Count.ToString();
-            string search = cbSearchPostNr.Text;
-            string areaToPrint = search;
-            if (areaToPrint == search)
+            string search1 = search.Text;
+            string areaToPrint = search1;
+            if (areaToPrint == search1)
             {
-                TextWriter writer = new StreamWriter($@"..\..\..\txt\Bolig_Søg_{search}.txt");
+                TextWriter writer = new StreamWriter($@"..\..\..\txt\Bolig_Søg_{search1}.txt");
                 for (int i = 0; i < dgvB.Rows.Count - 1; i++) // Bolig rows
                 {
                     //Bolig
@@ -87,25 +59,7 @@ namespace Semesterprojektet
                             else
                                 writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                         }
-                    }
-                    // Sælger - Virker ikke som det skal :(
-                    for (int k = 0; k < dgvK.Rows.Count - 1; k++) // Sælger rows
-                    {
-                        string areaK = dgvK.Rows[k].Cells[0].Value.ToString(); // 0 er index på kID (kundeID)
-                        string areaB = dgvB.Rows[i].Cells[9].Value.ToString(); // 9 er index på sælgerID
-                        if (areaB == areaK)
-                        {
-                            for (int j = 0; j < dgvK.Columns.Count; j++) // Sælger columns
-                            {
-                                if (j == dgvK.Columns.Count - 1) // Sælger if last column
-                                {
-                                    writer.WriteLine("\t" + dgvK.Rows[1].Cells[j].Value.ToString());
-                                }
-                                else
-                                    writer.Write("\t" + dgvK.Rows[1].Cells[j].Value.ToString() + "\t" + "|");
-                            }
-                        }
-                    }
+                    }                    
                 }
                 writer.Close();
                 MessageBox.Show("Selected data Exported");
@@ -132,46 +86,65 @@ namespace Semesterprojektet
 
         private void clear_Click(object sender, EventArgs e)
         {
-            // Fjerne de valgte felter 
-            foreach (DataGridViewRow row in dgvB.Rows)
+            //Search button = Find
+            string searchValue = search.Text;
+            dgvB.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
             {
-                for (int i = 0; i < row.Cells.Count; i++)
+                bool valueResult = false;
+                foreach (DataGridViewRow row in dgvB.Rows)
                 {
-                    int rowIndex = row.Index;
-                    dgvB.Rows[rowIndex].Selected = false;
-                    break;
-                }
-            }
-
-            // print af sælger informationer
-            /*
-            string search = "6";
-            string areaToPrint = search;
-            if (areaToPrint == search)
-            {
-                TextWriter writer = new StreamWriter($@"..\..\..\Bolig_Søg_{search}.txt");                
-                for (int k = 0; k < dgvK.Rows.Count - 1; k++) // rows
-                {
-                    string areaK = dgvK.Rows[k].Cells[0].Value.ToString();
-                    if (areaToPrint == areaK)
+                    for (int i = 0; i < row.Cells.Count; i++)
                     {
-                        for (int j = 0; j < dgvK.Columns.Count; j++) // columns
+                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
                         {
-                            if (j == dgvK.Columns.Count - 1) // if last column
-                            {
-                                writer.WriteLine("\t" + dgvK.Rows[k].Cells[j].Value.ToString());
-                            }
-                            else
-                                writer.Write("\t" + dgvK.Rows[k].Cells[j].Value.ToString() + "\t" + "|");
+                            int rowIndex = row.Index;
+                            dgvB.Rows[rowIndex].Selected = true;
+                            valueResult = true;
+                            break;
                         }
                     }
                 }
-                writer.Close();
-                MessageBox.Show("Selected data Exported");
+                if (!valueResult)
+                {
+                    MessageBox.Show("Unable to find " + search.Text, "Not Found");
+                    return;
+                }
             }
-            ^*/
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
 
-        }
+                // print af sælger informationer
+                /*
+                string search = "6";
+                string areaToPrint = search;
+                if (areaToPrint == search)
+                {
+                    TextWriter writer = new StreamWriter($@"..\..\..\Bolig_Søg_{search}.txt");                
+                    for (int k = 0; k < dgvK.Rows.Count - 1; k++) // rows
+                    {
+                        string areaK = dgvK.Rows[k].Cells[0].Value.ToString();
+                        if (areaToPrint == areaK)
+                        {
+                            for (int j = 0; j < dgvK.Columns.Count; j++) // columns
+                            {
+                                if (j == dgvK.Columns.Count - 1) // if last column
+                                {
+                                    writer.WriteLine("\t" + dgvK.Rows[k].Cells[j].Value.ToString());
+                                }
+                                else
+                                    writer.Write("\t" + dgvK.Rows[k].Cells[j].Value.ToString() + "\t" + "|");
+                            }
+                        }
+                    }
+                    writer.Close();
+                    MessageBox.Show("Selected data Exported");
+                }
+                ^*/
+
+            }
 
         private void mlDatoer_Click(object sender, EventArgs e)
         {
@@ -208,6 +181,63 @@ namespace Semesterprojektet
             {
                 MessageBox.Show("ERROR: \n\n" + exc.ToString());
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void search_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            string searchValue = search.Text;
+            dgvB.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                bool valueResult = false;
+                foreach (DataGridViewRow row in dgvB.Rows)
+                {
+                    for (int i = 0; i < row.Cells.Count; i++)
+                    {
+                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
+                        {
+                            int rowIndex = row.Index;
+                            dgvB.Rows[rowIndex].Selected = true;
+                            valueResult = true;
+                            break;
+                        }
+                    }
+                }
+                if (!valueResult)
+                {
+                    MessageBox.Show("Unable to find " + searchValue, "Not Found");
+                    return;
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void datobox1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Dato start", datobox1);
+        }
+
+        private void datobox2_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Dato slut", datobox2);
+        }
+
+        private void prisInput_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Pris input", prisInput);
+        }
+
+        private void search_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Søg eftter et postnummer, du gerne vil printe ", search);
         }
     }
 }
