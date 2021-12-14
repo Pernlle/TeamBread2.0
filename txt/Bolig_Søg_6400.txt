@@ -1,0 +1,23 @@
+	3	|	Karen	|	Christensen	|	kc@yahoo.com	|	False	|	True
+	4	|	Ingeborg	|	Iversen	|	ii@yahoo.com	|	False	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	3	|	Karen	|	Christensen	|	kc@yahoo.com	|	False	|	True
+	4	|	Ingeborg	|	Iversen	|	ii@yahoo.com	|	False	|	True
+	5	|	Donald	|	Pence	|	dp@yahoo.com	|	False	|	True
+	10	|	Klarsynsgade 121	|	6400	|	False	|	70	|	7000000	|		|		|	2	|	6	|	
+	6	|	Tornhøj	|	Skyskraper	|	ths@yahoo.com	|	True	|	False
+	3	|	Karen	|	Christensen	|	kc@yahoo.com	|	False	|	True
+	4	|	Ingeborg	|	Iversen	|	ii@yahoo.com	|	False	|	True
+	5	|	Donald	|	Pence	|	dp@yahoo.com	|	False	|	True
+	6	|	Tornhøj	|	Skyskraper	|	ths@yahoo.com	|	True	|	False
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	3	|	Karen	|	Christensen	|	kc@yahoo.com	|	False	|	True
+	4	|	Ingeborg	|	Iversen	|	ii@yahoo.com	|	False	|	True
+	3	|	Karen	|	Christensen	|	kc@yahoo.com	|	False	|	True
+	3	|	Karen	|	Christensen	|	kc@yahoo.com	|	False	|	True
+	3	|	Karen	|	Christensen	|	kc@yahoo.com	|	False	|	True
+	3	|	Karen	|	Christensen	|	kc@yahoo.com	|	False	|	True
+	4	|	Ingeborg	|	Iversen	|	ii@yahoo.com	|	False	|	True
+	2	|	Ulla	|	Christensen	|	uc@yahoo.com	|	True	|	True
+	1	|	Pernille	|	Ali	|	pa@yahoo.com	|	True	|	False
+	1	|	Pernille	|	Ali	|	pa@yahoo.com	|	True	|	False
