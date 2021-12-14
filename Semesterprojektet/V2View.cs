@@ -32,7 +32,7 @@ namespace Semesterprojektet
 
         private void cbSearchPostNr_SelectedIndexChanged(object sender, EventArgs e)
         { 
-
+            //Det fungerede ikke helt med printknappen
         }
 
         private void print_Click(object sender, EventArgs e)
@@ -210,7 +210,7 @@ namespace Semesterprojektet
                 }
                 if (!valueResult)
                 {
-                    MessageBox.Show("Unable to find " + search.Text, "Not Found");
+                    MessageBox.Show("Unable to find " + searchValue, "Not Found");
                     return;
                 }
             }
