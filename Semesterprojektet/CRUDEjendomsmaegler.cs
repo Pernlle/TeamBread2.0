@@ -13,6 +13,7 @@ namespace Semesterprojektet
 {
     public partial class CRUDEjendomsmaegler : Form
     {
+        // Connect to database - SQL
         public string strconn = @"Server=den1.mssql7.gear.host; Database=teambreaddb; User ID=teambreaddb; Password=Tg53?N_p6fzh";
 
         public CRUDEjendomsmaegler()
@@ -29,6 +30,7 @@ namespace Semesterprojektet
 
         private void createbtn_Click(object sender, EventArgs e)
         {
+            // C(RUD) - opret en ejendomsmægler 
             string eId = id.Text;
             string eFornavn = fornavn.Text;
             string eEfternavn = efternavn.Text;
@@ -39,7 +41,7 @@ namespace Semesterprojektet
             SqlConnection conn = new SqlConnection(strconn);
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
-            
+            // Parametre at sætte ind i databasen
             cmd.Parameters.Add("@fNavn", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@fNavn"].Value = Convert.ToString(eFornavn);
             cmd.Parameters.Add("@eNavn", System.Data.SqlDbType.VarChar);
@@ -49,6 +51,7 @@ namespace Semesterprojektet
             cmd.Parameters.Add("@pass", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@pass"].Value = Convert.ToString(ePass);
 
+            // Prøv om parametrene kan sættes ind i databasen, IF NOT vis fejltekst
             try
             {
                 conn.Open();
@@ -65,6 +68,7 @@ namespace Semesterprojektet
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
+            // (CR)U(D) - opdater en ejendomsmægler
             string eID = id.Text;
             string eEmail = email.Text;
 
@@ -76,6 +80,8 @@ namespace Semesterprojektet
             cmd.Parameters["@eID"].Value = Convert.ToInt32(eID);
             cmd.Parameters.Add("@email", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@email"].Value = Convert.ToString(eEmail);
+
+            // Prøv om parametrene kan sættes ind i databasen, IF NOT vis fejltekst
             try
             {
                 conn.Open();
@@ -91,22 +97,27 @@ namespace Semesterprojektet
         }
 
         private void deletebtn_Click(object sender, EventArgs e)
-        {            
+        {
+            // (CRU)D - slet ejendomsmægler
             SqlConnection conn = new SqlConnection(strconn);
 
+            // Vælg ejendomsmægler via grid
             int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
 
+            // Call metoden 'Yes_No'
             Yes_no(conn, cellValue);
         }
-        // Metode som spørger om du er sikker på om du vil slette ejendomsmægler eller ej.
+        // Metode Yes_No, som spørger om du er sikker på om du vil slette ejendomsmægler eller ej.
         public void Yes_no(SqlConnection conn, string cellValue)
         {
             string box_msg = $"Er du sikker på at du vil slette denne ejendomsmægler ID = {cellValue} ";
             string box_title = "Vælg ja eller nej";
 
+            // Viser en messagebox med to valg - yes, no
             var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
+            //Hvis du trykker ja til at slette ejendomsmægæler
             if (selectedOption == DialogResult.Yes)
             {
                 if (cellValue != "" || cellValue == "0") 
@@ -131,10 +142,12 @@ namespace Semesterprojektet
                     MessageBox.Show("Vælg noget at slette");
                 }
             }
+            // Hvis du trykker nej til at slette ejendomsmægæler
             else if (selectedOption == DialogResult.No) { MessageBox.Show("Gør noget andet så :) "); }
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Hvis der trykkes på grid vises værdierne i feltet
             if (e.RowIndex != -1)
             {
                 DataGridViewRow dgvRow = dataGridView1.Rows[e.RowIndex];
@@ -147,6 +160,7 @@ namespace Semesterprojektet
 
         private void updatebtn_MouseHover(object sender, EventArgs e)
         {
+            //Viser 'beskeden' hvis du hover over valgte felt
             toolTip1.Show("Du kan kun opdatere email | Vælg en ejendomsmægler i data sættet", updatebtn);
         }
 
