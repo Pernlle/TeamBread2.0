@@ -99,10 +99,10 @@ namespace Semesterprojektet
                             {
                                 if (j == dgvK.Columns.Count - 1) // Sælger if last column
                                 {
-                                    writer.WriteLine("\t" + dgvK.Rows[1].Cells[j].Value.ToString());
+                                    writer.WriteLine("\t" + dgvK.Rows[i].Cells[j].Value.ToString());
                                 }
                                 else
-                                    writer.Write("\t" + dgvK.Rows[1].Cells[j].Value.ToString() + "\t" + "|");
+                                    writer.Write("\t" + dgvK.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                             }
                         }
                     }
