@@ -126,8 +126,8 @@ namespace Semesterprojektet
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         conn.Close(); // remember this HUSK ALTID AT LUKKE!
+                        this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
                         MessageBox.Show("Solgt bolig oprettet");
-                        this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
                     }
                     catch (Exception exc)
                     {
@@ -166,8 +166,9 @@ namespace Semesterprojektet
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close(); // remember this HUSK ALTID AT LUKKE!
+                    this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
                     MessageBox.Show("Ny bolig oprettet");
-                    this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
+                    
                 }
                 catch (Exception exc)
                 {
@@ -202,7 +203,9 @@ namespace Semesterprojektet
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
+                    this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
                     MessageBox.Show("Updatere bolig i database");
+                    
                 }
                 catch (Exception exc)
                 {
@@ -241,8 +244,9 @@ namespace Semesterprojektet
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         conn.Close(); // remember this HUSK ALTID AT LUKKE!
+                        this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
                         MessageBox.Show("Bolig slettet");
-                        this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
+                       
                     }
                     catch (Exception exc)
                     {
@@ -259,7 +263,7 @@ namespace Semesterprojektet
         }
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            this.boligTableAdapter.Fill(this.tHEONETHEONLY.Bolig);
+            
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
