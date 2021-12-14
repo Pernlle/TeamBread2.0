@@ -21,7 +21,7 @@ namespace Semesterprojektet
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
- 
+            //Login button
             string id = textBox1.Text;
             string pass = textBox2.Text;
 
@@ -61,16 +61,17 @@ namespace Semesterprojektet
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            //Id tekstbox
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            //pass Textbox
         }
 
         private void search_Click(object sender, EventArgs e)
         {
+            // Søg Button
             panel2.Controls.Clear();
             V2View frm = new V2View() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
