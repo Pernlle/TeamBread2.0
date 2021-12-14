@@ -19,6 +19,7 @@ namespace Semesterprojektet
 
         private void boligbtn_Click(object sender, EventArgs e)
         {
+            //Bolig Button
             panel1.Controls.Clear();
             V2CRUDBolig frm = new V2CRUDBolig() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
@@ -28,6 +29,7 @@ namespace Semesterprojektet
 
         private void saelgerbtn_Click(object sender, EventArgs e)
         {
+            //Kunder button
             panel1.Controls.Clear();
             v3crudkunder frm = new v3crudkunder() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
