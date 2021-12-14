@@ -157,7 +157,7 @@ namespace Semesterprojektet
             else
             {
                 //Hvis ikke checkboxen er checked, bliver handelsdato, handelspris og køberid ikke inført
-                if (postnr.Text != "" && adresse.Text != "" && kvm.Text != "" && salgspris.Text != "" && handelspris.Text != "" && sID.Text != "" && eID.Text != "")
+                if (postnr.Text != "" && adresse.Text != "" && kvm.Text != "" && salgspris.Text != "" && sID.Text != "" && eID.Text != "")
                 {
 
                     string sqlCom = "INSERT INTO Bolig(adresse, postNr, kvm, salgsPris, saelger, eID, solgt) VALUES (@adresse, @postNr, @kvm, @salgsPris, @saeglerID, @eID,'0');";
