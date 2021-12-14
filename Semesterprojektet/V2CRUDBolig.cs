@@ -181,37 +181,78 @@ namespace Semesterprojektet
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            // Update - ikke værdig
-            string hPris = handelspris.Text;
-            string hDato = Convert.ToString(handelsdato.Value);
-
-            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
-            string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
-            if (cellValue != "" || cellValue == "0")
+            if (soldCheck.Checked)
             {
-                string sqlCom = $"UPDATE Bolig set handelsPris=@handelsPris WHERE {cellValue}";
-                SqlConnection conn = new SqlConnection(strconn);
-                SqlCommand cmd = new SqlCommand(sqlCom, conn);
+                // Update - ikke værdig
+                string hPris = handelspris.Text;
+                string hDato = Convert.ToString(handelsdato.Value);
 
-                cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
-                cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(hPris);
-                cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.VarChar);
-                cmd.Parameters["@handelsDato"].Value = Convert.ToString(hDato);
-                try
+                int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+                string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
+                if (cellValue != "" || cellValue == "0")
                 {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                    this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
-                    MessageBox.Show("Updatere bolig i database");
-                    
+                    string sqlCom = $"UPDATE Bolig SET handelsPris=@handelsPris, solgt = '1' WHERE {cellValue}";
+                    SqlConnection conn = new SqlConnection(strconn);
+                    SqlCommand cmd = new SqlCommand(sqlCom, conn);
+
+                    cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
+                    cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(hPris);
+                    cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.VarChar);
+                    cmd.Parameters["@handelsDato"].Value = Convert.ToString(hDato);
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
+                        MessageBox.Show("Updatere bolig i database");
+
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("ERROR: \n\n" + exc.ToString());
+                    }
                 }
-                catch (Exception exc)
+            }
+
+            else
+            {
+                // Update - ikke værdig
+                string hPris = handelspris.Text;
+                string hDato = Convert.ToString(handelsdato.Value);
+                string koeberid = koeberID.Text;
+
+                int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+                string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
+                if (cellValue != "" || cellValue == "0")
                 {
-                    MessageBox.Show("ERROR: \n\n" + exc.ToString());
+                    string sqlCom = $"UPDATE Bolig SET solgt = '0' koeberID=@koeberID handelsPris=@handelsPris WHERE {cellValue}";
+                    SqlConnection conn = new SqlConnection(strconn);
+                    SqlCommand cmd = new SqlCommand(sqlCom, conn);
+
+                    cmd.Parameters.Add("@handelsPris", System.Data.SqlDbType.Decimal);
+                    cmd.Parameters["@handelsPris"].Value = Convert.ToDecimal(hPris);
+                    cmd.Parameters.Add("@handelsDato", System.Data.SqlDbType.VarChar);
+                    cmd.Parameters["@handelsDato"].Value = Convert.ToString(hDato);
+                    cmd.Parameters.Add("@koeberID", System.Data.SqlDbType.VarChar);
+                    cmd.Parameters["@koeberID"].Value = Convert.ToString(koeberid);
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        this.boligTableAdapter2.Fill(this.tHEDATASETOFALL.Bolig);
+                        MessageBox.Show("Updatere bolig i database");
+
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("ERROR: \n\n" + exc.ToString());
+                    }
                 }
-            }            
+            }
         }
 
 
