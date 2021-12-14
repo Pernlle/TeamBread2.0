@@ -234,9 +234,6 @@ namespace Semesterprojektet
                     cmd.Parameters["@handelsDato"].Value = Convert.ToString(hdato);
                     cmd.Parameters.Add("@koeberID", System.Data.SqlDbType.VarChar);
                     cmd.Parameters["@koeberID"].Value = Convert.ToString(koeber);
-                    cmd.Parameters.Add("@salgsPris", System.Data.SqlDbType.Decimal);
-                    cmd.Parameters["@salgsPris"].Value = Convert.ToDecimal(spris);
-
                     try
                     {
                         conn.Open();
@@ -367,12 +364,12 @@ namespace Semesterprojektet
                 DataGridViewRow dgvRow = dataGridView1.Rows[e.RowIndex];
                 adresse.Text = dgvRow.Cells[1].Value.ToString();
                 postnr.Text = dgvRow.Cells[2].Value.ToString();
-                kvm.Text = dgvRow.Cells[3].Value.ToString();
-                salgspris.Text = dgvRow.Cells[7].Value.ToString();
-                sID.Text = dgvRow.Cells[4].Value.ToString();
-                eID.Text = dgvRow.Cells[5].Value.ToString();
+                kvm.Text = dgvRow.Cells[4].Value.ToString();
+                salgspris.Text = dgvRow.Cells[5].Value.ToString();
+                sID.Text = dgvRow.Cells[9].Value.ToString();
+                eID.Text = dgvRow.Cells[8].Value.ToString();
                 boligID.Text = dgvRow.Cells[0].Value.ToString();
-                handelspris.Text = dgvRow.Cells[8].Value.ToString();
+                handelspris.Text = dgvRow.Cells[6].Value.ToString();
                 koeberID.Text = dgvRow.Cells[10].Value.ToString();
             }
         }
