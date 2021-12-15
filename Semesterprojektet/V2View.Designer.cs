@@ -30,10 +30,10 @@ namespace Semesterprojektet
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.datobox2 = new System.Windows.Forms.TextBox();
@@ -44,6 +44,7 @@ namespace Semesterprojektet
             this.datoslutbox = new System.Windows.Forms.DateTimePicker();
             this.datostartbox = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.search = new System.Windows.Forms.MaskedTextBox();
             this.print = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.cbSearchPostNr = new System.Windows.Forms.ComboBox();
@@ -51,6 +52,7 @@ namespace Semesterprojektet
             this.tHEDATASETOFALLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tHEDATASETOFALL = new Semesterprojektet.tHEDATASETOFALL();
             this.clear = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvB = new System.Windows.Forms.DataGridView();
             this.bIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +79,6 @@ namespace Semesterprojektet
             this.dgvSD = new System.Windows.Forms.DataGridView();
             this.boligBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.search = new System.Windows.Forms.MaskedTextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -101,9 +101,8 @@ namespace Semesterprojektet
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1350, 130);
+            this.panel1.Size = new System.Drawing.Size(1200, 104);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -117,39 +116,44 @@ namespace Semesterprojektet
             this.panel3.Controls.Add(this.datostartbox);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(568, 130);
+            this.panel3.Size = new System.Drawing.Size(505, 104);
             this.panel3.TabIndex = 5;
             // 
             // datobox2
             // 
-            this.datobox2.Location = new System.Drawing.Point(17, 65);
+            this.datobox2.Location = new System.Drawing.Point(15, 52);
+            this.datobox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datobox2.Name = "datobox2";
-            this.datobox2.Size = new System.Drawing.Size(200, 26);
+            this.datobox2.Size = new System.Drawing.Size(178, 22);
             this.datobox2.TabIndex = 2;
             this.datobox2.MouseHover += new System.EventHandler(this.datobox2_MouseHover);
             // 
             // datobox1
             // 
-            this.datobox1.Location = new System.Drawing.Point(17, 28);
+            this.datobox1.Location = new System.Drawing.Point(15, 22);
+            this.datobox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datobox1.Name = "datobox1";
-            this.datobox1.Size = new System.Drawing.Size(200, 26);
+            this.datobox1.Size = new System.Drawing.Size(178, 22);
             this.datobox1.TabIndex = 1;
             this.datobox1.MouseHover += new System.EventHandler(this.datobox1_MouseHover);
             // 
             // prisInput
             // 
-            this.prisInput.Location = new System.Drawing.Point(344, 46);
+            this.prisInput.Location = new System.Drawing.Point(306, 37);
+            this.prisInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prisInput.Name = "prisInput";
-            this.prisInput.Size = new System.Drawing.Size(100, 26);
+            this.prisInput.Size = new System.Drawing.Size(89, 22);
             this.prisInput.TabIndex = 4;
             this.prisInput.MouseHover += new System.EventHandler(this.prisInput_MouseHover);
             // 
             // prisSearch
             // 
-            this.prisSearch.Location = new System.Drawing.Point(468, 41);
+            this.prisSearch.Location = new System.Drawing.Point(416, 33);
+            this.prisSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prisSearch.Name = "prisSearch";
-            this.prisSearch.Size = new System.Drawing.Size(75, 36);
+            this.prisSearch.Size = new System.Drawing.Size(67, 29);
             this.prisSearch.TabIndex = 5;
             this.prisSearch.Text = "Søg";
             this.prisSearch.UseVisualStyleBackColor = true;
@@ -157,9 +161,10 @@ namespace Semesterprojektet
             // 
             // mlDatoer
             // 
-            this.mlDatoer.Location = new System.Drawing.Point(240, 41);
+            this.mlDatoer.Location = new System.Drawing.Point(213, 33);
+            this.mlDatoer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mlDatoer.Name = "mlDatoer";
-            this.mlDatoer.Size = new System.Drawing.Size(75, 37);
+            this.mlDatoer.Size = new System.Drawing.Size(67, 30);
             this.mlDatoer.TabIndex = 3;
             this.mlDatoer.Text = "Søg";
             this.mlDatoer.UseVisualStyleBackColor = true;
@@ -167,16 +172,18 @@ namespace Semesterprojektet
             // 
             // datoslutbox
             // 
-            this.datoslutbox.Location = new System.Drawing.Point(17, 66);
+            this.datoslutbox.Location = new System.Drawing.Point(15, 53);
+            this.datoslutbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datoslutbox.Name = "datoslutbox";
-            this.datoslutbox.Size = new System.Drawing.Size(200, 26);
+            this.datoslutbox.Size = new System.Drawing.Size(178, 22);
             this.datoslutbox.TabIndex = 1;
             // 
             // datostartbox
             // 
-            this.datostartbox.Location = new System.Drawing.Point(17, 28);
+            this.datostartbox.Location = new System.Drawing.Point(15, 22);
+            this.datostartbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datostartbox.Name = "datostartbox";
-            this.datostartbox.Size = new System.Drawing.Size(200, 26);
+            this.datostartbox.Size = new System.Drawing.Size(178, 22);
             this.datostartbox.TabIndex = 0;
             // 
             // panel2
@@ -188,20 +195,28 @@ namespace Semesterprojektet
             this.panel2.Controls.Add(this.clear);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(884, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(786, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(466, 130);
+            this.panel2.Size = new System.Drawing.Size(414, 104);
             this.panel2.TabIndex = 4;
+            // 
+            // search
+            // 
+            this.search.Location = new System.Drawing.Point(28, 41);
+            this.search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(89, 22);
+            this.search.TabIndex = 6;
+            this.search.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.search_MaskInputRejected);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // print
             // 
             this.print.BackColor = System.Drawing.Color.White;
             this.print.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.print.Location = new System.Drawing.Point(316, 41);
-            this.print.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.print.Location = new System.Drawing.Point(282, 33);
             this.print.Name = "print";
-            this.print.Size = new System.Drawing.Size(124, 45);
+            this.print.Size = new System.Drawing.Size(110, 36);
             this.print.TabIndex = 8;
             this.print.Text = "Print";
             this.print.UseVisualStyleBackColor = false;
@@ -209,24 +224,19 @@ namespace Semesterprojektet
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(344, 57);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchTextBox.Location = new System.Drawing.Point(306, 46);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(28, 26);
+            this.searchTextBox.Size = new System.Drawing.Size(25, 22);
             this.searchTextBox.TabIndex = 3;
             this.searchTextBox.Visible = false;
             // 
             // cbSearchPostNr
             // 
-            this.cbSearchPostNr.DataSource = this.boligBindingSource1;
-            this.cbSearchPostNr.DisplayMember = "postNr";
             this.cbSearchPostNr.FormattingEnabled = true;
-            this.cbSearchPostNr.Location = new System.Drawing.Point(378, 51);
-            this.cbSearchPostNr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbSearchPostNr.Location = new System.Drawing.Point(336, 41);
             this.cbSearchPostNr.Name = "cbSearchPostNr";
-            this.cbSearchPostNr.Size = new System.Drawing.Size(10, 28);
+            this.cbSearchPostNr.Size = new System.Drawing.Size(9, 24);
             this.cbSearchPostNr.TabIndex = 3;
-            this.cbSearchPostNr.ValueMember = "postNr";
             this.cbSearchPostNr.SelectedIndexChanged += new System.EventHandler(this.cbSearchPostNr_SelectedIndexChanged);
             // 
             // boligBindingSource1
@@ -248,14 +258,22 @@ namespace Semesterprojektet
             // 
             this.clear.BackColor = System.Drawing.Color.White;
             this.clear.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Location = new System.Drawing.Point(161, 41);
-            this.clear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.clear.Location = new System.Drawing.Point(143, 33);
             this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(133, 45);
+            this.clear.Size = new System.Drawing.Size(118, 36);
             this.clear.TabIndex = 7;
             this.clear.Text = "Find";
             this.clear.UseVisualStyleBackColor = false;
             this.clear.Click += new System.EventHandler(this.clear_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(322, 38);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(9, 22);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dgvB
             // 
@@ -276,26 +294,25 @@ namespace Semesterprojektet
             this.saeglerIDDataGridViewTextBoxColumn,
             this.koeberIDDataGridViewTextBoxColumn});
             this.dgvB.DataSource = this.boligBindingSource;
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvB.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvB.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvB.GridColor = System.Drawing.Color.Silver;
-            this.dgvB.Location = new System.Drawing.Point(0, 130);
-            this.dgvB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvB.Location = new System.Drawing.Point(0, 104);
             this.dgvB.Name = "dgvB";
             this.dgvB.RowHeadersWidth = 51;
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvB.RowsDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvB.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvB.RowTemplate.Height = 24;
-            this.dgvB.Size = new System.Drawing.Size(1350, 546);
+            this.dgvB.Size = new System.Drawing.Size(1200, 437);
             this.dgvB.TabIndex = 1;
             this.dgvB.TabStop = false;
             // 
@@ -402,25 +419,24 @@ namespace Semesterprojektet
             this.dgvK.DataSource = this.kunderBindingSource;
             this.dgvK.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvK.GridColor = System.Drawing.Color.White;
-            this.dgvK.Location = new System.Drawing.Point(0, 487);
-            this.dgvK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvK.Location = new System.Drawing.Point(0, 390);
             this.dgvK.Name = "dgvK";
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvK.RowHeadersDefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvK.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvK.RowHeadersWidth = 51;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvK.RowsDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvK.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvK.RowTemplate.Height = 24;
-            this.dgvK.Size = new System.Drawing.Size(1350, 189);
+            this.dgvK.Size = new System.Drawing.Size(1200, 151);
             this.dgvK.TabIndex = 2;
             this.dgvK.TabStop = false;
             // 
@@ -479,11 +495,12 @@ namespace Semesterprojektet
             // dgvSD
             // 
             this.dgvSD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSD.Location = new System.Drawing.Point(388, 574);
+            this.dgvSD.Location = new System.Drawing.Point(345, 459);
+            this.dgvSD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSD.Name = "dgvSD";
             this.dgvSD.RowHeadersWidth = 62;
             this.dgvSD.RowTemplate.Height = 28;
-            this.dgvSD.Size = new System.Drawing.Size(41, 90);
+            this.dgvSD.Size = new System.Drawing.Size(36, 72);
             this.dgvSD.TabIndex = 3;
             // 
             // boligBindingSource2
@@ -495,40 +512,23 @@ namespace Semesterprojektet
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1350, 676);
+            this.panel4.Size = new System.Drawing.Size(1200, 541);
             this.panel4.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(362, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(10, 26);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // search
-            // 
-            this.search.Location = new System.Drawing.Point(31, 51);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(100, 26);
-            this.search.TabIndex = 6;
-            this.search.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.search_MaskInputRejected);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // V2View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1350, 676);
+            this.ClientSize = new System.Drawing.Size(1200, 541);
             this.Controls.Add(this.dgvK);
             this.Controls.Add(this.dgvB);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvSD);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "V2View";
             this.Text = "V2View";
             this.Load += new System.EventHandler(this.V2View_Load);

@@ -41,7 +41,26 @@ namespace Semesterprojektet
             // Det som sker her er, at, der først printes Boligen, og til sidst ALLE Sælgere - og dette går i loop til der ikke er flere boligere.
             string search1 = search.Text;
             string areaToPrint = search1;
-            if (areaToPrint == search1)
+            
+            if (search1=="")
+            {
+                TextWriter writer = new StreamWriter(@"..\..\..\txt\Bolig_Søg.txt");
+                for (int i = 0; i < dgvB.Rows.Count - 1; i++) // rows
+                {
+                    for (int j = 0; j < dgvB.Columns.Count; j++) // columns
+                    {
+                        if (j == dgvB.Columns.Count - 1) // if last column
+                        {
+                            writer.WriteLine("\t" + dgvB.Rows[i].Cells[j].Value.ToString());
+                        }
+                        else
+                            writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                    }
+                }
+                writer.Close();
+                MessageBox.Show("Full data Exported");
+            }
+            else if (areaToPrint == search1)
             {
                 TextWriter writer = new StreamWriter($@"..\..\..\txt\Bolig_Søg_{search1}.txt");
                 for (int i = 0; i < dgvB.Rows.Count - 1; i++) // Bolig rows
@@ -59,28 +78,10 @@ namespace Semesterprojektet
                             else
                                 writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                         }
-                    }                    
-                }
-                writer.Close();
-                MessageBox.Show("Selected data Exported");
-            }
-            else
-            {
-                TextWriter writer = new StreamWriter(@"..\..\..\txt\Bolig_Søg.txt");
-                for (int i = 0; i < dgvB.Rows.Count - 1; i++) // rows
-                {
-                    for (int j = 0; j < dgvB.Columns.Count; j++) // columns
-                    {
-                        if (j == dgvB.Columns.Count - 1) // if last column
-                        {
-                            writer.WriteLine("\t" + dgvB.Rows[i].Cells[j].Value.ToString());
-                        }
-                        else
-                            writer.Write("\t" + dgvB.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                     }
                 }
                 writer.Close();
-                MessageBox.Show("Full data Exported");
+                MessageBox.Show("Selected data Exported");
             }
         }
 
