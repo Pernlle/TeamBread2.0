@@ -190,6 +190,7 @@ namespace Semesterprojektet
 
         private void search_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
+            //Find knap
             string searchValue = search.Text;
             dgvB.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
